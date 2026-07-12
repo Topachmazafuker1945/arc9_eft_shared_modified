@@ -1,0 +1,16 @@
+{
+  "title": "[ARC9] Escape from Tarkov SHARED",
+  "type": "weapon",
+  "tags": [
+    "realism"
+  ],
+  "ignore": [
+    "*.stuff",
+    "*.py",
+    "workfolder*",
+    ".stuff*",
+    "wank*",
+    "arccw.jpg",
+    "*.hlsl"
+  ]
+}
