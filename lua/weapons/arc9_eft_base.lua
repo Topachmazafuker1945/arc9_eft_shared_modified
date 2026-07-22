@@ -97,8 +97,8 @@ SWEP.ActiveAng = Angle(0, 0, -5)
 SWEP.LowReadyVector = Vector(-1.0, -2, 1.0) -- pidarasiki
 SWEP.LowReadyAngle = Angle(0, -10, -5)
 
-SWEP.HighReadyVector = Vector(-0, -0, 0)
-SWEP.HighReadyAngle = Angle(0, 0, 0)
+SWEP.HighReadyVector = Vector(-0, -5, -4)
+SWEP.HighReadyAngle = Angle(0, 10, -10)
 
 SWEP.SomalianVector = Vector(-0, -3, 4.5)
 SWEP.SomalianAngle = Angle(0, 0, -40)
@@ -118,8 +118,8 @@ SWEP.ShootPosOffsetSomalian = Vector(-1, 0, -4)
 -- SWEP.ReloadPos = Vector(-0, 5, -5)
 -- SWEP.ReloadAng = Angle(-0, -22, -0)
 
-SWEP.SprintAng = Angle(35, -10, -20)
-SWEP.SprintPos = Vector(4, -4, -1)
+SWEP.SprintAng = Angle(75, -10, -20)
+SWEP.SprintPos = Vector(13, -2, 2)
 
 SWEP.NearWallAng = Angle(80, 5, 0)
 SWEP.NearWallPos = Vector(15, -0, -2.5)
@@ -291,11 +291,11 @@ SWEP.VisualRecoilDoingFunc = function(up, side, roll, punch, recamount, self) --
 
     end
 
-	if recamount >= 7 then
+	if recamount >= 6 then
 		up = up * 0.3
 	end
 
-	if recamount >= 12 then -- пьяница
+	if recamount >= 12 and self.IsPistol == false then -- пьяница
 		up = up * -0.1
 	end
 
@@ -340,7 +340,15 @@ SWEP.CamOffsetAng = Angle(0, 0, 90)
 SWEP.CamQCA_Mult = 1
 SWEP.CamQCA_Mult_ADS = 0.05
 
+
+
 SWEP.MuzzleParticle = "muzzleflash_4"
+-- SWEP.MuzzleParticleOverHeated = ""
+
+SWEP.HeatLowParticle = "arc9_eft_ak_heat_low"
+SWEP.HeatMedParticle = "arc9_eft_ak_heat_med"
+SWEP.HeatHugeParticle = "arc9_eft_ak_heat_huge"
+
 SWEP.AfterShotParticle = false 
 SWEP.AfterShotParticleHook = function(swep, old)
     if swep:GetProcessedValue("Overheat", true) and swep:GetHeatAmount() > 7 then return "barrel_smoke" end
@@ -381,7 +389,7 @@ SWEP.Hook_Think_TacReload = function(self)
 end
 
 --!self:GetProcessedValue("Silencer", true)
-local fuckthis = 0 -- OVERHEAT GAS EFFECT
+local fuckthis = 0 -- OVERHEAT GAS EFFECT - NOW MORE PCFs!!!
 SWEP.Hook_Think = function(self)
     if CLIENT then 
         if fuckthis < CurTime() then
@@ -389,9 +397,15 @@ SWEP.Hook_Think = function(self)
             if !self:GetProcessedValue("Overheat", true) then return end
             local hot = self:GetHeatAmount() / self:GetProcessedValue("HeatCapacity", true)
             
-            if hot > 0.2 and self:GetProcessedValue("Overheat", true) then
+            if self:GetProcessedValue("Overheat", true) then
                 local att = self:GetProcessedValue("MuzzleEffectQCA", true)
                 local vm = LocalPlayer():GetViewModel()
+                local wep = LocalPlayer():GetActiveWeapon()
+
+                local heat_low = wep.HeatLowParticle
+                local heat_med = wep.HeatMedParticle
+                local heat_huge = wep.HeatHugeParticle
+
                 local wm = false
                 if (LocalPlayer():ShouldDrawLocalPlayer() or self.Owner != LocalPlayer()) then
                     wm = true
@@ -402,34 +416,61 @@ SWEP.Hook_Think = function(self)
                 -- if !wm then parent = self.MuzzleDeviceVM
                 else parent = (self.WModel or {})[1] or self end
 
-                local pcf = CreateParticleSystem(parent, "arc9_eft_barrel_smoke", PATTACH_POINT_FOLLOW, att)
-                --local pcf2 = CreateParticleSystem(parent, "muzzle_heatwave_long", PATTACH_POINT_FOLLOW, att)
-
-                if IsValid(self.ActiveAfterShotPCF) then
-                    self.ActiveAfterShotPCF:StopEmission()
-                end
-
-                if IsValid(pcf) then
-                    pcf:StartEmission()
-
-                    self.ActiveAfterShotPCF = pcf
-                    if (muz or parent) != vm then
-                        pcf:SetShouldDraw(false)
-                        table.insert(self.PCFs, pcf)
-                    end
+                if hot > 0.8 then
+                    local pcf = CreateParticleSystem(parent, heat_huge, PATTACH_POINT_FOLLOW, att)
+                    --local pcf2 = CreateParticleSystem(parent, "muzzle_heatwave_long", PATTACH_POINT_FOLLOW, att)
                     
-                    -- if hot > 0.6 and self:GetProcessedValue("Overheat", true) then
-                    --     if IsValid(pcf2) then
-                    --         pcf:StartEmission()
+                    if IsValid(self.ActiveAfterShotPCF) then
+                        self.ActiveAfterShotPCF:StopEmission()
+                    end
 
-                    --         self.ActiveAfterShotPCF = pcf2
-                    --         if (muz or parent) != vm then
-                    --             pcf:SetShouldDraw(false)
-                    --             table.insert(self.PCFs, pcf2)
-                    --         end
-                    --     end
-                    -- end
+                    if IsValid(pcf) then
+                        pcf:StartEmission()
+
+                        self.ActiveAfterShotPCF = pcfs
+                        if (muz or parent) != vm then
+                            pcf:SetShouldDraw(false)
+                            table.insert(self.PCFs, pcf)
+                        end
+
+                    end
+
+                elseif hot > 0.30 then 
+                    local pcf = CreateParticleSystem(parent, heat_med, PATTACH_POINT_FOLLOW, att)
+                    --local pcf2 = CreateParticleSystem(parent, "muzzle_heatwave_long", PATTACH_POINT_FOLLOW, att)
+                    
+                    if IsValid(self.ActiveAfterShotPCF) then
+                        self.ActiveAfterShotPCF:StopEmission()
+                    end
+
+                    if IsValid(pcf) then
+                        pcf:StartEmission()
+
+                        self.ActiveAfterShotPCF = pcfs
+                        if (muz or parent) != vm then
+                            pcf:SetShouldDraw(false)
+                            table.insert(self.PCFs, pcf)
+                        end
+                    end
+
+                elseif hot > 0.075 then 
+                    local pcf = CreateParticleSystem(parent, heat_low, PATTACH_POINT_FOLLOW, att)
+                    
+                    if IsValid(self.ActiveAfterShotPCF) then
+                        self.ActiveAfterShotPCF:StopEmission()
+                    end
+
+                    if IsValid(pcf) then
+                        pcf:StartEmission()
+
+                        self.ActiveAfterShotPCF = pcfs
+                        if (muz or parent) != vm then
+                            pcf:SetShouldDraw(false)
+                            table.insert(self.PCFs, pcf)
+                        end
+                    end
                 end
+
             end
             
         end
@@ -440,7 +481,67 @@ SWEP.Hook_Think = function(self)
     if self.Hook_Think2 then self:Hook_Think2() end
 end
 
+-- --!self:GetProcessedValue("Silencer", true)
+-- local fuckthis = 0 -- OVERHEAT GAS EFFECT
+-- SWEP.Hook_Think = function(self)
+--     if CLIENT then 
+--         if fuckthis < CurTime() then
+--             fuckthis = CurTime() + 0.3
+--             if !self:GetProcessedValue("Overheat", true) then return end
+--             local hot = self:GetHeatAmount() / self:GetProcessedValue("HeatCapacity", true)
+            
+--             if self:GetProcessedValue("Overheat", true) then
+--                 if hot > 0.8 then
+--                     local att = self:GetProcessedValue("MuzzleEffectQCA", true)
+--                     local vm = LocalPlayer():GetViewModel()
+--                     local wep = LocalPlayer():GetActiveWeapon()
 
+--                     local heat_low = wep.HeatLowParticle
+--                     local heat_med = wep.HeatMedParticle
+--                     local heat_huge = wep.HeatHugeParticle
+
+--                     local wm = false
+--                     if (LocalPlayer():ShouldDrawLocalPlayer() or self.Owner != LocalPlayer()) then
+--                         wm = true
+--                         att = 1
+--                     end
+--                     local parent = self
+--                     if !wm then parent = vm
+--                     -- if !wm then parent = self.MuzzleDeviceVM
+--                     else parent = (self.WModel or {})[1] or self end
+
+--                     local pcf = CreateParticleSystem(parent, heat_huge, PATTACH_POINT_FOLLOW, att)
+--                     --local pcf2 = CreateParticleSystem(parent, "muzzle_heatwave_long", PATTACH_POINT_FOLLOW, att)
+
+--                     -- function ActivateEFTPCFs()
+                        
+--                     -- end
+                    
+--                     if IsValid(self.ActiveAfterShotPCF) then
+--                         self.ActiveAfterShotPCF:StopEmission()
+--                     end
+
+--                     if IsValid(pcf) then
+--                         pcf:StartEmission()
+
+--                         self.ActiveAfterShotPCF = pcfs
+--                         if (muz or parent) != vm then
+--                             pcf:SetShouldDraw(false)
+--                             table.insert(self.PCFs, pcf)
+--                             PrintTable(PCFs)
+--                         end
+
+--                     end
+--                 end
+--             end
+            
+--         end
+--     end
+
+
+--     self:Hook_Think_TacReload()
+--     if self.Hook_Think2 then self:Hook_Think2() end
+-- end
 
 SWEP.CaseEffectQCA = 2
 SWEP.ShellScale = 1
@@ -507,7 +608,6 @@ function SWEP:HookP_BlockFire()
                 net.Start("arc9eftmissingparts")
                 net.Send(self:GetOwner())
             end
-
             return true
         end
     end
@@ -524,9 +624,17 @@ function SWEP:HookP_BlockFire()
     
     local out = self:GetOutOfBreath()
     local weight = self:GetValue("EFTWeight")
-    local status = (self:GetSightAmount() < 0.8 and !self:GetBipod())
-    if weight > 6 and status or out == true and status then
-        print("weight: " .. weight)
+    local eft_inlowready = self:GetNW2Bool("EFT_LowReadyStance", false)
+    local eft_inhighready = self:GetNW2Bool("EFT_HighReadyStance", false)
+    local stances = (eft_inhighready or eft_inlowready)
+
+    local stat = (self:GetSightAmount() < 0.8 and !self:GetBipod())
+    local status = (weight > 6 and stat or out == true and stat)
+    if status then
+        EFTSetReady(ply, false)
+        -- print("weight: " .. weight)
+        return true
+    elseif stances == true and stat then
         return true
     end
 end
