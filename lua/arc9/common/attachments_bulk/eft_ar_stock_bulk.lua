@@ -1,0 +1,1398 @@
+local ATT = {}
+
+-- eft_ar_stock_b5
+-- eft_ar_stock_glcore
+-- eft_ar_stock_mftbus
+-- eft_ar_stock_prsgen2f
+-- eft_ar_stock_m4ss
+-- eft_ar_stock_sopmod -- moved to essentials
+
+///////////////////////////////////////      eft_ar_stock_adar
+
+
+ATT = {}
+
+ATT.PrintName = "ADAR 2-15 wooden stock"
+ATT.CompactName = "ADAR"
+ATT.Description = [[A wooden SVD-style stock for ADAR 2-15 carbines.]]
+
+ATT.Icon = Material("entities/eft_attachments/stocks/adarsock.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_adar_wood_v1.mdl"
+
+ATT.ActivateElements = {"pgrip_stock"}
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar15_pgripstock"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+
+ATT.HasGrip = true
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 13,
+    recoilModifier = -20,
+    weight = 0.695,
+}))
+
+
+-- EFT ID: 5c0e2ff6d174af02a1659d4a
+ARC9.LoadAttachment(ATT, "eft_ar_stock_adar")
+
+
+///////////////////////////////////////      eft_ar_stock_ak12
+
+
+ATT = {}
+
+ATT.PrintName = "AK-12 stock"
+ATT.CompactName = "AK-12"
+ATT.Description = [[A standard-issue telescopic stock for AK-12 automatic rifles, manufactured by Izhmash.]]
+ATT.Icon = Material("entities/eft_attachments/stocks/ak12.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_izhmash_ak12_std.mdl"
+
+ATT.HasStock = true
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar_stock"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+
+ATT.AdvancedCamoSupport = true
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 11,
+    recoilModifier = -21,
+    weight = 0.148,
+}))
+
+
+-- EFT ID: 5beec8c20db834001d2c465c
+ARC9.LoadAttachment(ATT, "eft_ar_stock_ak12")
+
+
+
+///////////////////////////////////////      eft_ar_stock_buttpad
+
+
+ATT = {}
+
+ATT.PrintName = "Magpul MOE Carbine rubber buttpad"
+ATT.CompactName = "RBP"
+ATT.Description = [[A standard rubber butt-pad for the Magpul MOE Carbine stock series. However, it can also be installed on other models of the series.]]
+ATT.Icon = Material("entities/eft_attachments/stocks/butt.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_magpul_rubber_butt_pad.mdl"
+
+-- ATT.HasStock = true
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar_buttpad"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 3,
+    weight = 0.055,
+}))
+
+
+-- EFT ID: 58d2912286f7744e27117493
+ARC9.LoadAttachment(ATT, "eft_ar_stock_buttpad")
+
+
+///////////////////////////////////////      eft_ar_stock_ctr
+
+
+ATT = {}
+
+ATT.PrintName = "Magpul CTR Carbine stock (Black)"
+ATT.CompactName = "CTR"
+ATT.Description = [[A drop-in replacement buttstock for AR-15/M16 carbines by Magpul Original Equipment. Uses mil-spec sized receiver extension tubes. Frame profile avoids snagging and shields the release latch to prevent accidental activation, includes a standard 0.30" thick rubber butt-pad to prevent slippage even with body armor or modular gear. Black version.]]
+ATT.Icon = Material("entities/eft_attachments/stocks/ctr.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_magpul_ctr_carbine.mdl"
+
+ATT.HasStock = true
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar_stock"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+ATT.Folder = "Magpul"
+
+ATT.AdvancedCamoSupport = true
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 10,
+    recoilModifier = -21,
+    weight = 0.226,
+}))
+
+
+-- EFT ID: 5d135e83d7ad1a21b83f42d8
+ARC9.LoadAttachment(ATT, "eft_ar_stock_ctr")
+
+
+///////////////////////////////////////      eft_ar_stock_ctrf
+
+
+ATT = {}
+
+ATT.PrintName = "Magpul CTR Carbine stock (Flat Dark Earth)"
+ATT.CompactName = "CTR"
+ATT.Description = [[A drop-in replacement buttstock for AR-15/M16 carbines by Magpul Original Equipment. Uses mil-spec sized receiver extension tubes. Frame profile avoids snagging and shields the release latch to prevent accidental activation, includes a standard 0.30" thick rubber butt-pad to prevent slippage even with body armor or modular gear. Flat Dark Earth version.]]
+ATT.Icon = Material("entities/eft_attachments/stocks/ctrf.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_magpul_ctr_carbine.mdl"
+ATT.ModelSkin = 1
+
+ATT.HasStock = true
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar_stock"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+ATT.Folder = "Magpul"
+
+ATT.AdvancedCamoSupport = true
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 10,
+    recoilModifier = -21,
+    weight = 0.226,
+}))
+
+
+-- EFT ID: 5d135ecbd7ad1a21c176542e
+ARC9.LoadAttachment(ATT, "eft_ar_stock_ctrf")
+
+
+///////////////////////////////////////      eft_ar_stock_ds150
+
+
+ATT = {}
+
+ATT.PrintName = "KRISS Defiance DS150 stock (Black)"
+ATT.CompactName = "DS150"
+ATT.Description = [[A drop-in replacement buttstock for AR-15/M16 carbines. It uses mil-spec sized receiver extension tubes. The frame profile avoids snagging and shields the release latch, preventing accidental activation. It includes a standard 0.30" thick rubber butt-pad to prevent slippage even with body armor or modular gear. Black version.]]
+ATT.Icon = Material("entities/eft_attachments/stocks/ds150.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_kriss_defiance_ds150.mdl"
+
+ATT.HasStock = true
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar_stock"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 10,
+    recoilModifier = -21.5,
+    weight = 0.4,
+}))
+
+
+-- EFT ID: 5fbbaa86f9986c4cff3fe5f6
+ARC9.LoadAttachment(ATT, "eft_ar_stock_ds150")
+
+
+///////////////////////////////////////      eft_ar_stock_ds150f
+
+
+ATT = {}
+
+ATT.PrintName = "KRISS Defiance DS150 stock (Flat Dark Earth)"
+ATT.CompactName = "DS150"
+ATT.Description = [[A drop-in replacement buttstock for AR-15/M16 carbines. It uses mil-spec sized receiver extension tubes. The frame profile avoids snagging and shields the release latch, preventing accidental activation. It includes a standard 0.30" thick rubber butt-pad to prevent slippage even with body armor or modular gear. Flat Dark Earth version.]]
+ATT.Icon = Material("entities/eft_attachments/stocks/ds150f.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_kriss_defiance_ds150.mdl"
+ATT.ModelSkin = 1
+
+ATT.HasStock = true
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar_stock"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 10,
+    recoilModifier = -21.5,
+    weight = 0.4,
+}))
+
+
+-- EFT ID: 5fce16961f152d4312622bc9
+ARC9.LoadAttachment(ATT, "eft_ar_stock_ds150f")
+
+
+///////////////////////////////////////      eft_ar_stock_e1
+
+
+ATT = {}
+
+ATT.PrintName = "AR-15 HK E1 buttstock"
+ATT.CompactName = "HK E1"
+ATT.Description = [[The E1 telescopic stock is designed as a replacement for standard HK416 stocks. Made of high grade nylon fiber with a twist off rubber butt pad and ambidextrous sling attachment point. Can be installed on any AR-15 weapon system. Manufactured by Heckler & Koch.]]
+ATT.Icon = Material("entities/eft_attachments/stocks/e1.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_hk_e1.mdl"
+
+ATT.HasStock = true
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar_stock"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 6,
+    recoilModifier = -22,
+    weight = 0.39,
+}))
+
+
+-- EFT ID: 5c87a07c2e2216001219d4a2
+ARC9.LoadAttachment(ATT, "eft_ar_stock_e1")
+
+
+///////////////////////////////////////      eft_ar_stock_emod
+
+
+ATT = {}
+
+ATT.PrintName = "Vltor EMOD stock"
+ATT.CompactName = "EMOD"
+ATT.Description = [[The EMOD buttstock designed for AR-15 weapon systems. Manufactured by Vltor.]]
+ATT.Icon = Material("entities/eft_attachments/stocks/emod.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_vltor_emod.mdl"
+
+ATT.HasStock = true
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar_stock"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 7,
+    recoilModifier = -21.5,
+    weight = 0.39,
+}))
+
+
+-- EFT ID: 5b39f8db5acfc40016387a1b
+ARC9.LoadAttachment(ATT, "eft_ar_stock_emod")
+
+
+
+
+///////////////////////////////////////      eft_ar_stock_glr16s
+
+
+ATT = {}
+
+ATT.PrintName = "FAB Defense GLR-16-S stock"
+ATT.CompactName = "GLR-16-S"
+ATT.Description = [[The GLR-16-S telescoping buttstock. Manufactured by FAB Defense.]]
+ATT.Icon = Material("entities/eft_attachments/stocks/glr.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_fab_defense_glr_16_s.mdl"
+
+ATT.HasStock = true
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar_stock"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+ATT.Folder = "FAB"
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 6,
+    recoilModifier = -21.5,
+    weight = 0.276,
+}))
+
+
+-- EFT ID: 5bfe86df0db834001b734685
+ARC9.LoadAttachment(ATT, "eft_ar_stock_glr16s")
+
+
+///////////////////////////////////////      eft_ar_stock_glshock
+
+
+ATT = {}
+
+ATT.PrintName = "FAB Defense GL-SHOCK buttstock"
+ATT.CompactName = "GL SHOCK"
+ATT.Description = [[A telescopic stock with an adjustable cheek rest kit, manufactured by FAB Defense.]]
+ATT.Icon = Material("entities/eft_attachments/stocks/glshock.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_fab_defense_gl_shock.mdl"
+
+ATT.HasStock = true
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar_stock"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+ATT.Folder = "FAB"
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 4,
+    recoilModifier = -22.5,
+    weight = 0.308,
+}))
+
+
+-- EFT ID: 5a9eb32da2750c00171b3f9c
+ARC9.LoadAttachment(ATT, "eft_ar_stock_glshock")
+
+
+///////////////////////////////////////      eft_ar_stock_heracqr
+
+
+ATT = {}
+
+ATT.PrintName = "AR-15 Hera Arms CQR pistol grip/buttstock"
+ATT.CompactName = "CQR"
+ATT.Description = [[Designed for the cilvilian market as well as for military use, to create one of the most rigid and compact Rifle Systems based on the widely available AR-15 platform. The CQR Riflestock is an easy to install replacement buttstock for Mil-Spec AR-15 Rifles using a Mil-Spec Carbine buffer tube.]]
+
+ATT.Icon = Material("entities/eft_attachments/stocks/cqrsock.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/pistolgrip_ar15_hera_arms_cqr.mdl"
+ATT.ActivateElements = {"pgrip_stock"}
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar15_pgripstock"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.HasGrip = true
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 15,
+    recoilModifier = -23,
+    weight = 0.499,
+}))
+
+
+-- EFT ID: 5a33e75ac4a2826c6e06d759
+ARC9.LoadAttachment(ATT, "eft_ar_stock_heracqr")
+
+
+///////////////////////////////////////      eft_ar_stock_magpulmoe
+
+
+ATT = {}
+
+ATT.PrintName = "Magpul MOE Carbine stock (Black)"
+ATT.CompactName = "MOE"
+ATT.Description = [[A drop-in replacement buttstock for AR-15/M16 carbines by Magpul Original Equipment. Uses mil-spec sized receiver extension tubes. Frame profile avoids snagging and shields the release latch to prevent accidental activation, includes a standard 0.30" thick rubber butt-pad to prevent slippage even with body armor or modular gear. Black version.]]
+ATT.Icon = Material("entities/eft_attachments/stocks/moe.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_magpul_moe_carbine.mdl"
+ATT.ModelSkin = 0
+
+ATT.HasStock = true
+
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar_stock"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+ATT.Folder = "Magpul"
+
+ATT.Attachments = {
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_stock"),
+        Category = "eft_ar_buttpad",
+        Pos = Vector(4.2, 0, 1.12),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+}
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 8,
+    recoilModifier = -21,
+    weight = 0.226,
+}))
+
+
+-- EFT ID: 56eabf3bd2720b75698b4569
+ARC9.LoadAttachment(ATT, "eft_ar_stock_magpulmoe")
+
+
+///////////////////////////////////////      eft_ar_stock_magpulmoe_fde
+
+
+ATT = {}
+
+ATT.PrintName = "Magpul MOE Carbine stock (Flat Dark Earth)"
+ATT.CompactName = "MOE"
+ATT.Description = [[A drop-in replacement buttstock for AR-15/M16 carbines by Magpul Original Equipment. Uses mil-spec sized receiver extension tubes. Frame profile avoids snagging and shields the release latch to prevent accidental activation, includes a standard 0.30" thick rubber butt-pad to prevent slippage even with body armor or modular gear. Flat Dark Earth version.]]
+ATT.Icon = Material("entities/eft_attachments/stocks/moef.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_magpul_moe_carbine.mdl"
+ATT.ModelSkin = 1
+
+ATT.HasStock = true
+
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar_stock"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+ATT.Folder = "Magpul"
+
+ATT.Attachments = {
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_stock"),
+        Category = "eft_ar_buttpad",
+        Pos = Vector(4.2, 0, 1.12),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+}
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 8,
+    recoilModifier = -21,
+    weight = 0.226,
+}))
+
+
+-- EFT ID: 58d2946386f774496974c37e
+ARC9.LoadAttachment(ATT, "eft_ar_stock_magpulmoe_fde")
+
+
+///////////////////////////////////////      eft_ar_stock_magpulmoe_fg
+
+
+ATT = {}
+
+ATT.PrintName = "Magpul MOE Carbine stock (Foliage Green)"
+ATT.CompactName = "MOE"
+ATT.Description = [[A drop-in replacement buttstock for AR-15/M16 carbines by Magpul Original Equipment. Uses mil-spec sized receiver extension tubes. Frame profile avoids snagging and shields the release latch to prevent accidental activation, includes a standard 0.30" thick rubber butt-pad to prevent slippage even with body armor or modular gear. Foliage Green version.]]
+ATT.Icon = Material("entities/eft_attachments/stocks/moefg.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_magpul_moe_carbine.mdl"
+ATT.ModelSkin = 2
+
+ATT.HasStock = true
+
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar_stock"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+ATT.Folder = "Magpul"
+
+ATT.Attachments = {
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_stock"),
+        Category = "eft_ar_buttpad",
+        Pos = Vector(4.2, 0, 1.12),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+}
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 8,
+    recoilModifier = -21,
+    weight = 0.226,
+}))
+
+
+-- EFT ID: 58d2946c86f7744e271174b5
+ARC9.LoadAttachment(ATT, "eft_ar_stock_magpulmoe_fg")
+
+
+///////////////////////////////////////      eft_ar_stock_magpulmoe_od
+
+
+ATT = {}
+
+ATT.PrintName = "Magpul MOE Carbine stock (Olive Drab)"
+ATT.CompactName = "MOE"
+ATT.Description = [[A drop-in replacement buttstock for AR-15/M16 carbines by Magpul Original Equipment. Uses mil-spec sized receiver extension tubes. Frame profile avoids snagging and shields the release latch to prevent accidental activation, includes a standard 0.30" thick rubber butt-pad to prevent slippage even with body armor or modular gear. Olive Drab version.]]
+ATT.Icon = Material("entities/eft_attachments/stocks/moeod.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_magpul_moe_carbine.mdl"
+ATT.ModelSkin = 3
+
+ATT.HasStock = true
+
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar_stock"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+ATT.Folder = "Magpul"
+
+ATT.Attachments = {
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_stock"),
+        Category = "eft_ar_buttpad",
+        Pos = Vector(4.2, 0, 1.12),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+}
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 8,
+    recoilModifier = -21,
+    weight = 0.226,
+}))
+
+
+-- EFT ID: 58d2947686f774485c6a1ee5
+ARC9.LoadAttachment(ATT, "eft_ar_stock_magpulmoe_od")
+
+
+///////////////////////////////////////      eft_ar_stock_magpulmoe_sg
+
+
+ATT = {}
+
+ATT.PrintName = "Magpul MOE Carbine stock (Stealth Gray)"
+ATT.CompactName = "MOE"
+ATT.Description = [[A drop-in replacement buttstock for AR-15/M16 carbines by Magpul Original Equipment. Uses mil-spec sized receiver extension tubes. Frame profile avoids snagging and shields the release latch to prevent accidental activation, includes a standard 0.30" thick rubber butt-pad to prevent slippage even with body armor or modular gear. Stealth Gray version.]]
+ATT.Icon = Material("entities/eft_attachments/stocks/moesg.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_magpul_moe_carbine.mdl"
+ATT.ModelSkin = 4
+
+ATT.HasStock = true
+
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar_stock"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+ATT.Folder = "Magpul"
+
+ATT.Attachments = {
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_stock"),
+        Category = "eft_ar_buttpad",
+        Pos = Vector(4.2, 0, 1.12),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+}
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 8,
+    recoilModifier = -21,
+    weight = 0.226,
+}))
+
+
+-- EFT ID: 58d2947e86f77447aa070d53
+ARC9.LoadAttachment(ATT, "eft_ar_stock_magpulmoe_sg")
+
+
+
+
+
+///////////////////////////////////////      eft_ar_stock_prsgen3
+
+
+ATT = {}
+
+ATT.PrintName = "Magpul PRS GEN3 stock (Black)"
+ATT.CompactName = "PRS GEN3"
+ATT.Description = [[The Magpul Precision Rifle/Sniper GEN3 is a field precision stock for AR-15/M16 and AR-10/SR-25 platforms. Featuring tool-less length of pull and cheek piece height adjustments via aluminum detent knobs, the PRS GEN3 stock provides a stable interface intended for semi-automatic sniper or varmint rifles. Black version.]]
+ATT.Icon = Material("entities/eft_attachments/stocks/gen3.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_magpul_prs_gen3.mdl"
+
+ATT.HasStock = true
+
+
+ATT.SortOrder = 0
+ATT.Category = {"eft_ar_stock", "eft_ar_stock_a2"}
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+ATT.Folder = "Magpul"
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 1,
+    recoilModifier = -24,
+    accuracyModifier = 5,
+    weight = 0.78,
+}))
+
+
+-- EFT ID: 5d44069ca4b9361ebd26fc37
+ARC9.LoadAttachment(ATT, "eft_ar_stock_prsgen3")
+
+
+///////////////////////////////////////      eft_ar_stock_prsgen3g
+
+
+ATT = {}
+
+ATT.PrintName = "Magpul PRS GEN3 stock (Grey)"
+ATT.CompactName = "PRS GEN3"
+ATT.Description = [[The Magpul Precision Rifle/Sniper GEN3 is a field precision stock for AR-15/M16 and AR-10/SR-25 platforms. Featuring tool-less length of pull and cheek piece height adjustments via aluminum detent knobs, the PRS GEN3 stock provides a stable interface intended for semi-automatic sniper or varmint rifles. Grey version.]]
+ATT.Icon = Material("entities/eft_attachments/stocks/gen3g.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_magpul_prs_gen3.mdl"
+ATT.ModelSkin = 1
+
+ATT.HasStock = true
+
+
+ATT.SortOrder = 0
+ATT.Category = {"eft_ar_stock", "eft_ar_stock_a2"}
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+ATT.Folder = "Magpul"
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 1,
+    recoilModifier = -24,
+    accuracyModifier = 5,
+    weight = 0.78,
+}))
+
+
+-- EFT ID: 5d4406a8a4b9361e4f6eb8b7
+ARC9.LoadAttachment(ATT, "eft_ar_stock_prsgen3g")
+
+
+///////////////////////////////////////      eft_ar_stock_ripstop
+
+
+ATT = {}
+
+ATT.PrintName = "CMMG RipStock buttstock"
+ATT.CompactName = "RipStock"
+ATT.Description = [[The RipStock minimalistic telescopic buttstock, engineered for lightning-fast deployment to the users personal setting. Manufactured by CMMG.]]
+ATT.Icon = Material("entities/eft_attachments/stocks/cmmg.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_cmmg_ripstock_micro.mdl"
+
+ATT.HasStock = true
+
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar_stock"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.AdvancedCamoSupport = true
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 15,
+    recoilModifier = -19,
+    weight = 0.28,
+}))
+
+
+-- EFT ID: 606587d11246154cad35d635
+ARC9.LoadAttachment(ATT, "eft_ar_stock_ripstop")
+
+
+///////////////////////////////////////      eft_ar_stock_sba3
+
+
+ATT = {}
+
+ATT.PrintName = "SB Tactical SBA3 brace"
+ATT.CompactName = "SBA3"
+ATT.Description = [[The SBA3 Pistol Stabilizing Brace, designed and manufactured by SB Tactical. Installed on AR-15 weapon systems.]]
+ATT.Icon = Material("entities/eft_attachments/stocks/sba3.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_sb_tactical_sba3_lod0.mdl"
+
+ATT.HasStock = true
+
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar_stock"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 8,
+    recoilModifier = -18,
+    weight = 0.191,
+}))
+
+
+-- EFT ID: 628a85ee6b1d481ff772e9d5
+ARC9.LoadAttachment(ATT, "eft_ar_stock_sba3")
+
+
+///////////////////////////////////////      eft_ar_stock_slim
+
+
+ATT = {}
+
+ATT.PrintName = "AR-15 HK Slim Line buttstock"
+ATT.CompactName = "Slim Line"
+ATT.Description = [[A telescoping stock from the Slim Line series, designed and manufactured by Heckler & Koch.]]
+ATT.Icon = Material("entities/eft_attachments/stocks/slim.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_hk_slim_line.mdl"
+
+ATT.HasStock = true
+
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar_stock"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.AdvancedCamoSupport = true
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 10,
+    recoilModifier = -21.5,
+    weight = 0.695,
+}))
+
+
+-- EFT ID: 5bb20e70d4351e0035629f8f
+ARC9.LoadAttachment(ATT, "eft_ar_stock_slim")
+
+
+
+
+///////////////////////////////////////      eft_ar_stock_vipermod1
+
+
+ATT = {}
+
+ATT.PrintName = "Strike Industries Viper Mod 1 stock"
+ATT.CompactName = "Viper Mod.1"
+ATT.Description = [[The Viper Mod 1 telescopic stock designed and produced by Strike Industries. The stock is made for the AR-15 platforms and will fit on all Mil-Spec dimension receiver extension tubes. The stock has been redesigned to achieve a lighter and a more compact design.]]
+ATT.Icon = Material("entities/eft_attachments/stocks/viper.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_strike_industries_viper_mod_1.mdl"
+
+ATT.HasStock = true
+
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar_stock"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 12,
+    recoilModifier = -20,
+    weight = 0.188,
+}))
+
+
+-- EFT ID: 5c793fde2e221601da358614
+ARC9.LoadAttachment(ATT, "eft_ar_stock_vipermod1")
+
+///////////////////////////////////////      eft_ar_stock_magpul_slk
+
+
+ATT = {}
+
+ATT.PrintName = "AR-15 Magpul MOE SL-K buttstock (Coyote Tan)"
+ATT.CompactName = "MOE SL-K"
+ATT.Description = [[A quick-detach buttstock for AR-15/M16 rifles with mil-spec buffer tube. Manufactured by Magpul Original Equipment. Coyote Tan version.]]
+ATT.Icon = Material("entities/eft_attachments/stocks/slk.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_magpul_moe_sl_k.mdl"
+
+ATT.HasStock = true
+
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar_stock"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+ATT.Folder = "Magpul"
+ATT.ModelOffset = Vector(-0.5, 0, 0)
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 8,
+    recoilModifier = -22,
+    weight = 0.226,
+}))
+
+
+-- EFT ID: 6529370c405a5f51dd023db8
+ARC9.LoadAttachment(ATT, "eft_ar_stock_magpul_slk")
+
+
+///////////////////////////////////////      eft_ar_stock_ddecb
+
+
+ATT = {}
+
+ATT.PrintName = "AR-15 Daniel Defense Enhanced Collapsible Buttstock (Black)"
+ATT.CompactName = "DD ECB"
+ATT.Description = [[A quick detach buttstock for AR-15 carbines. Manufactured by Daniel Defense. Black version.]]
+ATT.Icon = Material("entities/eft_attachments/stocks/dde.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_dd_enhanced.mdl"
+-- ATT.ModelSkin = 4
+
+ATT.HasStock = true
+
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar_stock"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.Attachments = {
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_stock"),
+        Category = "eft_dd_buttpad",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(-4.2, 0, -1),
+    },
+}
+
+ATT.AdvancedCamoSupport = true
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 8,
+    recoilModifier = -21,
+    weight = 0.227,
+}))
+
+
+-- EFT ID: 6516e91f609aaf354b34b3e2
+ARC9.LoadAttachment(ATT, "eft_ar_stock_ddecb")
+
+///////////////////////////////////////      eft_ar_stock_ddecb_f
+
+
+ATT = {}
+
+ATT.PrintName = "AR-15 Daniel Defense Enhanced Collapsible Buttstock (FDE)"
+ATT.CompactName = "DD ECB (FDE)"
+ATT.Description = [[A quick detach buttstock for AR-15 carbines. Manufactured by Daniel Defense. Flat Dark Earth version.]]
+ATT.Icon = Material("entities/eft_attachments/stocks/ddef.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_dd_enhanced.mdl"
+ATT.ModelSkin = 1
+
+ATT.HasStock = true
+
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar_stock"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.Attachments = {
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_stock"),
+        Category = "eft_dd_buttpad",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(-4.2, 0, -1),
+    },
+}
+
+ATT.AdvancedCamoSupport = true
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 8,
+    recoilModifier = -21,
+    weight = 0.227,
+}))
+
+
+-- EFT ID: 6516e971a3d4c6497930b450
+ARC9.LoadAttachment(ATT, "eft_ar_stock_ddecb_f")
+
+///////////////////////////////////////      eft_dd_buttpad_14
+
+ATT = {}
+
+ATT.PrintName = "Daniel Defense TCS 12mm Buttpad"
+ATT.CompactName = "TCS 12"
+ATT.Description = [[The 12mm Thicker Convex Shape Buttpad for Daniel Defense buttstocks. Manufactured by Daniel Defense.]]
+ATT.Icon = Material("entities/eft_attachments/stocks/ddbutt12.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_base_dd_buttpad_12mm.mdl"
+
+-- ATT.HasStock = true
+
+
+ATT.SortOrder = 0
+ATT.Category = "eft_dd_buttpad"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 2,
+    weight = 0.055,
+}))
+
+
+-- EFT ID: 6516e9bc5901745209404287
+ARC9.LoadAttachment(ATT, "eft_dd_buttpad_14")
+
+///////////////////////////////////////      eft_dd_buttpad_20
+
+ATT = {}
+
+ATT.PrintName = "Daniel Defense TCS 20mm Buttpad"
+ATT.CompactName = "TCS 20"
+ATT.Description = [[The 20mm Thicker Convex Shape Buttpad for Daniel Defense buttstocks. Manufactured by Daniel Defense.]]
+ATT.Icon = Material("entities/eft_attachments/stocks/ddbutt20.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_base_dd_buttpad_20mm.mdl"
+
+-- ATT.HasStock = true
+
+
+ATT.SortOrder = 0
+ATT.Category = "eft_dd_buttpad"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 0.5,
+    recoilModifier = -0.5,
+    weight = 0.063,
+}))
+
+
+-- EFT ID: 6516e9d7e239bd0c487e3766
+ARC9.LoadAttachment(ATT, "eft_dd_buttpad_20")
+
+
+
+
+
+///////////////////////////////////////      eft_ar_stock_n1
+
+
+ATT = {}
+
+ATT.PrintName = "AR-15 Colt N1 Stock"
+ATT.CompactName = "N1"
+ATT.Icon = Material("entities/eft_ar15_attachments/68a63c7322b1e0bd360afe65.png", "mips smooth")
+ATT.Description = "A telescopic buttstock, second generation of the classic stock for CAR-15. Manufactured by Colt."
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_colt_n1.mdl"
+
+ATT.HasStock = true
+
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar_stock"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.Attachments = {
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_stock"),
+        Category = "eft_n1_buttpad",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(-4.5, 0, 0),
+    },
+}
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 5,
+    recoilModifier = -21,
+    weight = 0.126,
+}))
+
+
+-- EFT ID: 68a63c7322b1e0bd360afe65
+ARC9.LoadAttachment(ATT, "eft_ar_stock_n1")
+
+///////////////////////////////////////      eft_ar_stock_n1_buttpad
+
+
+ATT = {}
+
+ATT.PrintName = "AR-15 John Masen Recoil Pad"
+ATT.CompactName = "N1 RP"
+ATT.Icon = Material("entities/eft_ar15_attachments/68a63c998e1fe612970728fe.png", "mips smooth")
+ATT.Description = "A rubber buttpad for the Colt N1 series stocks, improves ergonomics and cushions felt recoil. Manufactured by John Masen Co."
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_john_masen_n1_recoil_pad.mdl"
+
+-- ATT.HasStock = true
+
+
+ATT.SortOrder = 0
+ATT.Category = "eft_n1_buttpad"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 2,
+    recoilModifier = -1,
+    weight = 0.07,
+}))
+
+
+-- EFT ID: 68a63c998e1fe612970728fe
+ARC9.LoadAttachment(ATT, "eft_ar_stock_n1_buttpad")
+
+///////////////////////////////////////      eft_ar_stock_magpul_acs
+
+
+ATT = {}
+
+ATT.PrintName = "AR-15 Magpul ACS Carbine stock (Black)"
+ATT.CompactName = "ACS"
+ATT.Icon = Material("entities/eft_ar15_attachments/68bb25270e48a3afd7071216.png", "mips smooth")
+ATT.Description = "A quick-detach buttstock for AR-15/M16 carbines with a mil-spec telescoping tube, manufactured by Magpul Original Equipment. The frame design prevents binding and accidental release of the locking lever, while the standard-thickness rubber buttpad reduces slipping on armor or gear. Black version."
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_magpul_acs_carbine.mdl"
+
+ATT.HasStock = true
+
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar_stock"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+ATT.Folder = "Magpul"
+ATT.ModelOffset = Vector(-0.5, 0, 0)
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 9,
+    recoilModifier = -22,
+    weight = 0.327,
+}))
+
+
+-- EFT ID: 68bb25270e48a3afd7071216
+ARC9.LoadAttachment(ATT, "eft_ar_stock_magpul_acs")
+
+///////////////////////////////////////      eft_ar_stock_magpul_acs_fde
+
+
+ATT = {}
+
+ATT.PrintName = "AR-15 Magpul ACS Carbine stock (FDE)"
+ATT.CompactName = "ACS"
+ATT.Icon = Material("entities/eft_ar15_attachments/68bb2a3831ee03fbc00931e6.png", "mips smooth")
+ATT.Description = "A quick-detach buttstock for AR-15/M16 carbines with a mil-spec telescoping tube, manufactured by Magpul Original Equipment. The frame design prevents binding and accidental release of the locking lever, while the standard-thickness rubber buttpad reduces slipping on armor or gear. Flat Dark Earth version."
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_magpul_acs_carbine.mdl"
+ATT.ModelSkin = 1
+
+ATT.HasStock = true
+
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar_stock"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+ATT.Folder = "Magpul"
+ATT.ModelOffset = Vector(-0.5, 0, 0)
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 9,
+    recoilModifier = -22,
+    weight = 0.327,
+}))
+
+
+-- EFT ID: 68bb2a3831ee03fbc00931e6
+ARC9.LoadAttachment(ATT, "eft_ar_stock_magpul_acs_fde")
+
+///////////////////////////////////////      eft_ar_stock_7
+
+
+ATT = {}
+
+ATT.PrintName = "AR-15 Colt M16A1 Type 7 stock"
+ATT.CompactName = "Type 7"
+ATT.Icon = Material("entities/eft_ar15_attachments/68a63bc422b1e0bd360afe61.png", "mips smooth")
+ATT.Description = "A standard-issue buttstock for the early-issue M16A1 assault rifles, compatible with AR-15 and AR-10 platforms."
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_colt_m16a1_type_7.mdl"
+
+ATT.HasStock = true
+
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar_stock_a2"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 4,
+    recoilModifier = -22,
+    weight = 0.48,
+}))
+
+
+-- EFT ID: 68a63bc422b1e0bd360afe61
+ARC9.LoadAttachment(ATT, "eft_ar_stock_7")
+
+///////////////////////////////////////      eft_ar_stock_a2
+
+ATT = {}
+
+ATT.PrintName = "AR-15 Colt A2 stock"
+ATT.CompactName = "A2"
+ATT.Icon = Material("entities/eft_ar15_attachments/68a63c1fc92ee33ffa01bf5a.png", "mips smooth")
+ATT.Description = "The A2 type buttstock for the AR-15. Standard-issue for M16A2 assault rifles. Manufactured by Colt."
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_colt_a2.mdl"
+
+ATT.HasStock = true
+
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar_stock_a2"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 2,
+    recoilModifier = -23,
+    weight = 0.42,
+}))
+
+
+-- EFT ID: 68a63c1fc92ee33ffa01bf5a
+ARC9.LoadAttachment(ATT, "eft_ar_stock_a2")
+
+
+
+///////////////////////////////////////      eft_ar_stock_ravage_blk
+
+
+ATT = {}
+
+ATT.PrintName = "AR-15 Lead Star Arms Ravage stock"
+ATT.CompactName = "Ravage"
+ATT.Icon = Material("entities/eft_attachments/ravageb.png", "mips smooth")
+ATT.Description = "A lightweight buttstock for AR patter weapons. Manufactured by Lead Star Arms."
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_lead_star_arms_ravage.mdl"
+
+ATT.HasStock = true
+
+ATT.SortOrder = 0
+ATT.Category = {"eft_ar_stock"}
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+ATT.ModelOffset = Vector(-4.3, 0, 1)
+
+ATT.AdvancedCamoSupport = true
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 19,
+    recoilModifier = -19,
+    weight = 0.17,
+}))
+-- EFT ID: 6984b82c5aab442620032fe8
+ARC9.LoadAttachment(ATT, "eft_ar_stock_ravage_blk")
+
+///////////////////////////////////////      eft_ar_stock_ravage_red
+
+
+ATT = {}
+
+ATT.PrintName = "AR-15 Lead Star Arms Ravage stock (Red)"
+ATT.CompactName = "Ravage"
+ATT.Icon = Material("entities/eft_attachments/ravager.png", "mips smooth")
+ATT.Description = "A lightweight buttstock for AR patter weapons. Manufactured by Lead Star Arms. Red version."
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_lead_star_arms_ravage.mdl"
+ATT.ModelSkin = 1
+ATT.HasStock = true
+
+ATT.SortOrder = 0
+ATT.Category = {"eft_ar_stock"}
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+ATT.ModelOffset = Vector(-4.3, 0, 1)
+
+
+ATT.AdvancedCamoSupport = true
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 19,
+    recoilModifier = -19,
+    weight = 0.17,
+}))
+-- EFT ID: 6985ec9fc848f05f4600f6b9
+ARC9.LoadAttachment(ATT, "eft_ar_stock_ravage_red")
+
+///////////////////////////////////////      eft_ar_stock_ravage_ylw
+
+
+ATT = {}
+
+ATT.PrintName = "AR-15 Lead Star Arms Ravage stock (Yellow)"
+ATT.CompactName = "Ravage"
+ATT.Icon = Material("entities/eft_attachments/ravagey.png", "mips smooth")
+ATT.Description = "A lightweight buttstock for AR patter weapons. Manufactured by Lead Star Arms. Yellow version."
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_lead_star_arms_ravage.mdl"
+ATT.ModelSkin = 2
+ATT.HasStock = true
+
+ATT.SortOrder = 0
+ATT.Category = {"eft_ar_stock"}
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+ATT.ModelOffset = Vector(-4.3, 0, 1)
+
+ATT.AdvancedCamoSupport = true
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 19,
+    recoilModifier = -19,
+    weight = 0.17,
+}))
+-- EFT ID: 6985eca7de77dd8dd50025ba
+ARC9.LoadAttachment(ATT, "eft_ar_stock_ravage_ylw")
+
+
+///////////////////////////////////////      eft_ar_stock_ums_blk
+
+
+ATT = {}
+
+ATT.PrintName = "AR-15 Phase5 Universal Mini Stock"
+ATT.CompactName = "UMS"
+ATT.Icon = Material("entities/eft_attachments/umsb.png", "mips smooth")
+ATT.Description = "A minimalistic buttstock manufactured by Phase5."
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_phase5_ums.mdl"
+
+ATT.HasStock = true
+
+ATT.SortOrder = 0
+ATT.Category = {"eft_hexone_stock", "eft_ar_stock"}
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+ATT.ModelOffset = Vector(-4, 0, 1)
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 20,
+    recoilModifier = -18.5,
+    weight = 0.17,
+}))
+-- EFT ID: 698b338649b46ae2d0092e82
+ARC9.LoadAttachment(ATT, "eft_ar_stock_ums_blk")
+
+
+///////////////////////////////////////      eft_ar_stock_ums_red
+
+
+ATT = {}
+
+ATT.PrintName = "AR-15 Phase5 Universal Mini Stock (Red)"
+ATT.CompactName = "UMS"
+ATT.Icon = Material("entities/eft_attachments/umsr.png", "mips smooth")
+ATT.Description = "A minimalistic buttstock manufactured by Phase5. Red version."
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_phase5_ums.mdl"
+ATT.ModelSkin = 1
+
+ATT.HasStock = true
+
+ATT.SortOrder = 0
+ATT.Category = {"eft_hexone_stock", "eft_ar_stock"}
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+ATT.ModelOffset = Vector(-4, 0, 1)
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 20,
+    recoilModifier = -18.5,
+    weight = 0.17,
+}))
+-- EFT ID: 698b358b49b46ae2d0092e86
+ARC9.LoadAttachment(ATT, "eft_ar_stock_ums_red")
+
+
+///////////////////////////////////////      eft_ar_stock_ums_ylw
+
+
+ATT = {}
+
+ATT.PrintName = "AR-15 Phase5 Universal Mini Stock (Yellow)"
+ATT.CompactName = "UMS"
+ATT.Icon = Material("entities/eft_attachments/umsy.png", "mips smooth")
+ATT.Description = "A minimalistic buttstock manufactured by Phase5. Yellow version."
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_phase5_ums.mdl"
+ATT.ModelSkin = 2
+
+ATT.HasStock = true
+
+ATT.SortOrder = 0
+ATT.Category = {"eft_hexone_stock", "eft_ar_stock"}
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+ATT.ModelOffset = Vector(-4, 0, 1)
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 20,
+    recoilModifier = -18.5,
+    weight = 0.17,
+}))
+-- EFT ID: 698b3592e700c6d632003753
+ARC9.LoadAttachment(ATT, "eft_ar_stock_ums_ylw")
+
+
+///////////////////////////////////////      eft_ar_stock_glcore_s
+
+
+ATT = {}
+
+ATT.PrintName = "AR-15 FAB Defense GL-CORE S buttstock (Redline)"
+ATT.CompactName = "GL-CORE S"
+ATT.Icon = Material("entities/eft_attachments/glcs.png", "mips smooth")
+ATT.Description = "A lightweight telescopic stock manufactured by FAB Defense. Features an ergonomically shaped rubber buttpad for quick shouldering and improved weapon handling. Red-colored decorative accents from JP himself give the stock a distinct personality."
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_fab_defense_gl_core_s.mdl"
+
+ATT.HasStock = true
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar_stock"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+ATT.Folder = "FAB"
+
+ATT.AdvancedCamoSupport = true
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 12.5,
+    recoilModifier = -20.5,
+    weight = 0.21,
+}))
+-- EFT ID: 6981f3e2f819a41431029302
+ARC9.LoadAttachment(ATT, "eft_ar_stock_glcore_s")
+
+///////////////////////////////////////      eft_ar_stock_doublestar_buttpad
+
+ATT = {}
+
+ATT.PrintName = "DoubleStar ACE recoil pad"
+ATT.CompactName = "ACE pad"
+ATT.Icon = Material("entities/eft_attachments/5d120a28d7ad1a1c8962e295.png", "mips smooth")
+ATT.Description = "A short 0.5 inch recoil pad for DoubleStar ACE stocks."
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ace_double_star_ace_recoil_pad_05.mdl"
+
+ATT.SortOrder = 0
+ATT.Category = "eft_doublestar_buttpad"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 1,
+    weight = 0.22,
+}))
+-- EFT ID: 5d120a28d7ad1a1c8962e295
+ARC9.LoadAttachment(ATT, "eft_ar_stock_doublestar_buttpad")

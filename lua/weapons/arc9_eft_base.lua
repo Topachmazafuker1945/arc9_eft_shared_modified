@@ -74,16 +74,16 @@ if GetConVar("arc9_eft_nontpik_mode"):GetBool() then
     SWEP.HoldTypeCustomize = "slam"
 end
 
--- SWEP.TPIKLowReadyVector = Vector(-2.0, -5, 1.0)
--- SWEP.TPIKLowReadyAngle = Angle(0, -10, -5)
--- SWEP.TPIKHighReadyVector = Vector(-0, -0, 0)
--- SWEP.TPIKHighReadyAngle = Angle(0, 0, 0)
--- SWEP.TPIKSomalianVector = Vector(-0.0, -0, -6.0)
--- SWEP.TPIKSomalianAngle = Angle(0, -0, -30)
--- SWEP.TPIKCornerVector = Vector(-6.0, -8, 6.0)
--- SWEP.TPIKCornerAngle = Angle(0, -0, 20)
--- SWEP.TPIKLeftShoulderVector = Vector(4, 10, -1) 
--- SWEP.TPIKLeftShoulderAngle = Angle(0, -0, 0)
+SWEP.TPIKLowReadyVector = Vector(-0.0, -0, -3.0)
+SWEP.TPIKLowReadyAngle = Angle(30, -10, -5)
+SWEP.TPIKHighReadyVector = Vector(-5, 0, 10)
+SWEP.TPIKHighReadyAngle = Angle(-30, 0, 0)
+SWEP.TPIKSomalianVector = Vector(-0.0, -0, -6.0)
+SWEP.TPIKSomalianAngle = Angle(0, -0, -30)
+SWEP.TPIKCornerVector = Vector(-6.0, -8, 6.0)
+SWEP.TPIKCornerAngle = Angle(0, -0, 20)
+SWEP.TPIKLeftShoulderVector = Vector(4, 10, -1) 
+SWEP.TPIKLeftShoulderAngle = Angle(0, -0, 0)
 
 SWEP.EFTCombatStances = true
 SWEP.IsPistol = false
@@ -480,68 +480,6 @@ SWEP.Hook_Think = function(self)
     self:Hook_Think_TacReload()
     if self.Hook_Think2 then self:Hook_Think2() end
 end
-
--- --!self:GetProcessedValue("Silencer", true)
--- local fuckthis = 0 -- OVERHEAT GAS EFFECT
--- SWEP.Hook_Think = function(self)
---     if CLIENT then 
---         if fuckthis < CurTime() then
---             fuckthis = CurTime() + 0.3
---             if !self:GetProcessedValue("Overheat", true) then return end
---             local hot = self:GetHeatAmount() / self:GetProcessedValue("HeatCapacity", true)
-            
---             if self:GetProcessedValue("Overheat", true) then
---                 if hot > 0.8 then
---                     local att = self:GetProcessedValue("MuzzleEffectQCA", true)
---                     local vm = LocalPlayer():GetViewModel()
---                     local wep = LocalPlayer():GetActiveWeapon()
-
---                     local heat_low = wep.HeatLowParticle
---                     local heat_med = wep.HeatMedParticle
---                     local heat_huge = wep.HeatHugeParticle
-
---                     local wm = false
---                     if (LocalPlayer():ShouldDrawLocalPlayer() or self.Owner != LocalPlayer()) then
---                         wm = true
---                         att = 1
---                     end
---                     local parent = self
---                     if !wm then parent = vm
---                     -- if !wm then parent = self.MuzzleDeviceVM
---                     else parent = (self.WModel or {})[1] or self end
-
---                     local pcf = CreateParticleSystem(parent, heat_huge, PATTACH_POINT_FOLLOW, att)
---                     --local pcf2 = CreateParticleSystem(parent, "muzzle_heatwave_long", PATTACH_POINT_FOLLOW, att)
-
---                     -- function ActivateEFTPCFs()
-                        
---                     -- end
-                    
---                     if IsValid(self.ActiveAfterShotPCF) then
---                         self.ActiveAfterShotPCF:StopEmission()
---                     end
-
---                     if IsValid(pcf) then
---                         pcf:StartEmission()
-
---                         self.ActiveAfterShotPCF = pcfs
---                         if (muz or parent) != vm then
---                             pcf:SetShouldDraw(false)
---                             table.insert(self.PCFs, pcf)
---                             PrintTable(PCFs)
---                         end
-
---                     end
---                 end
---             end
-            
---         end
---     end
-
-
---     self:Hook_Think_TacReload()
---     if self.Hook_Think2 then self:Hook_Think2() end
--- end
 
 SWEP.CaseEffectQCA = 2
 SWEP.ShellScale = 1

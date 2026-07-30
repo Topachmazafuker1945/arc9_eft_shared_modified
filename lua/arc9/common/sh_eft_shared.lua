@@ -404,7 +404,7 @@ else
         makeeftmagcheck(rnds .. "", rndtype)
     end)
 
-    net.Receive("arc9eftchambercheck", function(len)
+    net.Receive("arc9eftchambercheck", function(len) --govno peredelay potom
         local checktype = net.ReadBool()
         local rnds = net.ReadUInt(9)
         local maxrnds = net.ReadUInt(9)
@@ -522,18 +522,36 @@ ARC9EFT.DeployTimeHook = function(wep, orig)
     return math.max(0.05, orig * 0.5 + ((1 - ergo * 0.01) * 0.25) * ergomult:GetFloat() + weight / 10)
 end
 
---[[local lowreadyvector = Vector(-2.0, -5, 1.0) 
-local highreadyvector = Vector(-0, -0, 0)
-local somalianvector = Vector(-2.0, -5, 1.0)
-local cornervector = Vector(3.0, -5, -2.0)
-local leftshouldervector = Vector(-7.0, -5, 1.0)
+function WeaponSelectorVkluchatel(state)
+    hook.Add('HUDShouldDraw', 'disablewepselector', function(el)
+        if el == 'CHudWeaponSelection' then
+            return state
+        end   
+    end)
+end
 
-local lowreadyangle = Angle(0, -10, -5)
-local highreadyangle = Angle(0, 0, 0)
-local somalianangle = Angle(0, -10, -5)
-local cornerangle = Angle(0, -0, 5)
-local leftshoulderangle = Angle(0, -0, -5)
-]]--
+-- (ply, status, stance)
+function EFTSetReady(ply, status)
+    if not IsValid(ply) then return end
+    local wep = ply:GetActiveWeapon()
+    if not (IsValid(wep) and wep.ARC9 and wep.EFTCombatStances == true) then return end
+    if status == false then
+        wep:SetNW2Bool("EFT_HighReadyStance", false)
+        wep:SetNW2Bool("EFT_LowReadyStance", false)
+        ply:GetNWInt("EFT_OGStatus", 0)
+    end
+end
+
+function EFTSetStance(ply, status)
+    if not IsValid(ply) then return end
+    local wep = ply:GetActiveWeapon()
+    if not (IsValid(wep) and wep.ARC9 and wep.EFTCombatStances == true) then return end
+    if status == false then
+        wep:SetNW2Bool("EFT_InCornerFire", false)
+        wep:SetNW2Bool("EFT_InLeftShoulder", false)
+        wep:SetNW2Bool("EFT_InSomalianStance", false)
+    end
+end
 
 local function ToggleEFTStance(ply, activeVar, printName)
     local targetPly = SERVER and ply or (CLIENT and LocalPlayer())
@@ -564,25 +582,10 @@ local function ToggleEFTStance(ply, activeVar, printName)
                 wep:SetNW2Bool(activeVar, true)
             end
             -- print(printName .. " status: " .. tostring(newState))
-            
-
         end
     end
 end
 
--- (ply, status, stance)
-function EFTSetReady(ply, status)
-    if not IsValid(ply) then return end
-    local wep = ply:GetActiveWeapon()
-    if not (IsValid(wep) and wep.ARC9 and wep.EFTCombatStances == true) then return end
-    -- local out = wep:GetOutOfBreath()
-    -- local weight = wep:GetValue("EFTWeight")
-    if status == false then
-        wep:SetNW2Bool("EFT_HighReadyStance", false)
-        wep:SetNW2Bool("EFT_LowReadyStance", false)
-        ply:GetNWInt("EFT_OGStatus", 0)
-    end
-end
 
 function EFTStanceScroller(ply, cmd)
 	if not IsValid(ply) then return end
@@ -593,7 +596,7 @@ function EFTStanceScroller(ply, cmd)
     local out = wep:GetOutOfBreath()
     local weight = wep:GetValue("EFTWeight")
 
-    if ply:KeyDown(IN_USE) and out == false and weight < 6 then --MR ANALUS
+    if ply:KeyDown(IN_WALK) and out == false and weight < 6 then --MR ANALUS
         WeaponSelectorVkluchatel(false) --МИСТР СФИНКТЕР, IF FALSE THEN HUD TURNS OFF
     
         local wheel = cmd:GetMouseWheel()
@@ -609,14 +612,10 @@ function EFTStanceScroller(ply, cmd)
 
         if OGstatus >= 0.75 then
             highReady = true
-            wep:SetNW2Bool("EFT_InCornerFire", false)
-            wep:SetNW2Bool("EFT_InLeftShoulder", false)
-            wep:SetNW2Bool("EFT_InSomalianStance", false)
+            EFTSetStance(ply, false)
         elseif OGstatus <= -0.75 then
             lowReady = true
-            wep:SetNW2Bool("EFT_InCornerFire", false)
-            wep:SetNW2Bool("EFT_InLeftShoulder", false)
-            wep:SetNW2Bool("EFT_InSomalianStance", false)
+            EFTSetStance(ply, false)
         end
         
         wep:SetNW2Bool("EFT_HighReadyStance", highReady)
@@ -625,14 +624,6 @@ function EFTStanceScroller(ply, cmd)
         ply:SetNWInt("EFT_OGStatus", OGstatus)
         -- print("OGstatus:", OGstatus, "High:", highReady, "Low:", lowReady)
     else return end
-end
-
-local function WeaponSelectorVkluchatel(state)
-    hook.Add('HUDShouldDraw', 'disablewepselector', function(el)
-        if el == 'CHudWeaponSelection' then
-            return state
-        end   
-    end)
 end
 
 hook.Add("StartCommand", "ScrollEFTStance", function(ply, cmd)

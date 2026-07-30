@@ -1,0 +1,746 @@
+local ATT = {}
+
+-- eft_ar_pgrip_colta2
+-- eft_ar_pgrip_diecsfde
+-- eft_ar_pgrip_dlg123
+-- eft_ar_pgrip_hkbgbeav
+-- eft_ar_pgrip_hkbgbeavral
+-- eft_ar_pgrip_hog
+-- eft_ar_pgrip_miad -- moved to essentials
+
+
+
+///////////////////////////////////////      eft_ar_pgrip_f1s1
+
+
+ATT = {}
+
+ATT.PrintName = "AR-15 F1 Firearms Skeletonized Style 1 pistol grip"
+ATT.CompactName = "F1 St1"
+ATT.Description = [[A lightweight ergonomical pistol grip with finger grooves for AR-15 weapon systems, manufactured by F1 Firearms.]]
+ATT.Icon = Material("entities/eft_attachments/pgrips/ar15grips/f1s2.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/pistolgrip_ar15_f1_firearms_st1_skeletonized.mdl"
+
+ATT.HasGrip = true
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar15_pgrip"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 5,
+    recoilModifier = -1.5,
+    weight = 0.08,
+}))
+
+
+-- EFT ID: 6113c3586c780c1e710c90bc
+ARC9.LoadAttachment(ATT, "eft_ar_pgrip_f1s1")
+
+
+///////////////////////////////////////      eft_ar_pgrip_f1s2
+
+
+ATT = {}
+
+ATT.PrintName = "AR-15 F1 Firearms Skeletonized Style 2 pistol grip"
+ATT.CompactName = "F1 St2"
+ATT.Description = [[A lightweight ergonomical pistol grip with finger grooves for AR-15 weapon systems, manufactured by F1 Firearms.]]
+ATT.Icon = Material("entities/eft_attachments/pgrips/ar15grips/f1s2.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/pistolgrip_ar15_f1_firearms_st2_skeletonized.mdl"
+
+ATT.HasGrip = true
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar15_pgrip"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 5,
+    recoilModifier = -1.5,
+    weight = 0.085,
+}))
+
+
+-- EFT ID: 6113cce3d92c473c770200c7
+ARC9.LoadAttachment(ATT, "eft_ar_pgrip_f1s2")
+
+
+///////////////////////////////////////      eft_ar_pgrip_f1s2pc
+
+
+ATT = {}
+
+ATT.PrintName = "AR-15 F1 Firearms Skeletonized Style 2 PC pistol grip"
+ATT.CompactName = "F1 St2 PC"
+ATT.Description = [[A lightweight ergonomical pistol grip with finger grooves for AR-15 weapon systems, manufactured by F1 Firearms. Wrapped with paracord for maximum comfort and minimum hand slip.]]
+ATT.Icon = Material("entities/eft_attachments/pgrips/ar15grips/f1s2pc.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/pistolgrip_ar15_f1_firearms_st2_pc_skeletonized.mdl"
+
+ATT.HasGrip = true
+
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar15_pgrip"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 5,
+    recoilModifier = -1.5,
+    weight = 0.087,
+}))
+
+
+-- EFT ID: 6113cc78d3a39d50044c065a
+ARC9.LoadAttachment(ATT, "eft_ar_pgrip_f1s2pc")
+
+
+///////////////////////////////////////      eft_ar_pgrip_grals
+
+
+ATT = {}
+
+ATT.PrintName = "AR-15 Naroh Arms GRAL-S pistol grip"
+ATT.CompactName = "GRAL-S"
+ATT.Description = [[The GRAL-S polymer pistol grip by Naroh Arms can be installed on any weapon that is compatible with the AR-15 pistol grips.]]
+ATT.Icon = Material("entities/eft_attachments/pgrips/ar15grips/gral.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/pistolgrip_ar15_naroh_arms_gral_s.mdl"
+
+ATT.HasGrip = true
+
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar15_pgrip_m4"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.AdvancedCamoSupport = true
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 5,
+    recoilModifier = -1.5,
+    weight = 0.092,
+}))
+
+
+-- EFT ID: 59db3a1d86f77429e05b4e92
+ARC9.LoadAttachment(ATT, "eft_ar_pgrip_grals")
+
+
+///////////////////////////////////////      eft_ar_pgrip_hexgrip
+
+
+ATT = {}
+
+ATT.PrintName = "AR-15 Tactical Dynamics Hexgrip pistol grip"
+ATT.CompactName = "Hexgrip"
+ATT.Description = [[The Hexgrip ergonomical pistol grip for the AR-15 platform weapon systems, manufactured by Tactical Dynamics.]]
+ATT.Icon = Material("entities/eft_attachments/pgrips/ar15grips/hexgrip.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/pistolgrip_ar15_tactical_dynamics_hexgrip.mdl"
+
+ATT.HasGrip = true
+
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar15_pgrip"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 5,
+    recoilModifier = -1.5,
+    weight = 0.064,
+}))
+
+
+-- EFT ID: 615d8faecabb9b7ad90f4d5d
+ARC9.LoadAttachment(ATT, "eft_ar_pgrip_hexgrip")
+
+
+///////////////////////////////////////      eft_ar_pgrip_hg15
+
+
+ATT = {}
+
+ATT.PrintName = "AR-15 Hera Arms HG-15 pistol grip"
+ATT.CompactName = "HG-15"
+ATT.Description = [[The Hera Arms HG-15 pistol grip can be installed on any weapon compatible with AR-15 grips.]]
+ATT.Icon = Material("entities/eft_attachments/pgrips/ar15grips/hg15.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/pistolgrip_ar15_hera_arms_hg15.mdl"
+
+ATT.HasGrip = true
+
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar15_pgrip_m4"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 5,
+    recoilModifier = -1.5,
+    weight = 0.08,
+}))
+
+
+-- EFT ID: 5cc9bcaed7f00c011c04e179
+ARC9.LoadAttachment(ATT, "eft_ar_pgrip_hg15")
+
+
+///////////////////////////////////////      eft_ar_pgrip_hkbg
+
+
+ATT = {}
+
+ATT.PrintName = "AR-15 HK Battle Grip pistol grip"
+ATT.CompactName = "Battle Grip"
+ATT.Description = [[The HK Battle Grip pistol grip can be installed on any weapon compatible with AR-15 grips.]]
+ATT.Icon = Material("entities/eft_attachments/pgrips/ar15grips/bg.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/pistolgrip_ar15_hk_battle_grip.mdl"
+
+ATT.HasGrip = true
+
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar15_pgrip"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 3,
+    recoilModifier = -1,
+    weight = 0.08,
+}))
+
+
+-- EFT ID: 5bb20e18d4351e00320205d5
+ARC9.LoadAttachment(ATT, "eft_ar_pgrip_hkbg")
+
+
+
+///////////////////////////////////////      eft_ar_pgrip_hkv2
+
+
+ATT = {}
+
+ATT.PrintName = "AR-15 HK V2 pistol grip"
+ATT.CompactName = "HK V2"
+ATT.Description = [[The HK V2 pistol grip can be installed on any weapon compatible with AR-15 grips. Manufactured by Heckler & Koch.]]
+ATT.Icon = Material("entities/eft_attachments/pgrips/ar15grips/hkv2.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/pistolgrip_ar15_hk_grip_v2.mdl"
+
+ATT.HasGrip = true
+
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar15_pgrip_m4"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 3,
+    recoilModifier = -1,
+    weight = 0.08,
+}))
+
+
+-- EFT ID: 5c6d7b3d2e221600114c9b7d
+ARC9.LoadAttachment(ATT, "eft_ar_pgrip_hkv2")
+
+
+
+///////////////////////////////////////      eft_ar_pgrip_mcx
+
+
+ATT = {}
+
+ATT.PrintName = "MCX pistol grip"
+ATT.CompactName = "MCX"
+ATT.Description = [[A polymer pistol grip for MCX assault rifles, manufactured by SIG Sauer.]]
+ATT.Icon = Material("entities/eft_attachments/pgrips/ar15grips/mcx.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/pistolgrip_ar15_sig_mcx_std.mdl"
+
+ATT.HasGrip = true
+
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar15_pgrip_m4"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.AdvancedCamoSupport = true
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 3,
+    weight = 0.08,
+}))
+
+
+-- EFT ID: 5fbcbd6c187fea44d52eda14
+ARC9.LoadAttachment(ATT, "eft_ar_pgrip_mcx")
+
+
+
+
+///////////////////////////////////////      eft_ar_pgrip_moe
+
+
+ATT = {}
+
+ATT.PrintName = "AR-15 Magpul MOE pistol grip (Black)"
+ATT.CompactName = "MOE AR15"
+ATT.Description = [[The polymer Magpul MOE (Magpul Original Equipment) pistol grip can be installed on any weapon compatible with AR-15 pistol grips. Thanks to the ergonomic shape and anti-slip texture, it makes the weapon grip and control more comfortably. The inside of the grip contains free space for spare parts, tools, batteries, and an accessories kit.]]
+ATT.Icon = Material("entities/eft_attachments/pgrips/ar15grips/moe.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/pistolgrip_ar15_magpul_moe.mdl"
+-- ATT.ModelSkin = 0
+
+ATT.HasGrip = true
+
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar15_pgrip_m4"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.AdvancedCamoSupport = true
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 5,
+    recoilModifier = -1.5,
+    weight = 0.05,
+}))
+
+
+-- EFT ID: 55802f5d4bdc2dac148b458f
+ARC9.LoadAttachment(ATT, "eft_ar_pgrip_moe")
+
+
+///////////////////////////////////////      eft_ar_pgrip_moefde
+
+
+ATT = {}
+
+ATT.PrintName = "AR-15 Magpul MOE pistol grip (FDE)"
+ATT.CompactName = "MOE AR15"
+ATT.Description = [[The Magpul MOE (Magpul Original Equipment) polymer pistol grip can be installed on any weapon compatible with AR-15 pistol grips. Thanks to the ergonomic shape and anti-slip texture, it makes weapon grip and control more comfortable. Inside of the grip contains free space for spare parts, tools and accessories kit or batteries.]]
+ATT.Icon = Material("entities/eft_attachments/pgrips/ar15grips/moefde.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/pistolgrip_ar15_magpul_moe.mdl"
+ATT.ModelSkin = 1
+
+ATT.HasGrip = true
+
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar15_pgrip_m4"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.AdvancedCamoSupport = true
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 5,
+    recoilModifier = -1.5,
+    weight = 0.05,
+}))
+
+
+-- EFT ID: 5d15cf3bd7ad1a67e71518b2
+ARC9.LoadAttachment(ATT, "eft_ar_pgrip_moefde")
+
+
+///////////////////////////////////////      eft_ar_pgrip_psg1
+
+
+ATT = {}
+
+ATT.PrintName = "AR-15 HK Ergo PSG-1 style pistol grip"
+ATT.CompactName = "Ergo PSG-1"
+ATT.Description = [[The Ergo PSG-1 style pistol grip can be installed on any weapon compatible with AR-15 grips.]]
+ATT.Icon = Material("entities/eft_attachments/pgrips/ar15grips/psg.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/pistolgrip_ar15_hk_ergo_psg1_style_grip.mdl"
+
+ATT.HasGrip = true
+
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar15_pgrip_m4"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.AdvancedCamoSupport = true
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 5,
+    recoilModifier = -1.5,
+    weight = 0.11,
+}))
+
+
+-- EFT ID: 5d025cc1d7ad1a53845279ef
+ARC9.LoadAttachment(ATT, "eft_ar_pgrip_psg1")
+
+
+///////////////////////////////////////      eft_ar_pgrip_stark
+
+
+ATT = {}
+
+ATT.PrintName = "AR-15 Stark AR Rifle Grip (Black)"
+ATT.CompactName = "Stark AR"
+ATT.Description = [[The AR Rifle Grip polymer pistol grip by Stark can be installed on any weapon that is compatible with the AR-15 pistol grips. Black version.]]
+ATT.Icon = Material("entities/eft_attachments/pgrips/ar15grips/stark.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/pistolgrip_ar15_stark_ar_rifle_grip.mdl"
+
+ATT.HasGrip = true
+
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar15_pgrip_m4"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 5,
+    recoilModifier = -1.5,
+    weight = 0.09,
+}))
+
+
+-- EFT ID: 59db3acc86f7742a2c4ab912
+ARC9.LoadAttachment(ATT, "eft_ar_pgrip_stark")
+
+
+///////////////////////////////////////      eft_ar_pgrip_starkfde
+
+
+ATT = {}
+
+ATT.PrintName = "AR-15 Stark AR Rifle Grip (FDE)"
+ATT.CompactName = "Stark AR"
+ATT.Description = [[The Stark AR Rifle Grip polymer pistol grip can be installed on any weapon that is compatible with the AR-15 pistol grips. Flat Dark Earth version.]]
+ATT.Icon = Material("entities/eft_attachments/pgrips/ar15grips/starkfde.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/pistolgrip_ar15_stark_ar_rifle_grip.mdl"
+ATT.ModelSkin = 1
+
+ATT.HasGrip = true
+
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar15_pgrip_m4"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 5,
+    recoilModifier = -1.5,
+    weight = 0.09,
+}))
+
+
+-- EFT ID: 59db3b0886f77429d72fb895
+ARC9.LoadAttachment(ATT, "eft_ar_pgrip_starkfde")
+
+
+///////////////////////////////////////      eft_ar_pgrip_tdskelet
+
+
+ATT = {}
+
+ATT.PrintName = "AR-15 Tactical Dynamics Skeletonized pistol grip"
+ATT.CompactName = "TD120001"
+ATT.Description = [[A lightweight skeletonized pistol grip for AR-15 weapon systems and compatibles, manufactured by Tactical Dynamics.]]
+ATT.Icon = Material("entities/eft_attachments/pgrips/ar15grips/tdskel.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/pistolgrip_ar15_tactical_dynamics_skeletonized_anodized.mdl"
+
+ATT.HasGrip = true
+
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar15_pgrip"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 5,
+    recoilModifier = -1.5,
+    weight = 0.038,
+}))
+
+
+-- EFT ID: 5b07db875acfc40dc528a5f6
+ARC9.LoadAttachment(ATT, "eft_ar_pgrip_tdskelet")
+
+
+///////////////////////////////////////      eft_ar_pgrip_orion
+
+
+ATT = {}
+
+ATT.PrintName = "AR-15 Aeroknox Orion pistol grip"
+ATT.CompactName = "Orion"
+ATT.Description = [[The Orion pistol grip can be installed on any weapon compatible with AR-15 grips. Manufactured Aeroknox.]]
+ATT.Icon = Material("entities/eft_attachments/pgrips/ar15grips/orion.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/pistolgrip_ar15_aeroknox_orion.mdl"
+
+ATT.HasGrip = true
+
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar15_pgrip"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 3,
+    recoilModifier = -1,
+    weight = 0.08,
+}))
+
+
+-- EFT ID: 63f5feead259b42f0b4d6d0f
+ARC9.LoadAttachment(ATT, "eft_ar_pgrip_orion")
+
+///////////////////////////////////////      eft_ar_pgrip_sig
+
+
+ATT = {}
+
+ATT.PrintName = "AR-15 SIG M400 Reduced Angle Pistol Grip (Coyote Tan) "
+ATT.CompactName = "M400"
+ATT.Description = [[The polymer M400 Reduced Angle Pistol Grip fits any weapon compatible with AR-15 system. Manufactured by SIG Sauer. Coyote Tan version.]]
+ATT.Icon = Material("entities/eft_attachments/pgrips/ar15grips/siggrip.png", "mips smooth")
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/pistolgrip_ar15_sig_reduced_angle.mdl"
+
+ATT.HasGrip = true
+
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar15_pgrip_m4"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 5,
+    recoilModifier = -1.5,
+    weight = 0.08,
+}))
+
+-- EFT ID: 652911675ae2ae97b80fdf3c
+ARC9.LoadAttachment(ATT, "eft_ar_pgrip_sig")
+
+///////////////////////////////////////      eft_ar_pgrip_a1
+
+ATT = {}
+
+ATT.PrintName = "AR-15 Colt A1 pistol grip"
+ATT.CompactName = "A1"
+ATT.Icon = Material("entities/eft_ar15_attachments/68a63d4f22b1e0bd360afe6a.png", "mips smooth")
+ATT.Description = "An older style polymer pistol grip manufactured by Colt."
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/pistolgrip_ar15_colt_a1.mdl"
+
+ATT.HasGrip = true
+
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar15_pgrip_m4"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 2,
+    weight = 0.113,
+}))
+
+
+-- EFT ID: 68a63d4f22b1e0bd360afe6a
+ARC9.LoadAttachment(ATT, "eft_ar_pgrip_a1")
+
+///////////////////////////////////////      eft_ar_pgrip_spr
+
+ATT = {}
+
+ATT.PrintName = "AR-15 Sierra Precision SPR pistol grip"
+ATT.CompactName = "SP SPR"
+ATT.Icon = Material("entities/eft_ar15_attachments/68caac14f42a4476cf0be2aa.png", "mips smooth")
+ATT.Description = "The polymer SPR Handgrip can be installed on any weapon compatible with AR-15 pistol grips. Manufactured by Sierra Precision."
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/pistolgrip_ar15_sierra_precision_spr_handgrip.mdl"
+
+ATT.HasGrip = true
+
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar15_pgrip_m4"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 5,
+    recoilModifier = -1,
+    weight = 0.09,
+}))
+
+
+-- EFT ID: 68caac14f42a4476cf0be2aa
+ARC9.LoadAttachment(ATT, "eft_ar_pgrip_spr")
+
+
+///////////////////////////////////////      eft_ar_pgrip_dlg138
+
+
+ATT = {}
+
+ATT.PrintName = "AR-15 DLG Tactical DLG-138 pistol grip (Black)"
+ATT.CompactName = "DLG138"
+ATT.Icon = Material("entities/eft_attachments/68c16fcffc90c174e50de1ae.png", "mips smooth")
+ATT.Description = "The DLG-138 pistol grip can be installed on any weapon compatible with AR-15 systems. Manufactured by DLG Tactical. Black version."
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/pistolgrip_ar15_dlg_138.mdl"
+
+ATT.HasGrip = true
+
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar15_pgrip_m4"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 3,
+    recoilModifier = -1,
+    weight = 0.1,
+}))
+
+
+-- EFT ID: 68c16fcffc90c174e50de1ae
+ARC9.LoadAttachment(ATT, "eft_ar_pgrip_dlg138")
+
+///////////////////////////////////////      eft_ar_pgrip_dlg138_fde
+
+
+ATT = {}
+
+ATT.PrintName = "AR-15 DLG Tactical DLG-138 pistol grip (FDE)"
+ATT.CompactName = "DLG138"
+ATT.Icon = Material("entities/eft_attachments/68c16fe183e2d814b0093f7c.png", "mips smooth")
+ATT.Description = "The DLG-138 pistol grip can be installed on any weapon compatible with AR-15 systems. Manufactured by DLG Tactical. Flat Dark Earth version."
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/pistolgrip_ar15_dlg_138.mdl"
+ATT.ModelSkin = 1
+
+ATT.HasGrip = true
+
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar15_pgrip_m4"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 3,
+    recoilModifier = -1,
+    weight = 0.1,
+}))
+
+
+-- EFT ID: 68c16fe183e2d814b0093f7c
+ARC9.LoadAttachment(ATT, "eft_ar_pgrip_dlg138_fde")
+
+
+
+///////////////////////////////////////      eft_ar_pgrip_chevron_blk
+
+
+ATT = {}
+
+ATT.PrintName = "AR-15 Tyrant Designs MOD Chevron pistol grip (Black)"
+ATT.CompactName = "Chevron"
+ATT.Icon = Material("entities/eft_attachments/tyrb.png", "mips smooth")
+ATT.Description = "An aluminium rubber-overmolded anti-slip pistol grip for AR systems, manufactured by Tyrant Designs. Black version."
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/pistolgrip_ar15_tyrant_designs_chevron_grip.mdl"
+
+ATT.HasGrip = true
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar15_pgrip"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 6,
+    recoilModifier = -1.2,
+    weight = 0.112,
+}))
+-- EFT ID: 6984b7d56be2752c150e6895
+ARC9.LoadAttachment(ATT, "eft_ar_pgrip_chevron_blk")
+
+///////////////////////////////////////      eft_ar_pgrip_chevron_red
+
+
+ATT = {}
+
+ATT.PrintName = "AR-15 Tyrant Designs MOD Chevron pistol grip (Red)"
+ATT.CompactName = "Chevron"
+ATT.Icon = Material("entities/eft_attachments/tyrr.png", "mips smooth")
+ATT.Description = "An aluminium rubber-overmolded anti-slip pistol grip for AR systems, manufactured by Tyrant Designs. Red version."
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/pistolgrip_ar15_tyrant_designs_chevron_grip.mdl"
+ATT.ModelSkin = 1
+
+ATT.HasGrip = true
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar15_pgrip"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 6,
+    recoilModifier = -1.2,
+    weight = 0.112,
+}))
+-- EFT ID: 6985eb089edef67ade080b72
+ARC9.LoadAttachment(ATT, "eft_ar_pgrip_chevron_red")
+
+///////////////////////////////////////      eft_ar_pgrip_chevron_ylw
+
+
+ATT = {}
+
+ATT.PrintName = "AR-15 Tyrant Designs MOD Chevron pistol grip (Yellow)"
+ATT.CompactName = "Chevron"
+ATT.Icon = Material("entities/eft_attachments/tyry.png", "mips smooth")
+ATT.Description = "An aluminium rubber-overmolded anti-slip pistol grip for AR systems, manufactured by Tyrant Designs. Yellow version."
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/pistolgrip_ar15_tyrant_designs_chevron_grip.mdl"
+ATT.ModelSkin = 2
+
+ATT.HasGrip = true
+
+ATT.SortOrder = 0
+ATT.Category = "eft_ar15_pgrip"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 6,
+    recoilModifier = -1.2,
+    weight = 0.112,
+}))
+-- EFT ID: 698dac21772d6f3dc00e4284
+ARC9.LoadAttachment(ATT, "eft_ar_pgrip_chevron_ylw")

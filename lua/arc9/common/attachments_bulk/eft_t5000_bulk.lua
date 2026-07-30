@@ -1,0 +1,406 @@
+local ATT = {}
+
+///////////////////////////////////////      eft_t5000_barrel_std
+
+ATT = {}
+
+ATT.PrintName = "ORSIS T-5000M 7.62x51 660mm barrel"
+ATT.CompactName = "T-5000 barrel"
+ATT.Icon = Material("entities/eft_t5000_attachments/orsis_t5000m_762x51_660mm_barrel.png", "mips smooth")
+ATT.Description = "A 660mm long match-grade barrel manufactured by ORSIS for the T-5000M 7.62x51 bolt-action sniper rifle."
+
+ATT.HeatCapacityMult = 0.82
+ATT.PhysBulletMuzzleVelocityMult = 1.115
+
+ATT.Spread = 0.65 * ARC9.MOAToAcc
+
+ATT.HasBarrel = true 
+
+ATT.SortOrder = -1
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.Category = {"eft_t5000_barrel"}
+
+ATT.Attachments = {
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_muzzle"),
+        Category = {"eft_muzzle_t5000", "eft_ar10_muzzle"},
+        Pos = Vector(-25.455, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+}
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -40,
+    recoilModifier = -16.5,
+    accuracyModifier = 10,
+    weight = 2.7,
+    velocity = 11,
+}))
+
+
+-- EFT ID: 5df256570dee1b22f862e9c4
+ARC9.LoadAttachment(ATT, "eft_t5000_barrel_std")
+
+///////////////////////////////////////      eft_t5000_chassis_std
+
+ATT = {}
+
+ATT.PrintName = "ORSIS T-5000M aluminium body"
+ATT.CompactName = "T-5000 body"
+ATT.Icon = Material("entities/eft_t5000_attachments/orsis_t5000m_aluminium_body.png", "mips smooth")
+ATT.Description = "A standard aluminum body for the T-5000M bolt-action sniper rifle, manufactured by ORSIS."
+
+
+-- ATT.HasGrip = true
+
+ATT.SortOrder = -1
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.Category = {"eft_t5000_chassis"}
+
+
+ATT.Attachments = {
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_handguard"),
+        Category = "eft_t5000_hg",
+        Pos = Vector(-7, 0, -0.5),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_pgrip"),
+        Category = "eft_t5000_pg",
+        Pos = Vector(5, 0, 2.5),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_stock"),
+        Category = "eft_t5000_stock",
+        Pos = Vector(7, 0, 1),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 16,
+    recoilModifier = -1,
+    weight = 0.64,
+}))
+
+
+-- EFT ID: 5df35e59c41b2312ea3334d5
+ARC9.LoadAttachment(ATT, "eft_t5000_chassis_std")
+
+///////////////////////////////////////      eft_t5000_hg_std
+
+ATT = {}
+
+ATT.PrintName = "ORSIS T-5000M handguard"
+ATT.CompactName = "T-5000 hg"
+ATT.Icon = Material("entities/eft_t5000_attachments/orsis_t5000m_handguard.png", "mips smooth")
+ATT.Description = "A standard handguard for the T-5000M bolt-action sniper rifle, manufactured by ORSIS."
+
+
+ATT.SortOrder = -1
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.Category = {"eft_t5000_hg"}
+
+ATT.Attachments = {
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_aux"),
+        Category = "eft_t5000_hg2",
+        Pos = Vector(2, 0, 1.22),
+        Ang = Angle(0, -90, -90),   
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_mount_l"),
+        Category = "eft_t5000_mount_side",
+        Pos = Vector(-8.35, -1.15, 0.1),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_mount_r"),
+        Category = "eft_t5000_mount_side",
+        Pos = Vector(-8.35, 1.15, 0.1),
+        Ang = Angle(180, 180, 0),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_mount_u"),
+        Category = "eft_t5000_mount_side",
+        Pos = Vector(-8.35, 0, -1.1),
+        Ang = Angle(0, 0, 90),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_mount_b"),
+        Category = "eft_t5000_mount_side_midonly",
+        Pos = Vector(-6.35, 0, 1.27),
+        Ang = Angle(0, 0, -90),
+        Icon_Offset = Vector(0, 0, 0),
+        ExcludeElements = {"eft_bipod_harris"}
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_bipod"),
+        Category = "eft_harris_bipod",
+        Pos = Vector(-8.8, 0, 1.4),
+        Ang = Angle(0, 0, 180),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 20,
+    weight = 0.46,
+}))
+
+
+-- EFT ID: 5df25d3bfd6b4e6e2276dc9a
+ARC9.LoadAttachment(ATT, "eft_t5000_hg_std")
+///////////////////////////////////////      eft_t5000_hg2_std
+
+ATT = {}
+
+ATT.PrintName = "ORSIS T-5000M padded handguard grip"
+ATT.CompactName = "T-5000 pad"
+ATT.Icon = Material("entities/eft_t5000_attachments/orsis_t5000m_padded_handguard_grip.png", "mips smooth")
+ATT.Description = "A standard-issue padded grip for the T-5000M sniper rifle, manufactured by ORSIS."
+
+
+ATT.HasHG = true
+
+ATT.SortOrder = -1
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.Category = {"eft_t5000_hg2"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 5,
+    recoilModifier = -0.5,
+    weight = 0.08,
+}))
+
+
+-- EFT ID: 5df36948bb49d91fb446d5ad
+ARC9.LoadAttachment(ATT, "eft_t5000_hg2_std")
+
+///////////////////////////////////////      eft_t5000_pg_std
+
+ATT = {}
+
+ATT.PrintName = "ORSIS T-5000M pistol grip"
+ATT.CompactName = "T-5000 grip"
+ATT.Icon = Material("entities/eft_t5000_attachments/orsis_t5000m_pistol_grip.png", "mips smooth")
+ATT.Description = "An ergonomic pistol grip for the T-5000M bolt-action sniper rifle, manufactured by ORSIS."
+
+
+ATT.HasGrip = true
+
+ATT.SortOrder = -1
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.Category = {"eft_t5000_pg"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 5,
+    weight = 0.08,
+}))
+
+
+-- EFT ID: 5df38a5fb74cd90030650cb6
+ARC9.LoadAttachment(ATT, "eft_t5000_pg_std")
+///////////////////////////////////////      eft_t5000_stock_std
+
+ATT = {}
+
+ATT.PrintName = "ORSIS T-5000M stock"
+ATT.CompactName = "T-5000 stock"
+ATT.Icon = Material("entities/eft_t5000_attachments/orsis_t5000m_stock.png", "mips smooth")
+ATT.Description = "A universal standard-issue stock for T-5000M sniper rifles, manufactured by ORSIS."
+
+
+
+ATT.SortOrder = -1
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.Category = {"eft_t5000_stock"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 11,
+    recoilModifier = -18,
+    weight = 0.31,
+}))
+
+
+-- EFT ID: 5df35ddddfc58d14537c2036
+ARC9.LoadAttachment(ATT, "eft_t5000_stock_std")
+///////////////////////////////////////      eft_t5000_rail_optic
+
+ATT = {}
+
+ATT.PrintName = "ORSIS T-5000M scope mount"
+ATT.CompactName = "T-5000 mount"
+ATT.Icon = Material("entities/eft_t5000_attachments/orsis_t5000m_scope_mount.png", "mips smooth")
+ATT.Description = "A universal scope mount for the T-5000M sniper rifle, manufactured by ORSIS. Allows installation of various scopes."
+
+
+ATT.SortOrder = -1
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.Category = {"eft_t5000_mount"}
+
+ATT.Attachments = {
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_scope"),
+        Category = {"eft_optic_large", "eft_optic_medium", "eft_optic_small"},
+        Pos = Vector(0, 0, -0.36),
+        Ang = Angle(0, 0, 0),
+    },
+}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -1,
+    weight = 0.14,
+}))
+
+
+-- EFT ID: 5df35e970b92095fd441e4d2
+ARC9.LoadAttachment(ATT, "eft_t5000_rail_optic")
+
+///////////////////////////////////////      eft_t5000_rail_long
+
+ATT = {}
+
+ATT.PrintName = "ORSIS T-5000M long length rail"
+ATT.CompactName = "T-5000 long"
+ATT.Icon = Material("entities/eft_t5000_attachments/orsis_t5000m_long_length_rail.png", "mips smooth")
+ATT.Description = "A long length rail for T-5000M sniper rifle allows installation of additional tactical equipment on the handguard. Manufactured by ORSIS."
+
+ATT.SortOrder = -1
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.Category = {"eft_t5000_mount_side"}
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/mount_t5000_long.mdl"
+
+ATT.Attachments = {
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_tactical"),
+        Category = {"eft_tactical", "eft_tactical_top", "eft_tactical_top_big"},
+        Pos = Vector(2, -0.22, 0),
+        Ang = Angle(0, 0, -90),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    weight = 0.05,
+}))
+
+
+-- EFT ID: 5df35ea9c41b2312ea3334d8
+ARC9.LoadAttachment(ATT, "eft_t5000_rail_long")
+///////////////////////////////////////      eft_t5000_rail_medium
+
+ATT = {}
+
+ATT.PrintName = "ORSIS T-5000M medium length rail"
+ATT.CompactName = "T-5000 medium"
+ATT.Icon = Material("entities/eft_t5000_attachments/orsis_t5000m_medium_length_rail.png", "mips smooth")
+ATT.Description = "A medium length rail for T-5000M sniper rifle allows installation of additional tactical equipment on the handguard. Manufactured by ORSIS."
+
+ATT.SortOrder = -1
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.Category = {"eft_t5000_mount_side", "eft_t5000_mount_side_midonly"}
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/mount_t5000_mid.mdl"
+
+ATT.Attachments = {
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_tactical"),
+        Category = "eft_tactical",
+        Pos = Vector(1, -0.4, 0),
+        Ang = Angle(0, 0, -90),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    weight = 0.05,
+}))
+
+
+-- EFT ID: 5df35eb2b11454561e3923e2
+ARC9.LoadAttachment(ATT, "eft_t5000_rail_medium")
+///////////////////////////////////////      eft_t5000_muzzle_brake
+
+ATT = {}
+
+ATT.PrintName = "ORSIS T-5000M 7.62x51 muzzle brake-compensator"
+ATT.CompactName = "T-5000 brake"
+ATT.Icon = Material("entities/eft_t5000_attachments/orsis_t5000m_762x51_muzzle_brakecompensator.png", "mips smooth")
+ATT.Description = "A standard-issue muzzle brake for the T-5000M bolt-action sniper rifle, manufactured by ORSIS."
+
+ATT.HeatCapacityMult = 0.99
+
+ATT.SortOrder = -2
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.BarrelLengthAdd = 1.5
+
+ATT.Category = {"eft_muzzle_t5000"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -2,
+    recoilModifier = -10,
+    accuracyModifier = 1,
+    weight = 0.098,
+}))
+
+
+-- EFT ID: 5df35e7f2a78646d96665dd4
+ARC9.LoadAttachment(ATT, "eft_t5000_muzzle_brake")
+
+///////////////////////////////////////      eft_t5000_mag_5
+
+ATT = {}
+
+ATT.PrintName = "ORSIS T-5000M 7.62x51 5-round magazine"
+ATT.CompactName = "T-5000 5"
+ATT.Icon = Material("entities/eft_t5000_attachments/orsis_t5000m_762x51_5round_magazine.png", "mips smooth")
+ATT.Description = "A 5-round magazine for the T-5000M 7.62x51 sniper rifle, manufactured by ORSIS."
+
+
+ATT.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/mag_t5000_5.mdl"
+ATT.DropMagazineAmount = 1
+
+ATT.SortOrder = 1
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.Category = {"eft_t5000_mag"}
+
+ATT.HasMag = true 
+ATT.SuppressEmptySuffix = false 
+
+ATT.DropMagazineSounds = ARC9EFT.MagDropMetal
+
+ATT.ClipSize = 5
+ATT.ChamberSize = 1
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 0.5,
+    weight = 0.35,
+    malfunctionChance = 0.02,
+}))
+
+
+-- EFT ID: 5df25b6c0b92095fd441e4cf
+ARC9.LoadAttachment(ATT, "eft_t5000_mag_5")
