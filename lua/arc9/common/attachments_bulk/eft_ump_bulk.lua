@@ -171,10 +171,12 @@ ATT.ToggleStats = {
         PrintName = "eft_toggle_unfolded",
         RecoilMult = 0.76,
         VisualRecoilMult = 0.76,
+        HasStock = true
     },
     {
         PrintName = "eft_toggle_folded",
-        ActivateElements = {"eft_stock_ump_std_folded"}
+        ActivateElements = {"eft_stock_ump_std_folded"},
+        HasStock = false
     },
 }
 

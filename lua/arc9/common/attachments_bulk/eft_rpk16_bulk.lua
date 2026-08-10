@@ -188,7 +188,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_rpk16_izhmash_rpk16_std_545x39.mdl"
 
 ATT.Category = {"eft_rpk16_muzzle"}
-
+ATT.MuzzleParticle = "arc9_eft_dtk_sport_2"
 
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
     ergonomicsModifier = -1,
@@ -321,7 +321,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/ak_stock_rpk_stock_tube.mdl"
 
 ATT.Category = {"eft_ak74m_stock", "eft_rpk16_stock"}
-
+ATT.HasStock = true
 
 ATT.Attachments = {
     {

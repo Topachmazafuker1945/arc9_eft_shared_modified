@@ -61,7 +61,7 @@ SWEP.SprintPosHook = function(self, old) if !self:GetValue("HasStock") then retu
 SWEP.HoldTypeSprintHook = function(self, old) if !self:GetValue("HasStock") then return handupholdtype end end
 
 ------------------------- |||           Stats            ||| -------------------------
-
+SWEP.HasStock = false
 SWEP.Spread = 6.26 * ARC9.MOAToAcc
 SWEP.RPM = 1075
 SWEP.EFTErgo = 73

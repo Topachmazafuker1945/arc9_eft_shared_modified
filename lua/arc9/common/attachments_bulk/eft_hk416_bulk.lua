@@ -73,7 +73,7 @@ ATT.Icon = Material("entities/eft_ar15_attachments/hk416/hk_enhanced_tube_buffer
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_hk_enhanced_stock_tube.mdl"
 
 ATT.HasBufferTube = true
-
+ATT.HasStock = true
 
 
 

@@ -96,7 +96,7 @@ ATT.Icon = Material("entities/eft_ks23_attachments/w.png", "mips smooth")
 ATT.Description = [[A wooden stock for the KS-23 shotgun with a rubber butt-plate.]]
 
 ATT.HasGrip = true
-
+ATT.HasStock = true
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
@@ -157,7 +157,7 @@ ATT.CompactName = "KS23M steel"
 ATT.Icon = Material("entities/eft_ks23_attachments/st.png", "mips smooth")
 ATT.Description = [[A steel wired stock for the KS-23M shotgun, manufactured by TOZ..]]
 
-
+ATT.HasStock = true
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 

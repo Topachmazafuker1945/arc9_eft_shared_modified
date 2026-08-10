@@ -353,7 +353,7 @@ ATT.HeatCapacityMult = 0.99
 
 ATT.SortOrder = -2
 ATT.MenuCategory = "ARC9 - EFT Attachments"
-
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_3"
 ATT.BarrelLengthAdd = 1.5
 
 ATT.Category = {"eft_muzzle_t5000"}

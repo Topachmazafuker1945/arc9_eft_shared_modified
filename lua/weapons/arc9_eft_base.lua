@@ -124,8 +124,8 @@ SWEP.SprintPos = Vector(13, -2, 2)
 SWEP.NearWallAng = Angle(80, 5, 0)
 SWEP.NearWallPos = Vector(15, -0, -2.5)
 
--- SWEP.CrouchPos = Vector(0, -2, 2.2)
--- SWEP.CrouchAng = Angle(0, 0, -4)
+SWEP.CrouchPos = Vector(0, -2, 2.2)
+SWEP.CrouchAng = Angle(0, 0, -4)
 
 SWEP.CustomizeAng = Angle(90, 0, 0)
 SWEP.CustomizePos = Vector(18.2, 26, 3.7)
@@ -210,7 +210,6 @@ SWEP.SupplyLimit = 4
 SWEP.SecondarySupplyLimit = 4
 
 SWEP.ReloadInSights = false
-
 SWEP.Bash = false
 SWEP.PrimaryBash = false
 
@@ -238,6 +237,14 @@ SWEP.RecoilMultCrouch = 0.75
 SWEP.RecoilUpMultFirstShot = 0.85
 SWEP.RecoilUpMultRecoil = 1.2
 
+SWEP.RecoilHook = function(self, old)
+    if self:GetValue("HasStock") == false then return old * 0.05 end
+end
+
+-- SWEP.RecoilRandomSideSightsHook = function(self, old)
+--     if self:GetValue("HasStock") == false then return old * 0.05 end
+-- end
+
 SWEP.RecoilDissipationRate = 5
 SWEP.RecoilAutoControlMultHipFire = 0.75
 SWEP.RecoilAutoControl_DontTryToReturnBack = true
@@ -251,6 +258,19 @@ SWEP.VisualRecoilMultHipFire = 1
 SWEP.VisualRecoilMultSights = 1
 SWEP.VisualRecoilMultCrouch = 0.75
 
+SWEP.VisualRecoilPositionBumpUpHook = function(self, old)
+    if self:GetValue("HasStock") == false then return old * 0.75 end
+end
+
+
+SWEP.VisualRecoilSideHook = function(self, old)
+    if self:GetValue("HasStock") == false then return old * 20 end
+end
+
+SWEP.VisualRecoilDampingConstHook = function(self, old)
+    if self:GetValue("HasStock") == false then return old * 0.2 end
+end
+
 SWEP.VisualRecoilDampingConstMultFirstShot = 3
 SWEP.EFT_ShotsToSwitchToFullAutoBehaviur = 2
 
@@ -258,12 +278,11 @@ SWEP.EFT_ShotsToSwitchToFullAutoBehaviur = 2
 --     return springconstant, VisualRecoilSpringMagnitude, PUNCH_DAMPING
 -- end
 
-SWEP.VisualRecoilDoingFunc = function(up, side, roll, punch, recamount, self) -- SPT BUYANOV MOD FIX PATCH RECOIL 2.0
+SWEP.VisualRecoilDoingFunc = function(up, side, roll, punch, recamount, self) -- SPT REALISM MOD BUYANOV MOD FIX PATCH RECOIL 2.0
 
     local eft_inleftshoulder = self:GetNW2Bool("EFT_InLeftShoulder", false) or {}
     local eft_incorner = self:GetNW2Bool("EFT_InCornerFire", false) or {}
     local eft_insomalian = self:GetNW2Bool("EFT_InSomalianStance", false) or {}
-
     if !self.EFT_VisualRecoilUp_BURST_SEMI then return up, side, roll, punch end
 
     local fullauto = math.Clamp(recamount - self.EFT_ShotsToSwitchToFullAutoBehaviur, 0, 3) * 0.33333333
@@ -271,46 +290,61 @@ SWEP.VisualRecoilDoingFunc = function(up, side, roll, punch, recamount, self) --
 	up = math.Clamp(up, 0, 12)
     side = Lerp(fullauto, self.EFT_VisualRecoilSide_BURST_SEMI, side)
 
-    --target = (self.IsPistol == false or )
 
-    if recamount < 2.5 then
-        if self:GetSightAmount() < 0.4 and self.IsPistol == false and eft_insomalian == false and eft_insomalian == false and eft_inleftshoulder == false then -- only for visual when hipfiring
-            up = up * 1.25
-            punch = punch * 1.25
-        end
-
-        if eft_incorner == true and self:GetSightAmount() < 0.4 and self.IsPistol == false or eft_insomalian == true and self:GetSightAmount() < 0.4 and self.IsPistol == false then
-            up = up * 2
-            punch = punch * 2
-        end
-
-        if eft_inleftshoulder == true and self:GetSightAmount() < 0.4 and self.IsPistol == false then
-            up = up * 1.75
-            punch = punch * 0.9
-        end
-
+    if recamount < 2.5 and !self.IsPistol then
+        up = up * 1.1
+        punch = punch * 1.5
+    elseif recamount < 2.5 and self.IsPistol then
+        up = up * 1.45
+        side = side * 1.15
     end
 
-	if recamount >= 6 then
-		up = up * 0.3
-	end
+	if recamount >= 6 and !self.IsPistol then
+		up = up * 1.15
+        roll = roll * 1.15
+        punch = punch * 1.25
+	elseif recamount >= 3 and self.IsPistol then
+        up = up * 1.35
+        side = side * 1.55
+    end
 
-	if recamount >= 12 and self.IsPistol == false then -- пьяница
-		up = up * -0.1
-	end
+	if recamount >= 12 and !self.IsPistol then -- пьяница
+		up = up * 1
+        roll = roll * 1.85
+        side = side * 1.55
+        punch = punch * 0.7
+	elseif recamount >= 6 and self.IsPistol then
+        up = up * 0.75
+        side = side * 1.5
+    end
+
+    if eft_incorner == true and !self.IsPistol or eft_insomalian == true and !self.IsPistol then --стрельба без упора в плечо, реализм хуле
+        up = up * 3
+        punch = punch * 1.1
+    elseif !self:GetValue("HasStock") and !self.IsPistol then
+        up = up * 2
+        punch = punch * 0.75
+    end
 
     if self:GetBipod() == true then
-            up = up * 0.4
-            punch = punch * 1.5
-            side = side * 0.4
+        up = up * 0.4
+        punch = punch * 1.5
+        side = side * 0.4
     end
+
     
-    if self:GetUBGL() then up = 2.0 end -- ubgl!
+    if self:GetUBGL() then up = 1.5 end -- ubgl!
 
 	local huy = math.Clamp(fullauto * 8, 1, 2)
+
+    -- for i, ply in ipairs( player.GetAll() ) do
+    --     ply:ChatPrint("  REC: " ..  recamount .. "  UP:  " .. up .. "  SIDE:  " .. side .. "  PUNCH:  " .. punch)
+    -- end
+
 	-- ЖЕСТКО починил сайд отдачу за дарсу... простите если насрал..vkusno ya poel
     return (up * 1.6) * huy, (side * (math.random(2) == 2 and 400 or -400) / (huy * 16)) / huy, roll * 7, punch * 2
 
+    --return ebanutaia otpacha tarkov spt realism mod dlya pistoletov i karabinov vseh variantov s poderjkoy STANCE MOD!!!
 end
 
 SWEP.RecoilKickAffectPitch = true

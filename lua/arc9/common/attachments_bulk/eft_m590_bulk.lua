@@ -84,7 +84,6 @@ ATT.Description = "The MOE handguard, designed for Mossberg 500/590 shotguns. Ma
 ATT.HeatCapacityMult = 1.019
 
 ATT.HasHG = true 
-
 -- sadly (or happily) those lhiks are same as default hold pose
 -- oh turns out hand is not on hg 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/moe870_lhik.mdl"
@@ -277,10 +276,10 @@ ATT.Description = "An ergonomic polymer stock for the Mossberg 590A1 shotgun wit
 
 
 ATT.HasGrip = true
-
+ATT.HasStock = true
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
-
+ATT.HasStock = true
 ATT.Category = {"eft_m590_stock"}
 
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
@@ -304,7 +303,7 @@ ATT.Description = "A classical-looking polymer stock for Mossberg 590A1 shotguns
 
 
 ATT.HasGrip = true
-
+ATT.HasStock = true
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 

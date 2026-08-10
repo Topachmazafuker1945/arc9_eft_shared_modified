@@ -96,7 +96,7 @@ SWEP.VisualRecoil = 0.5 -- general multiplier for it
 SWEP.EFT_VisualRecoilUp_BURST_SEMI   = 0.5   -- up/down tilt when semi/bursts
 SWEP.VisualRecoilUp                   = 0.5   --   when fullautoing
 SWEP.EFT_VisualRecoilSide_BURST_SEMI = 0.001 -- left/right tilt when semi/burst
-SWEP.VisualRecoilSide                 = 0.01   --   when fullautoing
+SWEP.VisualRecoilSide                 = 0.005   --   when fullautoing
 SWEP.VisualRecoilRoll = 25 --roll tilt, a visual thing
 
 SWEP.VisualRecoilPunch = 2.5 -- How far back visrec moves the gun

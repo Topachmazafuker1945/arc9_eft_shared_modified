@@ -918,7 +918,7 @@ ATT.Description = "A Monte Carlo-style wooden walnut forestock for MP-155 shotgu
 ATT.HeatCapacityMult = 1.041
 
 ATT.HasHG = true 
-
+ATT.HasStock = true
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
@@ -1108,7 +1108,7 @@ ATT.Description = "A wooden stock for MP-133 and MP-153 shotguns with a rubber b
 
 
 ATT.HasGrip = true
-
+ATT.HasStock = true
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
@@ -1135,7 +1135,7 @@ ATT.Description = "A plastic stock for MP-133 and MP-153 shotguns with a rubber 
 
 
 ATT.HasGrip = true
-
+ATT.HasStock = true
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
@@ -1232,7 +1232,7 @@ ATT.Description = "A Monte Carlo-style wooden walnut stock for MP-155 shotguns w
 
 
 ATT.HasGrip = true
-
+ATT.HasStock = true
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
@@ -1295,7 +1295,7 @@ ATT.Description = "The \"Ultima\" modification polymer stock for the MP-155 shot
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
-
+ATT.HasStock = true
 ATT.Category = {"eft_mr155u_pg_stock"}
 
 ATT.Attachments = {
@@ -2295,7 +2295,7 @@ ATT.Description = [[A standard wooden stock for the MTs-255-12 shotgun, manufact
 
 
 ATT.HasGrip = true 
-
+ATT.HasStock = true
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 

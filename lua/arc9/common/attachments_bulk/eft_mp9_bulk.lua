@@ -59,7 +59,7 @@ ATT.HeatCapacityMult = 0.87
 ATT.Silencer = true 
 ATT.BarrelLengthAdd = 5
 
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_2_small"
 ATT.MuzzleEffectQCA = 5
 ATT.NoFlash = true
 
@@ -103,7 +103,8 @@ ATT.ToggleStats = {
         PrintName = "eft_toggle_folded",
         CustomizePos = Vector(16, 40, 5),
         CustomizeRotateAnchor = Vector(18, -4.28, -5.23),
-        ActivateElements = {"eft_mp9_stock_folded"}
+        ActivateElements = {"eft_mp9_stock_folded"},
+        HasStock = false
     },
 }
 

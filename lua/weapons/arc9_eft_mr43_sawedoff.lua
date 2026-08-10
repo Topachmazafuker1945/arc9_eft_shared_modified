@@ -26,6 +26,7 @@ SWEP.EFTErgo = 50
 SWEP.EFTWeight = 1.3
 
 -- this thing WILL one hand sprint always
+SWEP.HasStock = false
 SWEP.OneHandedSprint = true
 SWEP.SprintAng = Angle(3, 33, -12)
 SWEP.SprintPos = Vector(3, -7.1, -13)

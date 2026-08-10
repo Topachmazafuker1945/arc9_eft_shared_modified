@@ -149,7 +149,7 @@ ATT.Icon = Material("entities/eft_ash12_attachments/sil.png", "mips smooth")
 ATT.Description = [[Tactical suppressor manufactured by CKIB for ASh-12 12.7x55 automatic rifle.]]
 
 ATT.Silencer = true
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_1"
 ATT.NoFlash = true
 ATT.BarrelLengthAdd = 5
 
@@ -194,7 +194,7 @@ ATT.BarrelLengthAdd = 2
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.Category = {"eft_ash12_muzzle"}
-
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_3"
 
 
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({

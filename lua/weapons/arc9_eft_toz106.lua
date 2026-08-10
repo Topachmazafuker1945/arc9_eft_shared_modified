@@ -83,7 +83,7 @@ SWEP.EFTWeight = 1.3
 SWEP.BarrelLength = 30
 SWEP.Ammo = "Buckshot"
 SWEP.Firemodes = { { Mode = 1, PrintName = ARC9:GetPhrase("eft_fmode_bolt") } }
-
+SWEP.TriggerStartFireAnim = true
 SWEP.Slot = 1
 
 ------------------------- |||           Recoil            ||| -------------------------

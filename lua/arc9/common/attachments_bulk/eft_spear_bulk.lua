@@ -277,7 +277,7 @@ ATT.Icon = Material("entities/eft_spear_attachments/tub.png", "mips smooth")
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_base_sig_low_profile_tube.mdl"
 
 ATT.HasBufferTube = true
-
+ATT.HasStock = true
 
 ATT.SortOrder = 0
 ATT.Category = "eft_spear_buffertube"
@@ -320,7 +320,7 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_base_sig_low_profile_tube.
 ATT.ModelSkin = 1
 
 ATT.HasBufferTube = true
-
+ATT.HasStock = true
 
 ATT.SortOrder = 0
 ATT.Category = "eft_spear_buffertube"

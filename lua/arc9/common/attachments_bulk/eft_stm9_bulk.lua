@@ -577,7 +577,7 @@ ATT.Description = "STM Arms Receiver Extension Buffer Tube, 4-position, Com-Spec
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_stmarms_com_spec_std.mdl"
 
 ATT.HasBufferTube = true
-
+ATT.HasStock = true
 
 -- 
 ATT.SortOrder = 0

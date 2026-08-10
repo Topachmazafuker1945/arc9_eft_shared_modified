@@ -586,6 +586,7 @@ ATT.ModelOffset = Vector(4.27, -13.05, 2.77)
 ATT.RHIK = true
 ATT.ActivateElements = {"eft_grippose"}
 
+
 ATT.Category = {"eft_m870_stock", "eft_m870_stock_fabagr"}
 
 
@@ -713,6 +714,7 @@ ATT.Icon = Material("entities/eft_m870_attachments/sga.png", "mips smooth")
 ATT.Description = [[An ergonomic polymer stock for the Remington Model 870 shotgun with a rubber butt-plate, manufactured by Magpul.]]
 
 ATT.HasGrip = true
+ATT.HasStock = true
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -743,7 +745,7 @@ ATT.HasGrip = true
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
-
+ATT.HasStock = true
 ATT.Category = {"eft_m870_stock"}
 
 
@@ -767,7 +769,7 @@ ATT.Icon = Material("entities/eft_m870_attachments/leo.png", "mips smooth")
 ATT.Description = [[Mesa Tactical’s Telescoping Stock Conversion Kit replaces the standard buttstock with an adapter that accepts AR style collapsible stocks and pistol grips.]]
 
 -- ATT.HasGrip = true 
-
+ATT.HasStock = true
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 

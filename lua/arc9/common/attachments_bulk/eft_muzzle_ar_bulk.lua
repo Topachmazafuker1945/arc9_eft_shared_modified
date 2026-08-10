@@ -18,7 +18,7 @@ ATT.BarrelLengthAdd = 0.5
 
 ATT.HeatCapacityMult = 0.989
 ATT.PhysBulletMuzzleVelocityMult = 1.005
-
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_2"
 ATT.Category = {"eft_ar10_muzzle"}
 
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
@@ -51,7 +51,7 @@ ATT.BarrelLengthAdd = 0.5
 
 ATT.HeatCapacityMult = 0.987
 ATT.PhysBulletMuzzleVelocityMult = 1.005
-
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_2"
 ATT.Category = {"eft_ar10_muzzle"}
 
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
@@ -81,6 +81,7 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_all_dd_wave_muzzle_brake_
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_2"
 
 ATT.HeatCapacityMult = 0.99
 ATT.PhysBulletMuzzleVelocityMult = 0.995
@@ -125,6 +126,7 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_ar10_surefire_warden_dire
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
+ATT.MuzzleParticle = "arc9_eft_dtk_fireball_2"
 
 ATT.HeatCapacityMult = 0.991
 ATT.PhysBulletMuzzleVelocityMult = 1.02
@@ -157,7 +159,7 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_ar15_taa_zk_23_muzzle_bra
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
-
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_2"
 ATT.HeatCapacityMult = 0.989
 
 ATT.Category = {"eft_ar10_muzzle"}
@@ -233,7 +235,7 @@ ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 1
 
 ATT.HeatCapacityMult = 0.99
-
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_2"
 ATT.Category = {"eft_ar10_muzzle", "eft_bmd762_muzzle2"}
 
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
@@ -261,7 +263,7 @@ ATT.Model = "models/weapons/arc9_eft_shared/atts/muzzle/muzzle_ar10_lantac_dgn76
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 1
-
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_2"
 ATT.HeatCapacityMult = 0.99
 
 ATT.Category = {"eft_ar15_muzzle"}
@@ -293,7 +295,7 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_ar10_precision_armament_m
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
-
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_3"
 ATT.HeatCapacityMult = 0.987
 
 ATT.Category = {"eft_ar10_muzzle"}
@@ -327,7 +329,7 @@ ATT.BarrelLengthAdd = 0.5
 
 ATT.HeatCapacityMult = 0.99
 ATT.PhysBulletMuzzleVelocityMult = 1.005
-
+ATT.MuzzleParticle = "arc9_eft_muzzleflashider_1"
 ATT.Category = {"eft_ar10_muzzle"}
 
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
@@ -356,7 +358,8 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_ar15_dt_mdr_std_556x45.md
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
-
+ATT.MuzzleParticle = "arc9_eft_muzzleflashider_1"
+ATT.NoFlash = true
 
 ATT.HeatCapacityMult = 0.99
 ATT.PhysBulletMuzzleVelocityMult = 1.01
@@ -390,9 +393,8 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_ar10_fortis_red_brake_762
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
-
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_3"
 ATT.HeatCapacityMult = 0.983
-
 ATT.Category = {"eft_ar10_muzzle"}
 
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
@@ -420,7 +422,7 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_ar10_odin_works_atlas_7_m
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
-
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_2"
 ATT.HeatCapacityMult = 0.985
 ATT.PhysBulletMuzzleVelocityMult = 1.005
 
@@ -451,6 +453,8 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_ar10_aac_scar_h_miter_51t
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
+ATT.NoFlash = true
+ATT.MuzzleParticle = "arc9_eft_muzzleflashider_1"
 
 ATT.HeatCapacityMult = 0.99
 ATT.PhysBulletMuzzleVelocityMult = 1.01
@@ -496,7 +500,7 @@ ATT.BarrelLengthAdd = 0.5
 
 ATT.HeatCapacityMult = 0.987
 ATT.PhysBulletMuzzleVelocityMult = 1.04
-
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_1"
 ATT.Category = {"eft_ar10_muzzle"}
 
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
@@ -605,7 +609,7 @@ ATT.Scale = 1.15
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
-
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_3"
 
 ATT.Category = {"eft_ar10_muzzle"}
 
@@ -638,7 +642,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.MuzzleDevice = true -- set to true if you want to use this to emit particles
 ATT.MuzzleDevice_Priority = 4
-
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_2"
 ATT.HeatCapacityMult = 0.987
 
 ATT.ModelOffset = Vector(0, 0, -0)
@@ -715,7 +719,8 @@ ATT.BarrelLengthAdd = 0.5
 
 ATT.HeatCapacityMult = 0.99
 ATT.PhysBulletMuzzleVelocityMult = 1.01
-
+ATT.MuzzleParticle = "arc9_eft_muzzleflashider_1"
+ATT.NoFlash = true
 ATT.Category = {"eft_tlok_muzzle"}
 
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
@@ -745,6 +750,7 @@ ATT.BarrelLengthAdd = 0.5
 
 ATT.HeatCapacityMult = 0.99
 ATT.PhysBulletMuzzleVelocityMult = 1.005
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_2"
 
 ATT.Category = {"eft_tlok_muzzle"}
 
@@ -773,7 +779,7 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_base_sig_muzzle_break_2_7
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 3
 ATT.BarrelLengthAdd = 0.5
-
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_2"
 ATT.HeatCapacityMult = 0.99
 ATT.PhysBulletMuzzleVelocityMult = 1.005
 
@@ -845,7 +851,7 @@ ATT.Model = "models/weapons/arc9_eft_shared/atts/muzzle/muzzle_ar15_pws_cqb_556x
 
 ATT.HeatCapacityMult = 0.989
 ATT.PhysBulletMuzzleVelocityMult = 1.005
-
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_2"
 ATT.Category = {"eft_ar15_muzzle", "eft_ak101_muzzle"}
 
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
@@ -873,7 +879,7 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_ar15_deltatech_dtk.mdl"
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
-
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_2"
 
 ATT.Category = {"eft_ar15_muzzle"}
 
@@ -935,7 +941,7 @@ ATT.PhysBulletMuzzleVelocityMult = 1.0075
 ATT.Silencer = true
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 5
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_1"
 ATT.NoFlash = true
 
 ATT.Category = {"eft_ak101_muzzle", "eft_ar15_muzzle"}
@@ -966,7 +972,8 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_ar15_colt_usgi_a1_3_prong
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
-
+ATT.NoFlash = true
+ATT.MuzzleParticle = "arc9_eft_muzzleflashider_1"
 
 ATT.Category = {"eft_ar15_muzzle"}
 
@@ -1135,7 +1142,7 @@ ATT.BarrelLengthAdd = 0.5
 
 ATT.HeatCapacityMult = 0.987
 ATT.PhysBulletMuzzleVelocityMult = 1.005
-
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_2"
 ATT.Category = {"eft_ar10_muzzle"}
 
 ATT.Attachments = {

@@ -17,6 +17,8 @@ ATT.Category = {"eft_mp7_muzzle"}
 
 ATT.PhysBulletMuzzleVelocityMult = 1.005
 -- ATT.HeatCapacityMult = 0.989
+ATT.NoFlash = true
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_1_small"
 
 ATT.Attachments = {
     {
@@ -57,7 +59,7 @@ ATT.HeatCapacityMult = 0.87
 ATT.Silencer = true 
 ATT.BarrelLengthAdd = 5
 
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_2_small"
 ATT.MuzzleEffectQCA = 5
 ATT.NoFlash = true
 
@@ -104,7 +106,8 @@ ATT.ToggleStats = {
         PrintName = "eft_toggle_folded",
         CustomizePos = Vector(18, 40, 6),
         CustomizeRotateAnchor = Vector(18, -4.28, -5.23),
-        ActivateElements = {"eft_mp7_stock_a1folded"}
+        ActivateElements = {"eft_mp7_stock_a1folded"},
+        HasStock = false
     },
 }
 
@@ -146,7 +149,8 @@ ATT.ToggleStats = {
         PrintName = "eft_toggle_folded",
         CustomizePos = Vector(18, 40, 6),
         CustomizeRotateAnchor = Vector(18, -4.28, -5.23),
-        ActivateElements = {"eft_mp7_stock_a2folded"}
+        ActivateElements = {"eft_mp7_stock_a2folded"},
+        HasStock = false
     },
 }
 

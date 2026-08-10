@@ -96,7 +96,7 @@ ATT.Description = "The SOCOM 16 polymer stock for M1A rifles, manufactured by Sp
 ATT.HeatCapacityMult = 0.97
 
 ATT.HasGrip = true
-
+ATT.HasStock = true 
 ATT.SortOrder = -1
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
@@ -137,7 +137,7 @@ ATT.Description = "The Archangel polymer chassis for M1A rifles, manufactured by
 ATT.HeatCapacityMult = 0.95
 
 ATT.HasGrip = true
-
+ATT.HasStock = true 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
@@ -747,7 +747,7 @@ ATT.Description = "The M14ALCS (MOD-0) stock for M14 rifles from the Enhanced Ba
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
-
+ATT.HasStock = true 
 ATT.Category = {"eft_m1a_sage_stock"}
 
 ATT.Attachments = {    
@@ -1032,6 +1032,8 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_m1a_springfield_armory_na
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
+ATT.NoFlash = true
+ATT.MuzzleParticle = "arc9_eft_muzzleflashider_2"
 
 ATT.Category = {"eft_muzzle_m1a_22"}
 
@@ -1075,6 +1077,8 @@ ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
 
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_2"
+
 ATT.Category = {"eft_muzzle_m1a_16"}
 
 ATT.Attachments = {
@@ -1116,6 +1120,8 @@ ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
 
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_2"
+
 ATT.Category = {"eft_muzzle_m1a_22", "eft_muzzle_m1a_brake"}
 
 
@@ -1148,7 +1154,8 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_m14_yankee_hill_phantom_q
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
-
+ATT.NoFlash = true
+ATT.MuzzleParticle = "arc9_eft_muzzleflashider_1"
 ATT.Category = {"eft_muzzle_m1a_22"}
 
 ATT.Attachments = {
@@ -1273,7 +1280,7 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_m1a_smith_enterprise_soco
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
-
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_4"
 ATT.Category = {"eft_muzzle_m1a_16"}
 
 ATT.Attachments = {

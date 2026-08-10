@@ -4,6 +4,8 @@ ARC9EFTBASE = true
 ARC9EFTRMOD = ARC9EFTRMOD or {}
 ARC9EFTRMOD = true
 
+AddCSLuaFile("lua/arc9/common/cl_eft_stances.lua")
+
 ARC9EFT.RicochetSounds = {
     ")arc9_eft_shared/ricochet/ricochet1.wav",
     ")arc9_eft_shared/ricochet/ricochet2.wav",
@@ -147,7 +149,7 @@ if SERVER then
     util.AddNetworkString("arc9eftchambercheck")
     util.AddNetworkString("arc9eftquestionnotif")
     util.AddNetworkString("arc9eftbadtripwire")
-    
+    util.AddNetworkString("arc9eftstances")
 else
     matproxy.Add({
         name = "ARC9_EFT_FAKEAMMO",
@@ -404,7 +406,7 @@ else
         makeeftmagcheck(rnds .. "", rndtype)
     end)
 
-    net.Receive("arc9eftchambercheck", function(len) --govno peredelay potom
+    net.Receive("arc9eftchambercheck", function(len) --govno peredelay potom НЕ ВОЗРАЖАЙТЕ ПЖ ПЖ
         local checktype = net.ReadBool()
         local rnds = net.ReadUInt(9)
         local maxrnds = net.ReadUInt(9)
@@ -421,6 +423,13 @@ else
         if rnds == ARC9:GetPhrase("eft_hud_empty") then rndtype = ARC9:GetPhrase("eft_hud_none") end
 
         makeeftmagcheck(rnds .. "", rndtype)
+    end)
+end
+
+if SERVER then
+    net.Receive("arc9eftstances", function(len, ply)
+        local stance = net.ReadString()
+        ToggleEFTStance(ply, stance)
     end)
 end
 
@@ -522,6 +531,22 @@ ARC9EFT.DeployTimeHook = function(wep, orig)
     return math.max(0.05, orig * 0.5 + ((1 - ergo * 0.01) * 0.25) * ergomult:GetFloat() + weight / 10)
 end
 
+hook.Add("StartCommand", "ScrollEFTStance", function(ply, cmd)
+    EFTStanceScroller(ply, cmd)
+end)
+
+-- concommand.Add("arc9_eft_cornerblindfire", function(ply)
+--     ToggleEFTStance(ply, "EFT_InCornerFire", "Corner Blind Fire")
+-- end)
+
+-- concommand.Add("arc9_eft_leftshoulder", function(ply)
+--     ToggleEFTStance(ply, "EFT_InLeftShoulder", "Left Shoulder")
+-- end)
+
+-- concommand.Add("arc9_eft_somalianblindfire", function(ply)
+--     ToggleEFTStance(ply, "EFT_InSomalianStance", "Somalian Stance")
+-- end)
+
 function WeaponSelectorVkluchatel(state)
     hook.Add('HUDShouldDraw', 'disablewepselector', function(el)
         if el == 'CHudWeaponSelection' then
@@ -532,10 +557,10 @@ end
 
 -- (ply, status, stance)
 function EFTSetReady(ply, status)
-    if not IsValid(ply) then return end
+    if !IsValid(ply) then return end
     local wep = ply:GetActiveWeapon()
-    if not (IsValid(wep) and wep.ARC9 and wep.EFTCombatStances == true) then return end
-    if status == false then
+    if !(IsValid(wep) and wep.ARC9 and wep.EFTCombatStances == true) then return end
+    if !status then
         wep:SetNW2Bool("EFT_HighReadyStance", false)
         wep:SetNW2Bool("EFT_LowReadyStance", false)
         ply:GetNWInt("EFT_OGStatus", 0)
@@ -543,60 +568,59 @@ function EFTSetReady(ply, status)
 end
 
 function EFTSetStance(ply, status)
-    if not IsValid(ply) then return end
+    if !IsValid(ply) then return end
     local wep = ply:GetActiveWeapon()
-    if not (IsValid(wep) and wep.ARC9 and wep.EFTCombatStances == true) then return end
-    if status == false then
+    if !(IsValid(wep) and wep.ARC9 and wep.EFTCombatStances == true) then return end
+    if !status then
         wep:SetNW2Bool("EFT_InCornerFire", false)
         wep:SetNW2Bool("EFT_InLeftShoulder", false)
         wep:SetNW2Bool("EFT_InSomalianStance", false)
     end
 end
 
-local function ToggleEFTStance(ply, activeVar, printName)
-    local targetPly = SERVER and ply or (CLIENT and LocalPlayer())
-    if not IsValid(targetPly) then return end
-    local wep = targetPly:GetActiveWeapon()
+function ToggleEFTStance(ply, stanceName) --koroche potom уберу 
+    if !IsValid(ply) then return end
 
-    if IsValid(wep) and wep.ARC9 and wep.EFTCombatStances == true then
+    local wep = ply:GetActiveWeapon()
+    if !(IsValid(wep) and wep.ARC9 and wep.EFTCombatStances) then return end
 
-        local out = wep:GetOutOfBreath()
-        local weight = wep:GetValue("EFTWeight") or {}
+    local currentState = wep:GetNW2Bool(stanceName, false)
+    local newState = !currentState
 
-        if weight < 6 and out == false then
-            local stances = {
-                "EFT_InCornerFire",
-                "EFT_InLeftShoulder",
-                "EFT_InSomalianStance"
-            }
-            
-            local curState = wep:GetNW2Bool(activeVar, false)
-            local newState = not curState
+    if !newState then
+        wep:SetNW2Bool(stanceName, false)
+        EFTSetReady(ply, false)
+        return
+    end
 
-            for _, stance in ipairs(stances) do
-                wep:SetNW2Bool(stance, false)
-                EFTSetReady(ply, false)
-            end
-        
-            if newState then
-                wep:SetNW2Bool(activeVar, true)
-            end
-            -- print(printName .. " status: " .. tostring(newState))
+    local allStances = {
+        "EFT_InCornerFire",
+        "EFT_InLeftShoulder",
+        "EFT_InSomalianStance"
+    }
+
+    for _, name in ipairs(allStances) do
+        if name ~= stanceName then
+            wep:SetNW2Bool(name, false)
         end
     end
+
+    wep:SetNW2Bool(stanceName, true)
+    EFTSetReady(ply, false)
 end
 
 
-function EFTStanceScroller(ply, cmd)
-	if not IsValid(ply) then return end
 
+function EFTStanceScroller(ply, cmd)
+	if !IsValid(ply) then return end
 	local wep = ply:GetActiveWeapon()
-	if not (IsValid(wep) and wep.ARC9 and wep.EFTCombatStances == true) then return end
+    
+	if !(IsValid(wep) and wep.ARC9 and wep.EFTCombatStances) then return end
     WeaponSelectorVkluchatel(true) --IF TRUE THEN HUD WORKS
     local out = wep:GetOutOfBreath()
-    local weight = wep:GetValue("EFTWeight")
+    local weight = wep:GetValue("EFTWeight") or 0
 
-    if ply:KeyDown(IN_WALK) and out == false and weight < 6 then --MR ANALUS
+    if ply:KeyDown(IN_WALK) and !out and weight < 6 then --MR ANALUS
         WeaponSelectorVkluchatel(false) --МИСТР СФИНКТЕР, IF FALSE THEN HUD TURNS OFF
     
         local wheel = cmd:GetMouseWheel()
@@ -625,22 +649,6 @@ function EFTStanceScroller(ply, cmd)
         -- print("OGstatus:", OGstatus, "High:", highReady, "Low:", lowReady)
     else return end
 end
-
-hook.Add("StartCommand", "ScrollEFTStance", function(ply, cmd)
-    EFTStanceScroller(ply, cmd)
-end)
-
-concommand.Add("arc9_eft_cornerblindfire", function(ply)
-    ToggleEFTStance(ply, "EFT_InCornerFire", "Corner Blind Fire")
-end)
-
-concommand.Add("arc9_eft_leftshoulder", function(ply)
-    ToggleEFTStance(ply, "EFT_InLeftShoulder", "Left Shoulder")
-end)
-
-concommand.Add("arc9_eft_somalianblindfire", function(ply)
-    ToggleEFTStance(ply, "EFT_InSomalianStance", "Somalian Stance")
-end)
 
 local dmgrangecvar = GetConVar("arc9_eft_mindmgrange")
 local dmgrangesgcvar = GetConVar("arc9_eft_mindmgrange_sg")

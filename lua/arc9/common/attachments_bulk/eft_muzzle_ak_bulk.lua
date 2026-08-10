@@ -200,7 +200,6 @@ ATT.MuzzleParticle = "arc9_eft_dtk_1"
 ATT.HeatCapacityMult = 0.989
 ATT.PhysBulletMuzzleVelocityMult = 1.005
 
-
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
     ergonomicsModifier = -3.5,
     recoilModifier = -10.5,
@@ -444,7 +443,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.HeatCapacityMult = 0.99
 ATT.PhysBulletMuzzleVelocityMult = 0.99
-
+ATT.MuzzleParticle = "arc9_eft_dtk_1"
 ATT.Model = "models/weapons/arc9_eft_shared/atts/muzzle/muzzle_ar10_lantac_dgn762b_muzzle_brake_762x51.mdl"
 
 ATT.Category = {"eft_akm_muzzle"}

@@ -584,7 +584,8 @@ ATT.ToggleStats = {
         PrintName = "eft_toggle_folded",
         CustomizePos = Vector(16, 40, 5),
         CustomizeRotateAnchor = Vector(16, -4.5, -5.23),
-        ActivateElements = {"eft_mp5_stock_a3_folded"}
+        ActivateElements = {"eft_mp5_stock_a3_folded"},
+        HasStock = false
     },
 }
 
@@ -611,7 +612,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 
 ATT.HasBufferTube = true 
-
+ATT.HasStock = false
 ATT.Category = {"eft_mp5_stock"}
 
 ATT.CustomizePos = Vector(17, 40, 5)
@@ -738,6 +739,8 @@ ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
 
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_1"
+
 ATT.HeatCapacityMult = 0.99
 
 ATT.Category = {"eft_mp5_muzzle_second"}
@@ -768,6 +771,8 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_mp5_hk_noveske_style_3_lu
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
+
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_2"
 
 ATT.HeatCapacityMult = 0.991
 
@@ -803,7 +808,7 @@ ATT.PhysBulletMuzzleVelocityMult = 1.012
 ATT.Silencer = true 
 ATT.BarrelLengthAdd = 3
 
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_2_small"
 ATT.NoFlash = true
 -- ATT.MuzzleEffectQCA = 5
 

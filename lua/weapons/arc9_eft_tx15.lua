@@ -44,7 +44,6 @@ SWEP.StandardPresets = {
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_tx15.mdl"
 SWEP.DefaultBodygroups = "00000010000000"
 
-SWEP.RecoilAutoControl = 6
 
 SWEP.EFTErgo = 50
 SWEP.EFTWeight = 0.69
@@ -60,10 +59,10 @@ SWEP.Spread = 1.49 * ARC9.MOAToAcc
 SWEP.MalfunctionMeanShotsToFail = 675 * 1.5
 
 --recoil
-SWEP.RecoilUp   = 3.25  -- up recoil
-SWEP.RecoilSide = 0.5 -- sideways recoil
-SWEP.RecoilRandomUp   = 0.55 -- random up/down
-SWEP.RecoilRandomSide = 0.4   -- random left/right
+SWEP.RecoilUpMult   = 0.9  -- up recoil
+SWEP.RecoilSideMult = 0.8 -- sideways recoil
+SWEP.RecoilRandomUpMult   = 0.9 -- random up/down
+SWEP.RecoilRandomSideMult = 0.8   -- random left/right
 
 local path = ")weapons/darsu_eft/m4a1/"
 

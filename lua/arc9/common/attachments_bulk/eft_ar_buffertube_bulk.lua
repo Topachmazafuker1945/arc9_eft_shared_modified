@@ -17,7 +17,7 @@ ATT.Icon = Material("entities/eft_attachments/stocks/adar.png", "mips smooth")
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_colt_stock_tube_std.mdl"
 
 ATT.HasBufferTube = true
-
+ATT.HasStock = true
 ATT.SortOrder = 0
 ATT.Category = "eft_ar15_buffertube"
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -59,7 +59,7 @@ ATT.Icon = Material("entities/eft_attachments/stocks/f93.png", "mips smooth")
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_ergo_f93_pro_stock.mdl"
 
 ATT.HasBufferTube = true
-
+ATT.HasStock = true
 ATT.ExcludeElements = {"pgrip_stock"}
 
 
@@ -92,7 +92,7 @@ ATT.Icon = Material("entities/eft_attachments/stocks/m7a1.png", "mips smooth")
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_troy_m7a1_pdw.mdl"
 
 ATT.HasBufferTube = true
-
+ATT.HasStock = true
 ATT.ExcludeElements = {"pgrip_stock"}
 
 ATT.SortOrder = 0
@@ -125,7 +125,7 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_troy_m7a1_pdw.mdl"
 ATT.ModelSkin = 1
 
 ATT.HasBufferTube = true
-
+ATT.HasStock = true
 ATT.ExcludeElements = {"pgrip_stock"}
 
 ATT.SortOrder = 0
@@ -157,7 +157,7 @@ ATT.Icon = Material("entities/eft_attachments/stocks/rtm.png", "mips smooth")
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_rtm_atp_buffer_tube.mdl"
 
 ATT.HasBufferTube = true
-
+ATT.HasStock = true
 ATT.SortOrder = 0
 ATT.Category = "eft_ar15_buffertube"
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -199,7 +199,7 @@ ATT.Icon = Material("entities/eft_attachments/stocks/adv.png", "mips smooth")
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_strike_industries_advanced_receiver_extension.mdl"
 
 ATT.HasBufferTube = true
-
+ATT.HasStock = true
 ATT.SortOrder = 0
 ATT.Category = "eft_ar15_buffertube"
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -242,7 +242,7 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_strike_industries_adv
 ATT.ModelSkin = 1
 
 ATT.HasBufferTube = true
-
+ATT.HasStock = true
 ATT.SortOrder = 0
 ATT.Category = "eft_ar15_buffertube"
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -288,7 +288,7 @@ ATT.Icon = Material("entities/eft_attachments/stocks/gen2.png", "mips smooth")
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_magpul_ubr_gen2.mdl"
 
 ATT.HasBufferTube = true
-
+ATT.HasStock = true
 
 ATT.ExcludeElements = {"pgrip_stock"}
 
@@ -322,7 +322,7 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_magpul_ubr_gen2.mdl"
 ATT.ModelSkin = 1
 
 ATT.HasBufferTube = true
-
+ATT.HasStock = true
 ATT.ExcludeElements = {"pgrip_stock"}
 
 
@@ -355,7 +355,7 @@ ATT.Icon = Material("entities/eft_attachments/stocks/viperpdw.png", "mips smooth
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_strike_industries_viper_pdw_stock.mdl"
 
 ATT.HasBufferTube = true
-
+ATT.HasStock = true
 ATT.ExcludeElements = {"pgrip_stock"}
 
 
@@ -389,7 +389,7 @@ ATT.Icon = Material("entities/eft_attachments/stocks/arfx.png", "mips smooth")
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_double_star_ace_arfx.mdl"
 
 ATT.HasBufferTube = true
-
+ATT.HasStock = true
 ATT.ExcludeElements = {"pgrip_stock"}
 
 
@@ -421,7 +421,7 @@ ATT.Icon = Material("entities/eft_attachments/stocks/baskak.png", "mips smooth")
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_armacon_baskak.mdl"
 ATT.ModelOffset = Vector(0.25, 0, 0)
 ATT.HasBufferTube = true
-
+ATT.HasStock = true
 
 ATT.ExcludeElements = {"pgrip_stock"}
 
@@ -455,6 +455,7 @@ ATT.Description = "An AR-15 mil-spec buffer tube for installation of various tel
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_cgnl_stock_tube.mdl"
 
 ATT.HasBufferTube = true
+ATT.HasStock = true
 ATT.SortOrder = 0
 ATT.Category = "eft_ar15_buffertube"
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -496,6 +497,7 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_cgnl_stock_tube.mdl"
 ATT.ModelSkin = 1
 
 ATT.HasBufferTube = true
+ATT.HasStock = true
 ATT.SortOrder = 0
 ATT.Category = "eft_ar15_buffertube"
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -538,6 +540,7 @@ ATT.Description = "A hexagonal buffer tube for attaching Phase5 buttstocks. Manu
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_phase5_hexone_buffer_tube.mdl"
 
 ATT.HasBufferTube = true
+ATT.HasStock = true
 ATT.SortOrder = 0
 ATT.Category = "eft_ar15_buffertube"
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -576,7 +579,7 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_colt_stock_tube_a2.md
 -- same texture named differently wtf
 
 ATT.HasBufferTube = true
-
+ATT.HasStock = true
 ATT.ExcludeElements = {"pgrip_stock"}
 
 ATT.SortOrder = 0
@@ -618,7 +621,7 @@ ATT.Description = "The Crosshair Hydraulic buffer tube by Mesa Tactical. Has a m
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_mesa_crosshair_hydraulic_buffer_tube.mdl"
 ATT.ModelOffset = Vector(0.0, 0, 0)
 ATT.HasBufferTube = true
-
+ATT.HasStock = true
 
 ATT.ExcludeElements = {"pgrip_stock"}
 

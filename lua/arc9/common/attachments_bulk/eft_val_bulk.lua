@@ -212,7 +212,7 @@ ATT.Description = "An adapter for installing aftermarket buttstocks on the AS VA
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
-
+ATT.HasStock = true
 ATT.Category = {"eft_val_stock"}
 
 ATT.Attachments = {

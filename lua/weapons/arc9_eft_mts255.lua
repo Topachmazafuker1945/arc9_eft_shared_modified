@@ -66,6 +66,7 @@ SWEP.SpreadAddHot = 0
 SWEP.DispersionHook = ARC9EFT.SpreadBonus or nil
 SWEP.DispersionSpreadAddHot = 0.01 -- overheat debuff
 
+SWEP.HasStock = false
 SWEP.RPM = 134
 SWEP.EFTErgo = 50
 SWEP.EFTWeight = 1.1

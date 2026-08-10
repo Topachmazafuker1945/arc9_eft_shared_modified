@@ -177,7 +177,7 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_ar15_bulletec_st_6012_muz
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
-ATT.MuzzleParticle = "arc9_eft_muzzledevice_2"
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_3"
 ATT.HeatCapacityMult = 0.986
 
 ATT.Category = {"eft_ar15_muzzle"}
@@ -839,7 +839,7 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_ar15_taa_zk_23_muzzle_bra
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
-
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_2"
 ATT.HeatCapacityMult = 0.989
 
 ATT.Category = {"eft_ar15_muzzle"}
@@ -1003,7 +1003,7 @@ ARC9.LoadAttachment(ATT, "eft_muzzle_ar15_warden")
 
 ATT = {}
 
-ATT.PrintName = "AR-15 AlienTech 5.56x45 muzzle brake"
+ATT.PrintName = "AR-15 AlienTech 5.56x45 muzzle brake222"
 ATT.CompactName = "AlienTech"
 ATT.Icon = Material("entities/eft_ar15_attachments/muzzle/alien.png", "mips smooth")
 ATT.Description = [[A competition steel muzzle brake with one closed and five open ports designed by George Gubich, a six-time champion in practical shooting in Russia. Installed on AR-15 family weapons.]]
@@ -1017,6 +1017,8 @@ ATT.BarrelLengthAdd = 0.5
 ATT.MuzzleParticle = "arc9_eft_muzzledevice_3"
 ATT.HeatCapacityMult = 0.987
 ATT.PhysBulletMuzzleVelocityMult = 1.0045
+
+ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.Category = {"eft_ar15_muzzle"}
 
@@ -1067,13 +1069,6 @@ table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
 
 -- EFT ID: 5c78f2882e22165df16b832e
 ARC9.LoadAttachment(ATT, "eft_muzzle_ar15_jailbreak")
-
-
-
-
-
-
-
 
 
 ///////////////////////////////////////      eft_silencer_thorpsr

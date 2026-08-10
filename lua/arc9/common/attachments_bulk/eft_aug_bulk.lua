@@ -506,7 +506,8 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_aug_steyr_a3_closed_flash_hider.mdl"
 ATT.BarrelLengthAdd = 0.5
-
+ATT.NoFlash = true
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_1"
 
 
 ATT.Category = {"eft_aug_muzzle"}
@@ -537,6 +538,9 @@ ATT.BarrelLengthAdd = 0.5
 
 ATT.Category = {"eft_aug_muzzle"}
 
+ATT.NoFlash = true
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_1"
+
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
     ergonomicsModifier = -1,
     recoilModifier = -5,
@@ -560,6 +564,9 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_aug_steyr_a3_muzzle_brake.mdl"
 ATT.BarrelLengthAdd = 0.5
+
+ATT.NoFlash = true
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_1"
 
 ATT.Category = {"eft_aug_muzzle"}
 

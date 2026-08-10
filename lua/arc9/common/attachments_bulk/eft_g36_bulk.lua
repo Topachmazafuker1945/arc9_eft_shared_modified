@@ -1124,6 +1124,8 @@ ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
 
+ATT.NoFlash = true
+ATT.MuzzleParticle = "arc9_eft_muzzleflashider_1"
 
 ATT.Category = {"eft_g36_muzzle"}
 
@@ -1153,6 +1155,9 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_g36_hk_complete.mdl"
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
+
+ATT.NoFlash = true
+ATT.MuzzleParticle = "arc9_eft_muzzleflashider_1"
 
 ATT.HeatCapacityMult = 0.99
 
@@ -1184,6 +1189,9 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_g36_hk_4_prong.mdl"
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
+
+ATT.NoFlash = true
+ATT.MuzzleParticle = "arc9_eft_muzzleflashider_1"
 
 ATT.HeatCapacityMult = 0.99
 

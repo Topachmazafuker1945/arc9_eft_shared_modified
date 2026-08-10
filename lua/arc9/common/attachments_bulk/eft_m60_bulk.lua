@@ -766,6 +766,9 @@ ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
 
+ATT.NoFlash = true
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_1"
+
 ATT.Category = {"eft_muzzle_m60"}
 
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
@@ -798,6 +801,9 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_m60_usord_e6.mdl"
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
+
+ATT.NoFlash = true
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_1"
 
 ATT.Category = {"eft_muzzle_m60"}
 

@@ -14,7 +14,7 @@ ATT.Icon = Material("entities/eft_attachments/stocks/a2.png", "mips smooth")
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_colt_stock_tube_a2.mdl"
 
 ATT.HasBufferTube = true
-
+ATT.HasStock = true
 
 ATT.ExcludeElements = {"pgrip_stock"}
 
@@ -61,7 +61,7 @@ ATT.Icon = Material("entities/eft_attachments/stocks/colttube.png", "mips smooth
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_colt_stock_tube_std.mdl"
 
 ATT.HasBufferTube = true
-
+ATT.HasStock = true
 
 -- 
 ATT.SortOrder = 0
@@ -106,7 +106,7 @@ ATT.Icon = Material("entities/eft_attachments/stocks/socom.png", "mips smooth")
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_double_star_ace_socom_gen_4.mdl"
 
 ATT.HasBufferTube = true
-
+ATT.HasStock = true
 ATT.ExcludeElements = {"pgrip_stock"}
 
 
@@ -163,7 +163,6 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_high_standart_m4ss.md
 ATT.HasStock = true
 
 
-
 ATT.SortOrder = 0
 ATT.Category = "eft_ar_stock"
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -193,7 +192,7 @@ ATT.Icon = Material("entities/eft_attachments/stocks/b5.png", "mips smooth")
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/stock_ar15_b5_precision.mdl"
 
 ATT.HasStock = true
-
+ATT.HasStock = true
 
 
 ATT.SortOrder = 0

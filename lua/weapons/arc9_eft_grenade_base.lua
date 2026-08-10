@@ -6,6 +6,7 @@ SWEP.AdminOnly = false
 SWEP.NoDynamicKillIcon = true
 SWEP.NotForNPCs = true
 SWEP.EntitySelectIcon = true
+SWEP.EFTCombatStances = false
 
 SWEP.PrintName = ARC9:GetPhrase("eft_weapon_rgd5")
 SWEP.Class = ARC9:GetPhrase("eft_class_weapon_grenade")
@@ -47,6 +48,7 @@ SWEP.WorldModelOffset = {
 }
 
 SWEP.MirrorVMWMHeldOnly = true
+
 
 SWEP.BottomlessClip = true
 SWEP.ChamberSize = 0 -- The amount of rounds this gun can chamber.

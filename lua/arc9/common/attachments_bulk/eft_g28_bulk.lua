@@ -695,6 +695,8 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 -- ATT.MuzzleDevice = true
 -- ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
+ATT.NoFlash = true
+ATT.MuzzleParticle = "arc9_eft_muzzleflashider_1"
 
 ATT.PhysBulletMuzzleVelocityMult = 1.02
 

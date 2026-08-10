@@ -277,7 +277,7 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/ak_stock_ak12_stock_tube.mdl"
 ATT.ModelOffset = Vector(0, 0, 0.05)
 ATT.ModelAngleOffset = Angle(0, 0, -2.5)
 ATT.Category = {"eft_ak74m_stock", "eft_rpk16_stock"}
-
+ATT.HasStock = true
 ATT.RecoilMult = 0.96
 ATT.VisualRecoilMult = 0.96
 

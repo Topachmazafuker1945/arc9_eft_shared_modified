@@ -34,7 +34,7 @@ SWEP.DefaultBodygroups = "00000000000000"
 SWEP.WorldModelOffset = {
     Pos = Vector(-8.3, 5.5, -5),
     Ang = Angle(-7, 0, 180),
-    TPIKPos = Vector(-5, 5, -4), -- rpg
+    TPIKPos = Vector(-2, 4.5, -5), -- rpg
     TPIKAng = Angle(-11.5, 0, 180),
     Scale = 1
 }
@@ -44,11 +44,28 @@ SWEP.IronSights = {
     Ang = Angle(0, 0.06, 0),
     ViewModelFOV = 54,
     Midpoint = { Pos = Vector(-1, 0, 8), Ang = Angle(0, 0, -145) },
-    Magnification = 1.1,
+    Magnification = 1.0,
 }
 
+SWEP.TPIKLowReadyVector = Vector (0, -0, -3.0)
+SWEP.TPIKLowReadyAngle = Angle(50, -10, -5)
+SWEP.TPIKHighReadyVector = Vector(-4.5, -2, 17)
+SWEP.TPIKHighReadyAngle = Angle(-40, 0, 0)
+SWEP.TPIKSomalianVector = Vector(-0.0, -0, -6.0)
+SWEP.TPIKSomalianAngle = Angle(0, -0, -30)
+SWEP.TPIKCornerVector = Vector(-6.0, -8, 6.0)
+SWEP.TPIKCornerAngle = Angle(0, -0, 20)
+SWEP.TPIKLeftShoulderVector = Vector(4, 10, -1) 
+SWEP.TPIKLeftShoulderAngle = Angle(0, -0, 0)
 
-SWEP.ActivePos = Vector(-0.7, -3.1, -.35)
+SWEP.ActivePos = Vector(-2.0, -6.1, -.35)
+
+SWEP.LowReadyVector = Vector(-1.0, -2, 1.0) -- pidarasiki
+SWEP.LowReadyAngle = Angle(0, -10, -5)
+
+SWEP.HighReadyVector = Vector(2, -7, -12)
+SWEP.HighReadyAngle = Angle(0, 30, -5)
+
 SWEP.CustomizePos = Vector(21, 48, 3.5)
 SWEP.CustomizeSnapshotFOV = 55
 SWEP.CustomizeRotateAnchor = Vector(21, -4.28, -5.23)
@@ -70,41 +87,49 @@ SWEP.Slot = 3
 
 SWEP.Recoil = 1 -- general multiplier of main recoil
 
-SWEP.RecoilUp   = 2   -- up recoil
-SWEP.RecoilSide = 1.1 -- sideways recoil
-SWEP.RecoilRandomUp   = 0.5 -- random up/down
-SWEP.RecoilRandomSide = 0.25   -- random left/right
+SWEP.RecoilUp   = 1.0   -- up recoil
+SWEP.RecoilUpSights   = 6.25   -- up recoil sight
+SWEP.RecoilSide = 1.2 -- sideways recoil
+SWEP.RecoilSideSights = 8.0 -- sideways recoil
 
-SWEP.RecoilAutoControl = 3.6 -- autocompenstaion, could be cool if set to high but it also affects main recoil
+SWEP.RecoilRandomUp   = 1.1 -- random up/down
+SWEP.RecoilRandomUpSights   = 5.25 -- random up/down sight
+SWEP.RecoilRandomSide = 1.2   -- random left/right
+SWEP.RecoilRandomSideSights = 6.0   -- random left/right
+
+SWEP.RecoilAutoControl = 10.0 -- autocompenstaion, could be cool if set to high but it also affects main recoil
 
 -- visual recoil   aka visrec
-SWEP.VisualRecoil = 1.1 -- general multiplier for it
+SWEP.VisualRecoil = 0.5 -- general multiplier for it
+--SWEP.VisualRecoilHipFire = 0.1 -- general multiplier for it
 
 SWEP.EFT_VisualRecoilUp_BURST_SEMI   = 0.5   -- up/down tilt when semi/bursts
-SWEP.VisualRecoilUp                   = 0.8   --   when fullautoing
+SWEP.VisualRecoilUp                   = 0.5   --   when fullautoing
 SWEP.EFT_VisualRecoilSide_BURST_SEMI = 0.001 -- left/right tilt when semi/burst
-SWEP.VisualRecoilSide                 = 0.1   --   when fullautoing
-SWEP.VisualRecoilRoll = 4 -- roll tilt, a visual thing
+SWEP.VisualRecoilSide                 = 0.0075   --   when fullautoing
+SWEP.VisualRecoilRoll = 25 --roll tilt, a visual thing
 
-SWEP.VisualRecoilPunch = 1 -- How far back visrec moves the gun
-SWEP.VisualRecoilPunchSights = 3 -- same but in sights only
+SWEP.VisualRecoilPunch = 6 -- How far back visrec moves the gun
+SWEP.VisualRecoilPunchSights = 150 -- same but in sights only
 
-SWEP.VisualRecoilDampingConst = 110  -- spring settings, this is speed of visrec
-SWEP.VisualRecoilSpringPunchDamping = 7 -- the less this is the more wobbly gun moves
-SWEP.VisualRecoilSpringMagnitude = 0.5 -- some third element of spring, high values make gun shake asf on low fps
 
-SWEP.VisualRecoilPositionBumpUpHipFire = 0.05 -- gun will go down each shot by this value
-SWEP.VisualRecoilPositionBumpUp = -0.05 -- same but in sights
-SWEP.VisualRecoilPositionBumpUpRTScope = 0.05 -- same but in rt scopes, you probably should keep it same as sight value, i guess it doesn't matter anymore after recoil update
+SWEP.VisualRecoilDampingConst = 200 -- spring settings, this is speed of visrec
+SWEP.VisualRecoilSpringPunchDamping = 3 -- the less this is the more wobbly gun moves
+SWEP.VisualRecoilSpringMagnitude = 1 -- some third element of spring, high values make gun shake asf on low fps
+
+SWEP.VisualRecoilPositionBumpUpHipFire = -1.0 -- gun will go down each shot by this value
+SWEP.VisualRecoilPositionBumpUp = -1.25 -- same but in sights
+SWEP.VisualRecoilPositionBumpUpRTScope = -1.0 -- same but in rt scopes, you probably should keep it same as sight value, i guess it doesn't matter anymore after recoil update
 
 -- SWEP.VisualRecoilCenter = Vector(4.28-1.5, 19, -5.23 +3) -- ugh, i dont now what to set it too, but probably it should be diffferent on each gun
-SWEP.EFT_ShotsToSwitchToFullAutoBehaviur = 2 -- how many shots for switch to fullauto stats from semi/burst, + 2 shots afterwards are lerping. you probably should not touch this but ok
+SWEP.EFT_ShotsToSwitchToFullAutoBehaviur = 3 -- how many shots for switch to fullauto stats from semi/burst, + 2 shots afterwards are lerping. you probably should not touch this but ok
 
-SWEP.RecoilKick = 0.75 -- camera roll each shot + makes camera go more up when fullautoing
+SWEP.RecoilKick = 0.5 -- camera roll each shot + makes camera go more up when fullautoing
 
-SWEP.VisualRecoilCenter = Vector(4.28, 19, -2.25)
-SWEP.SubtleVisualRecoil = 1.25
-SWEP.SubtleVisualRecoilDirection = 4
+SWEP.VisualRecoilCenter = Vector(4.28, 19, -2)
+SWEP.SubtleVisualRecoilSights = 2.2
+SWEP.SubtleVisualRecoilHipFire = 2.0
+SWEP.SubtleVisualRecoilDirection = 5.5
 SWEP.SubtleVisualRecoilSpeed = 1
 
 ------------------------- |||           Damage            ||| -------------------------

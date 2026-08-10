@@ -32,7 +32,7 @@ SWEP.DefaultBodygroups = "0000000000000"
 SWEP.WorldModelOffset = {
     Pos = Vector(-8.3, 5.5, -6),
     Ang = Angle(-7, 0, 180),
-    TPIKPos = Vector(-5, 5, -4), -- rpg
+    TPIKPos = Vector(-5, 6, -3), -- rpg
     TPIKAng = Angle(-11.5, 0, 180),
     Scale = 1
 }
@@ -45,7 +45,25 @@ SWEP.IronSights = {
     ViewModelFOV = 54
 }
 
+SWEP.TPIKLowReadyVector = Vector(5.0, -0, -3.0)
+SWEP.TPIKLowReadyAngle = Angle(50, -10, -5)
+SWEP.TPIKHighReadyVector = Vector(-6.5, -2.5, 20)
+SWEP.TPIKHighReadyAngle = Angle(-40, 0, 0)
+SWEP.TPIKSomalianVector = Vector(-0.0, -0, -6.0)
+SWEP.TPIKSomalianAngle = Angle(0, -0, -30)
+SWEP.TPIKCornerVector = Vector(-6.0, -8, 6.0)
+SWEP.TPIKCornerAngle = Angle(0, -0, 20)
+SWEP.TPIKLeftShoulderVector = Vector(4, 10, -1) 
+SWEP.TPIKLeftShoulderAngle = Angle(0, -0, 0)
+
 SWEP.ActivePos = Vector(-0.7, -3.1, -.35)
+
+SWEP.LowReadyVector = Vector(-1.0, -2, 1.0) -- pidarasiki
+SWEP.LowReadyAngle = Angle(0, -10, -5)
+
+SWEP.HighReadyVector = Vector(2, -7, -12)
+SWEP.HighReadyAngle = Angle(0, 30, -5)
+
 SWEP.CustomizePos = Vector(22, 55, 4)
 SWEP.CustomizeSnapshotFOV = 50
 SWEP.CustomizeRotateAnchor = Vector(22, -4.28, -5.23)

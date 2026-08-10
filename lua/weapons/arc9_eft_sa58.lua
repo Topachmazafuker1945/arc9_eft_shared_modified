@@ -34,7 +34,7 @@ SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_dsa_sa58.mdl"
 SWEP.WorldModelOffset = {
     Pos = Vector(-12, 5.5, -4.7),
     Ang = Angle(-7, 0, 180),
-    TPIKPos = Vector(-8, 5, -2), -- rpg
+    TPIKPos = Vector(-6, 3.5, -3), -- rpg
     TPIKAng = Angle(-11.5, 0, 180),
     Scale = 1
 }
@@ -47,7 +47,25 @@ SWEP.IronSights = {
     ViewModelFOV = 54
 }
 
-SWEP.ActivePos = Vector(-0.7, -3.1, -.35)
+SWEP.TPIKLowReadyVector = Vector(5.0, -0, -3.0)
+SWEP.TPIKLowReadyAngle = Angle(50, -10, -5)
+SWEP.TPIKHighReadyVector = Vector(-3.0, -0, 17)
+SWEP.TPIKHighReadyAngle = Angle(-40, 0, 0)
+SWEP.TPIKSomalianVector = Vector(-0.0, -0, -6.0)
+SWEP.TPIKSomalianAngle = Angle(0, -0, -30)
+SWEP.TPIKCornerVector = Vector(-6.0, -8, 6.0)
+SWEP.TPIKCornerAngle = Angle(0, -0, 20)
+SWEP.TPIKLeftShoulderVector = Vector(4, 10, -1) 
+SWEP.TPIKLeftShoulderAngle = Angle(0, -0, 0)
+
+SWEP.ActivePos = Vector(-2.0, -6.1, -.35)
+
+SWEP.LowReadyVector = Vector(-1.0, -2, 1.0) -- pidarasiki
+SWEP.LowReadyAngle = Angle(0, -10, -5)
+
+SWEP.HighReadyVector = Vector(2, -7, -12)
+SWEP.HighReadyAngle = Angle(0, 30, -5)
+
 SWEP.CustomizePos = Vector(20.5, 42, 4)
 SWEP.CustomizeSnapshotFOV = 55
 SWEP.CustomizeRotateAnchor = Vector(20.5, -4.28, -5.23)
@@ -73,14 +91,14 @@ SWEP.Slot = 3
 SWEP.Recoil = 1 -- general multiplier of main recoil
 
 SWEP.RecoilUp   = 1.0   -- up recoil
-SWEP.RecoilUpSights   = 3.65   -- up recoil sight
+SWEP.RecoilUpSights   = 8.25   -- up recoil sight
 SWEP.RecoilSide = 1.2 -- sideways recoil
-SWEP.RecoilSideSights = 2.5 -- sideways recoil
+SWEP.RecoilSideSights = 8.0 -- sideways recoil
 
 SWEP.RecoilRandomUp   = 1.1 -- random up/down
-SWEP.RecoilRandomUpSights   = 3.55 -- random up/down sight
+SWEP.RecoilRandomUpSights   = 8.25 -- random up/down sight
 SWEP.RecoilRandomSide = 1.2   -- random left/right
-SWEP.RecoilRandomSideSights = 2.9   -- random left/right
+SWEP.RecoilRandomSideSights = 6.0   -- random left/right
 
 SWEP.RecoilAutoControl = 10.0 -- autocompenstaion, could be cool if set to high but it also affects main recoil
 
@@ -88,17 +106,17 @@ SWEP.RecoilAutoControl = 10.0 -- autocompenstaion, could be cool if set to high 
 SWEP.VisualRecoil = 0.5 -- general multiplier for it
 --SWEP.VisualRecoilHipFire = 0.1 -- general multiplier for it
 
-SWEP.EFT_VisualRecoilUp_BURST_SEMI   = 0.6   -- up/down tilt when semi/bursts
-SWEP.VisualRecoilUp                   = 0.6   --   when fullautoing
+SWEP.EFT_VisualRecoilUp_BURST_SEMI   = 0.5   -- up/down tilt when semi/bursts
+SWEP.VisualRecoilUp                   = 0.5   --   when fullautoing
 SWEP.EFT_VisualRecoilSide_BURST_SEMI = 0.001 -- left/right tilt when semi/burst
-SWEP.VisualRecoilSide                 = 0.015   --   when fullautoing
+SWEP.VisualRecoilSide                 = 0.0075   --   when fullautoing
 SWEP.VisualRecoilRoll = 25 --roll tilt, a visual thing
 
 SWEP.VisualRecoilPunch = 6 -- How far back visrec moves the gun
-SWEP.VisualRecoilPunchSights = 90 -- same but in sights only
+SWEP.VisualRecoilPunchSights = 100 -- same but in sights only
 
 
-SWEP.VisualRecoilDampingConst = 150 -- spring settings, this is speed of visrec
+SWEP.VisualRecoilDampingConst = 200 -- spring settings, this is speed of visrec
 SWEP.VisualRecoilSpringPunchDamping = 3 -- the less this is the more wobbly gun moves
 SWEP.VisualRecoilSpringMagnitude = 1 -- some third element of spring, high values make gun shake asf on low fps
 

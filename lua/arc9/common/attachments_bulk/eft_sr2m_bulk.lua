@@ -442,7 +442,8 @@ ATT.ToggleStats = {
         PrintName = "eft_toggle_folded",
         -- CustomizePos = Vector(18, 25, 6),
         -- CustomizeRotateAnchor = Vector(18, -4.28, -5.23),
-        ActivateElements = {"eft_sr2m_stock_std_folded"}
+        ActivateElements = {"eft_sr2m_stock_std_folded"},
+        HasStock = false
     },
 }
 

@@ -13,7 +13,7 @@ SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_mp5k.mdl"
 SWEP.Description = ARC9:GetPhrase("eft_weapon_mp5k_desc")
 
 SWEP.StandardPresets = false 
-
+SWEP.HasStock = false
 SWEP.RPM = 900
 SWEP.EFTErgo = 55
 SWEP.EFTWeight = 1.15

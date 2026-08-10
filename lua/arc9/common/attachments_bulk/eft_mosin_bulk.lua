@@ -1012,7 +1012,7 @@ ATT.HeatCapacityMult = 1.14
 ATT.PhysBulletMuzzleVelocityMult = 1.0175
 
 ATT.Silencer = true
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_1"
 ATT.NoFlash = true
 
 ATT.Category = {"eft_muzzle_mosin"}
@@ -1043,6 +1043,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_mosin_tpp_clamp_on_muzzle_brake.mdl"
 ATT.ModelOffset = Vector(0.55, 0, 0)
 
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_2"
 
 ATT.Category = {"eft_muzzle_mosin"}
 
@@ -1071,6 +1072,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_mosin_tacfire_tanker_style.mdl"
 ATT.ModelOffset = Vector(0.52, 0, 0)
 
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_2"
 
 ATT.Category = {"eft_muzzle_mosin"}
 
@@ -1099,6 +1101,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_mosin_witt_machine_custom_clamp_on_muzzle_brake.mdl"
 ATT.ModelOffset = Vector(0.43, 0, 0)
 
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_2"
 
 ATT.Category = {"eft_muzzle_mosin"}
 

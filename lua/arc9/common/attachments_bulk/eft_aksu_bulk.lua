@@ -122,7 +122,7 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_aks74u_izhmash_std_545x39.mdl"
-
+ATT.MuzzleParticle = "arc9_eft_dtk_fireball_1"
 
 ATT.Category = {"eft_ak74_muzzle"}
 
@@ -215,7 +215,7 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/ak_stock_aks74u_std.mdl"
-
+ATT.HasStock = true
 ATT.Category = {"eft_aks_stock"}
 
 ATT.Attachments = {

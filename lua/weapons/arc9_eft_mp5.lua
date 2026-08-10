@@ -74,6 +74,7 @@ SWEP.Firemodes = {
     { Mode = 3, PoseParam = 2, RunawayBurst = true},
 }
 
+-- SWEP.HasStock = false
 SWEP.Slot = 2
 
 SWEP.ChamberSize = 0 -- no mag
@@ -84,33 +85,33 @@ SWEP.ClipSize = 0 -- actual chamber (no mag)
 SWEP.Recoil = 1 -- general multiplier of main recoil
 
 SWEP.RecoilUp   = 0.35   -- up recoil
-SWEP.RecoilUpSights   = 0.7   -- up recoil sight
+SWEP.RecoilUpSights   = 3.1   -- up recoil sight
 SWEP.RecoilSide = 1.1 -- sideways recoil
-SWEP.RecoilSideSights = 1.8 -- sideways recoil
+SWEP.RecoilSideSights = 3.9 -- sideways recoil
 
 SWEP.RecoilRandomUp   = 0.35 -- random up/down
-SWEP.RecoilRandomUpSights   = 0.5 -- random up/down sight
+SWEP.RecoilRandomUpSights   = 3.0 -- random up/down sight
 SWEP.RecoilRandomSide = 1.0   -- random left/right
-SWEP.RecoilRandomSideSights = 1.4   -- random left/right
+SWEP.RecoilRandomSideSights = 4.2   -- random left/right
 
-SWEP.RecoilAutoControl = 3.0 -- autocompenstaion, could be cool if set to high but it also affects main recoil
+SWEP.RecoilAutoControl = 10.0 -- autocompenstaion, could be cool if set to high but it also affects main recoil
 
 -- visual recoil   aka visrec
 SWEP.VisualRecoil = 0.5 -- general multiplier for it
 --SWEP.VisualRecoilHipFire = 0.1 -- general multiplier for it
 
 SWEP.EFT_VisualRecoilUp_BURST_SEMI   = 0.3   -- up/down tilt when semi/bursts
-SWEP.VisualRecoilUp                   = 0.7   --   when fullautoing
+SWEP.VisualRecoilUp                   = 0.3   --   when fullautoing
 SWEP.EFT_VisualRecoilSide_BURST_SEMI = 0.001 -- left/right tilt when semi/burst
-SWEP.VisualRecoilSide                 = 0.010   --   when fullautoing
+SWEP.VisualRecoilSide                 = 0.004   --   when fullautoing
 SWEP.VisualRecoilRoll = 20 --roll tilt, a visual thing
 
-SWEP.VisualRecoilPunch = 3 -- How far back visrec moves the gun
-SWEP.VisualRecoilPunchSights = 40 -- same but in sights only
+SWEP.VisualRecoilPunch = 1.25 -- How far back visrec moves the gun
+SWEP.VisualRecoilPunchSights = 45 -- same but in sights only
 
 
 SWEP.VisualRecoilDampingConst = 200 -- spring settings, this is speed of visrec
-SWEP.VisualRecoilSpringPunchDamping = 2.0 -- the less this is the more wobbly gun moves
+SWEP.VisualRecoilSpringPunchDamping = 5.0 -- the less this is the more wobbly gun moves
 SWEP.VisualRecoilSpringMagnitude = 1 -- some third element of spring, high values make gun shake asf on low fps
 
 SWEP.VisualRecoilPositionBumpUpHipFire = -1 -- gun will go down each shot by this value
