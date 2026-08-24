@@ -204,6 +204,7 @@ ATT.Attachments = {
         Pos = Vector(0.7, 0, 2.2),
         Ang = Angle(0, 0, 180),
         Icon_Offset = Vector(0, 0, 0),
+        ExtraSightDistance = 8
     },
     {
         PrintName = ARC9:GetPhrase("eft_cat_tactical"),
@@ -729,7 +730,7 @@ ATT.Sights = {
     {
         Pos = Vector(0, 13, -0.45),
         Ang = Angle(0, 0.2, 0),
-        Magnification = 1.1,
+        Magnification = 1.0,
         IsIronSight = true
     }
 }

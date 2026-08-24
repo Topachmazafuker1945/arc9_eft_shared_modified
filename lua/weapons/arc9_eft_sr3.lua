@@ -31,6 +31,8 @@ SWEP.EFTErgo = 45
 SWEP.EFTWeight = 1.41
 SWEP.HeatCapacity = 76
 
+SWEP.MuzzleParticle = "arc9_eft_muzzledevice_4_x" -- Used for some muzzle effects.
+
 local path = ")weapons/darsu_eft/val/"
 
 SWEP.ShootSound = { path .. "fire_new/sr3m_outdoor_close_loop1.wav", path .. "fire_new/sr3m_outdoor_close_loop2.wav", path .. "fire_new/sr3m_outdoor_close_loop3.wav", path .. "fire_new/sr3m_outdoor_close_loop4.wav" }

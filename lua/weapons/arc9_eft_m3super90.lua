@@ -245,7 +245,16 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
             anim = "look"
             if empty and sa then return "look_empty_pa" end -- to not play empty open bolt anim on pumpaction
         end
-        
+        if rand == 0 then -- chamber check
+            if SERVER then
+                net.Start("arc9eftchambercheck")
+                net.WriteBool(true) -- accurate or not based on mag type
+                net.WriteUInt(swep:Clip1(), 9)
+            --net.WriteUInt(math.min(swep:Clip1(), swep:GetCapacity()), 9)
+                net.WriteUInt(swep:GetCapacity(), 9)
+                net.Send(swep:GetOwner())
+            end
+        end        
         return empty and anim .. "_empty" or anim
     end
     

@@ -122,7 +122,7 @@ ATT.Icon = Material("entities/eft_svds_attachments/m.png", "mips smooth")
 ATT.Description = [[A standard Izhmash-produced muzzle brake and compensator for the SVDS.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
-
+ATT.MuzzleParticle = "arc9_eft_muzzleflashider_3_x"
 
 ATT.Category = {"eft_svds_muzzle"}
 ATT.Attachments = {

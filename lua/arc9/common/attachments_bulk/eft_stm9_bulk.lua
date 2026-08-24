@@ -303,7 +303,7 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_all_stmarms_stm9_muzzle_b
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
-
+ATT.MuzzleParticle = "arc9_eft_pistol_4_muzzlebrake_A"
 ATT.EFTErgoAdd = -2
 ATT.RecoilMult = 0.94
 ATT.VisualRecoilMult = 0.94

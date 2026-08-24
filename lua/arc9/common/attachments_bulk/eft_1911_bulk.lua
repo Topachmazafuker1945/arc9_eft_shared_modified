@@ -465,7 +465,7 @@ ATT.SortOrder = -99
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.ExcludeElements = { "eft_barrel_1911_thr" }
-
+ATT.MuzzleParticle = "arc9_eft_pistol_4_muzzlebrake_A"
 ATT.Category = {"eft_1911_muzzlerec"}
 
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({

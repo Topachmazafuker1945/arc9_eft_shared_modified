@@ -286,7 +286,16 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
         else
             ending = rand
         end
-        
+        if rand == 0 then -- chamber check
+            if SERVER then
+                net.Start("arc9eftchambercheck")
+                net.WriteBool(true) -- accurate or not based on mag type
+                net.WriteUInt(swep:Clip1(), 9)
+            --net.WriteUInt(math.min(swep:Clip1(), swep:GetCapacity()), 9)
+                net.WriteUInt(swep:GetCapacity(), 9)
+                net.Send(swep:GetOwner())
+            end
+        end        
         return anim .. ending
     elseif anim == "reload" then
         return anim .. (empty and "_empty" or "") .. ending

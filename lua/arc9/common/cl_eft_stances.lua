@@ -20,5 +20,15 @@ if CLIENT then
             net.WriteString("EFT_InSomalianStance")
         net.SendToServer()
     end)
+
 end
 
+function WeaponSelectorVkluchatel(state)
+    if CLIENT then
+        hook.Add('HUDShouldDraw', 'disablewepselector', function(el)
+            if el == 'CHudWeaponSelection' then
+                return state
+            end   
+        end)
+    end
+end

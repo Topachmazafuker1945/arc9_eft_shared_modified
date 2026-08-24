@@ -48,20 +48,20 @@ SWEP.IsPistol = true
 SWEP.ActivePos = Vector(-3, -6, -0.0)
 SWEP.ActiveAng = Angle(0, 0, -5)
 
-SWEP.LowReadyVector = Vector(2.0, -2, 2.5) -- pidarasiki
-SWEP.LowReadyAngle = Angle(0, -10, -1)
+SWEP.LowReadyVector = Vector(10.0, -5, 3.5) -- pidarasiki
+SWEP.LowReadyAngle = Angle(25, -15, -5)
 
-SWEP.HighReadyVector = Vector(3, -2, -10)
-SWEP.HighReadyAngle = Angle(10, 40, 10)
+SWEP.HighReadyVector = Vector(5, -5, -15)
+SWEP.HighReadyAngle = Angle(10, 35, 0)
 
 SWEP.SomalianVector = Vector(-0, -3, 5.5)
 SWEP.SomalianAngle = Angle(0, 0, -30)
 
-SWEP.CornerVector = Vector(8.0, -2, 3.0)
-SWEP.CornerAngle = Angle(0, -0, 30)
+SWEP.CornerVector = Vector(8.0, -3, 3.0)
+SWEP.CornerAngle = Angle(0, -0, 20)
 
 SWEP.LeftShoulderVector = Vector(-5.5, -1, -0.6) --now it's a leftcorner not shoulder >w<
-SWEP.LeftShoulderAngle = Angle(0, 0, -17)
+SWEP.LeftShoulderAngle = Angle(0, 0, -10)
 
 SWEP.CustomizePos = Vector(24, 40, 3)
 SWEP.CustomizeSnapshotFOV = 40
@@ -128,7 +128,7 @@ SWEP.Firemodes = {
 
 SWEP.Slot = 1
 SWEP.ReloadInSights = false
-
+SWEP.Sway = 1.5
 ------------------------- |||           Recoil            ||| -------------------------
 
 SWEP.Recoil = 1 -- general multiplier of main recoil
@@ -229,7 +229,7 @@ SWEP.Overheat = false
 ------------------------- |||           Minor stuff            ||| -------------------------
 
 SWEP.CamQCA_Mult = 1
-SWEP.MuzzleParticle = "muzzleflash_pistol_deagle"
+SWEP.MuzzleParticle = "arc9_eft_pistol_3_magnum_clean"
 SWEP.AfterShotParticle = "barrel_smoke"
 SWEP.ShellModel = "models/weapons/arc9/darsu_eft/shells/127x55.mdl"
 SWEP.ShellSounds = ARC9EFT.ShellsHeavy

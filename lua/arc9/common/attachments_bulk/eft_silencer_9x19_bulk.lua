@@ -24,7 +24,7 @@ ATT.HeatCapacityAdd = -60*0.5
 
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 5
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_2_small"
 ATT.NoFlash = true
 ATT.BarrelLengthAdd = 5
 
@@ -83,7 +83,7 @@ ATT.HeatCapacityAdd = -62*0.5
 
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 5
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_2_small"
 ATT.NoFlash = true
 ATT.BarrelLengthAdd = 5
 
@@ -123,7 +123,7 @@ ATT.HeatCapacityAdd = -65*0.5
 
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 5
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_2_small"
 ATT.NoFlash = true
 ATT.BarrelLengthAdd = 5
 
@@ -164,7 +164,7 @@ ATT.HeatCapacityAdd = -50*0.5
 
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 5
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_2_small"
 ATT.NoFlash = true
 
 ATT.Category = {"eft_pp1901_muzzle", "eft_9mm_muzzle"}
@@ -204,7 +204,7 @@ ATT.HeatCapacityAdd = -50*0.5
 
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 5
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_2_small"
 ATT.NoFlash = true
 ATT.BarrelLengthAdd = 5
 

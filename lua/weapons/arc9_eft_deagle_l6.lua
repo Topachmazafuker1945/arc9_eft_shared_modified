@@ -43,7 +43,7 @@ SWEP.IronSights = {
         Pos = Vector(-1, 0, 8),
         Ang = Angle(0, 0, -145),
     },
-    Magnification = 1.1,
+    Magnification = 1.0,
 }
 
 SWEP.IsPistol = true
@@ -51,20 +51,20 @@ SWEP.IsPistol = true
 SWEP.ActivePos = Vector(-3, -6, -0.0)
 SWEP.ActiveAng = Angle(0, 0, -5)
 
-SWEP.LowReadyVector = Vector(2.0, -2, 2.5) -- pidarasiki
-SWEP.LowReadyAngle = Angle(0, -10, -1)
+SWEP.LowReadyVector = Vector(5.0, -5, 3.5) -- pidarasiki
+SWEP.LowReadyAngle = Angle(15, -15, -5)
 
-SWEP.HighReadyVector = Vector(-0, -0, 0)
-SWEP.HighReadyAngle = Angle(0, 0, 0)
+SWEP.HighReadyVector = Vector(1, -3, -15)
+SWEP.HighReadyAngle = Angle(0, 45, 0)
 
 SWEP.SomalianVector = Vector(-0, -3, 5.5)
 SWEP.SomalianAngle = Angle(0, 0, -30)
 
-SWEP.CornerVector = Vector(8.0, -2, 3.0)
-SWEP.CornerAngle = Angle(0, -0, 30)
+SWEP.CornerVector = Vector(8.0, -2, 1.0)
+SWEP.CornerAngle = Angle(0, -0, 20)
 
 SWEP.LeftShoulderVector = Vector(-5.5, -1, -0.6) --now it's a leftcorner not shoulder >w<
-SWEP.LeftShoulderAngle = Angle(0, 0, -17)
+SWEP.LeftShoulderAngle = Angle(0, 0, -10)
 
 SWEP.SprintAng = Angle(0, 20.6,  -15.2)
 SWEP.SprintPos = Vector(0.5, -5.1, -13.5)
@@ -73,8 +73,8 @@ SWEP.CustomizeSnapshotFOV = 35
 SWEP.CustomizeRotateAnchor = Vector(22.2, -4.28, -5.23)
 SWEP.CustomizeSnapshotPos = Vector(0, 0, 0)
 
-SWEP.ShootPosOffset = Vector(0.5, 0, -1.5) -- you can make different shoot offsets for different stances in arc9_eft_base, look stances in sh_eft_shared file.
-SWEP.ShootPosOffsetAim = Vector(0, 0, -1.5) -- same but when aiming down sights
+SWEP.ShootPosOffset = Vector(0.5, 0, -1) -- you can make different shoot offsets for different stances in arc9_eft_base, look stances in sh_eft_shared file.
+SWEP.ShootPosOffsetAim = Vector(0, 0, -1) -- same but when aiming down sights
 SWEP.ShootPosOffsetLeftShoulder = Vector(-5.0, 0, -0) -- same but when in left shoulder
 SWEP.ShootPosOffsetCorner = Vector(11.0, 0, 0)  -- same but when peeking corner, there x coordinate must be a little bigger, cuz its mult original offset
 SWEP.ShootPosOffsetSomalian = Vector(0, 0, -6) --this one is above head, i dunno how to call it, maybe "over the head"?
@@ -115,7 +115,7 @@ SWEP.EFTWeight = 0.578
 SWEP.BarrelLength = 25
 SWEP.Ammo = "pistol"
 SWEP.Firemodes = { { Mode = 1 } }
-
+SWEP.Sway = 1.5
 SWEP.Slot = 1
 
 ------------------------- |||           Recoil            ||| -------------------------
@@ -190,7 +190,7 @@ SWEP.HeatDissipation = 0.75
 ------------------------- |||           Minor stuff            ||| -------------------------
 
 SWEP.CamQCA_Mult = 0.8
-SWEP.MuzzleParticle = "muzzleflash_pistol_deagle" -- Used for some muzzle effects.
+SWEP.MuzzleParticle = "arc9_eft_pistol_3_magnum" -- Used for some muzzle effects.
 SWEP.ShellModel = "models/weapons/arc9/darsu_eft/shells/50ae.mdl"
 SWEP.ShellCorrectAng = Angle(0, 180, 180)
 SWEP.ShellSounds = ARC9EFT.ShellsHeavy

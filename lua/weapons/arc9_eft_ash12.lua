@@ -272,8 +272,6 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
 
         ending = rand
                 
-
-
         if ending == 2 then
             if SERVER then
                 net.Start("arc9eftmagcheck")
@@ -288,7 +286,16 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
                 return anim .. "2_1"
             end
         end
-
+        if ending == 0 then -- chamber check
+            if SERVER then
+                net.Start("arc9eftchambercheck")
+                net.WriteBool(true) -- accurate or not based on mag type
+                net.WriteUInt(swep:Clip1(), 9)
+            --net.WriteUInt(math.min(swep:Clip1(), swep:GetCapacity()), 9)
+                net.WriteUInt(swep:GetCapacity(), 9)
+                net.Send(swep:GetOwner())
+            end
+        end
         return anim .. ending
     end
     

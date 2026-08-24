@@ -32,7 +32,7 @@ SWEP.WorldModel = "models/weapons/w_pist_glock18.mdl"
 SWEP.WorldModelOffset = {
     Pos = Vector(-16.25, 5.5, -4),
     Ang = Angle(-7, 0, 180),
-    TPIKPos = Vector(-0, 1, -6), -- rpg
+    TPIKPos = Vector(-0, 1.25, -6), -- rpg
     TPIKAng = Angle(-5, 0, 180),
     Scale = 1,
 
@@ -55,20 +55,20 @@ SWEP.IsPistol = true
 SWEP.ActivePos = Vector(-4.75, -5, -1.2)
 SWEP.ActiveAng = Angle(0, 0, -17)
 
-SWEP.LowReadyVector = Vector(2.0, -2, 2.5) -- pidarasiki
-SWEP.LowReadyAngle = Angle(0, -10, -1)
+SWEP.LowReadyVector = Vector(10.0, -5, 3.5) -- pidarasiki
+SWEP.LowReadyAngle = Angle(25, -15, 5)
 
-SWEP.HighReadyVector = Vector(3, -2, -10)
-SWEP.HighReadyAngle = Angle(10, 40, 10)
+SWEP.HighReadyVector = Vector(5, -5, -10)
+SWEP.HighReadyAngle = Angle(10, 35, 10)
 
 SWEP.SomalianVector = Vector(-0, -3, 5.5)
 SWEP.SomalianAngle = Angle(0, 0, -30)
 
-SWEP.CornerVector = Vector(8.0, -2, 3.0)
+SWEP.CornerVector = Vector(8.0, -4, 3.0)
 SWEP.CornerAngle = Angle(0, -0, 30)
 
 SWEP.LeftShoulderVector = Vector(-5.5, -1, -0.6) --now it's a leftcorner not shoulder >w<
-SWEP.LeftShoulderAngle = Angle(0, 0, -17)
+SWEP.LeftShoulderAngle = Angle(0, 0, -12)
 
 SWEP.SprintAng = Angle(0, 20.6,  -15.2)
 SWEP.SprintPos = Vector(0.5, -5.1, -13.5)
@@ -136,48 +136,51 @@ SWEP.EFTWeight = 0.664
 SWEP.BarrelLength = 18
 SWEP.Ammo = "pistol"
 SWEP.Firemodes = { { Mode = 1 } }
-
+SWEP.Sway = 1.5
 SWEP.Slot = 1
 
 ------------------------- |||           Recoil            ||| -------------------------
 
-SWEP.Recoil = 1.25 -- general multiplier of main recoil
+SWEP.Recoil = 1 -- general multiplier of main recoil
 
-SWEP.RecoilUp   = 2   -- up recoil
+SWEP.RecoilUp   = 1.0   -- up recoil
+--SWEP.RecoilUpSights   = 2.5   -- up recoil
 SWEP.RecoilSide = 1.5 -- sideways recoil
-SWEP.RecoilRandomUp   = 0.2 -- random up/down
-SWEP.RecoilRandomSide = 0.72   -- random left/right
+SWEP.RecoilRandomUp   = 1.0 -- random up/down
+--SWEP.RecoilRandomUpSights   = 2.5 -- random up/down
+SWEP.RecoilRandomSide = 1.5   -- random left/right
 
-SWEP.RecoilAutoControl = 3.3 -- autocompenstaion, could be cool if set to high but it also affects main recoil
+SWEP.RecoilAutoControl = 10.1 -- autocompenstaion, could be cool if set to high but it also affects main recoil
 
 -- visual recoil   aka visrec
-SWEP.VisualRecoil = 1 -- general multiplier for it
+SWEP.VisualRecoil = 0.5 -- general multiplier for it
 
-SWEP.EFT_VisualRecoilUp_BURST_SEMI   = 2   -- up/down tilt when semi/bursts
-SWEP.VisualRecoilUp                   = 2   --   when fullautoing
-SWEP.EFT_VisualRecoilSide_BURST_SEMI = 0.001 -- left/right tilt when semi/burst
-SWEP.VisualRecoilSide                 = 0.005   --   when fullautoing
-SWEP.VisualRecoilRoll = 4 -- roll tilt, a visual thing
+SWEP.EFT_VisualRecoilUp_BURST_SEMI   = 4.5   -- up/down tilt when semi/bursts
+SWEP.VisualRecoilUp                   = 4.5  --   when fullautoing
 
-SWEP.VisualRecoilPunch = 0.75 -- How far back visrec moves the gun
-SWEP.VisualRecoilPunchSights = 5 -- same but in sights only
+SWEP.EFT_VisualRecoilSide_BURST_SEMI = 0.01 -- left/right tilt when semi/burst
+SWEP.VisualRecoilSide                 = 0.02   --   when fullautoing
+SWEP.VisualRecoilRoll = 25 -- roll tilt, a visual thing
+
+SWEP.VisualRecoilPunch = 4 -- How far back visrec moves the gun
+SWEP.VisualRecoilPunchSights = 60 -- same but in sights only
 
 SWEP.VisualRecoilDampingConst = 200  -- spring settings, this is speed of visrec
-SWEP.VisualRecoilSpringPunchDamping = 9 -- the less this is the more wobbly gun moves
-SWEP.VisualRecoilSpringMagnitude = 2 -- some third element of spring, high values make gun shake asf on low fps
+SWEP.VisualRecoilSpringPunchDamping = 5 -- the less this is the more wobbly gun moves
+SWEP.VisualRecoilSpringMagnitude = 5 -- some third element of spring, high values make gun shake asf on low fps
 
-SWEP.VisualRecoilPositionBumpUpHipFire = -0.01 -- gun will go down each shot by this value
-SWEP.VisualRecoilPositionBumpUp = -0.01 -- same but in sights
-SWEP.VisualRecoilPositionBumpUpRTScope = 0.05 -- same but in rt scopes, you probably should keep it same as sight value, i guess it doesn't matter anymore after recoil update
+SWEP.VisualRecoilPositionBumpUpHipFire = 0.1 -- gun will go down each shot by this value
+SWEP.VisualRecoilPositionBumpUp = -0.15 -- same but in sights
+SWEP.VisualRecoilPositionBumpUpRTScope = -0.2 -- same but in rt scopes, you probably should keep it same as sight value, i guess it doesn't matter anymore after recoil update
 
-SWEP.EFT_ShotsToSwitchToFullAutoBehaviur = 2 -- how many shots for switch to fullauto stats from semi/burst, + 2 shots afterwards are lerping. you probably should not touch this but ok
+SWEP.EFT_ShotsToSwitchToFullAutoBehaviur = 6 -- how many shots for switch to fullauto stats from semi/burst, + 2 shots afterwards are lerping. you probably should not touch this but ok
 
-SWEP.RecoilKick = 0.5 -- camera roll each shot + makes camera go more up when fullautoing
+SWEP.RecoilKick = 0.3 -- camera roll each shot + makes camera go more up when fullautoing
 
 SWEP.VisualRecoilCenter = Vector(4.28, 15, -1.2)
-SWEP.SubtleVisualRecoil = 0.35
-SWEP.SubtleVisualRecoilHipFire = 7
-SWEP.SubtleVisualRecoilDirection = 3
+SWEP.SubtleVisualRecoil = 1.35
+SWEP.SubtleVisualRecoilHipFire = 1.1
+SWEP.SubtleVisualRecoilDirection = 5
 SWEP.SubtleVisualRecoilSpeed = 1
 
 ------------------------- |||           Damage            ||| -------------------------
@@ -243,7 +246,7 @@ SWEP.HeatDissipation = 2
 ------------------------- |||           Minor stuff            ||| -------------------------
 
 SWEP.CamQCA_Mult = 0.35
-SWEP.MuzzleParticle = "muzzleflash_pistol" -- Used for some muzzle effects.
+SWEP.MuzzleParticle = "arc9_eft_pistol_2" -- Used for some muzzle effects.
 SWEP.ShellModel = "models/weapons/arc9/darsu_eft/shells/762x25tt.mdl"
 SWEP.ShellSounds = ARC9EFT.Shells9mm
 
@@ -347,7 +350,16 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
             if nomag then rand = 0 end
             ending = rand
         end
-
+        if rand == 0 then -- chamber check
+            if SERVER then
+                net.Start("arc9eftchambercheck")
+                net.WriteBool(true) -- accurate or not based on mag type
+                net.WriteUInt(swep:Clip1(), 9)
+            --net.WriteUInt(math.min(swep:Clip1(), swep:GetCapacity()), 9)
+                net.WriteUInt(swep:GetCapacity(), 9)
+                net.Send(swep:GetOwner())
+            end
+        end
         return anim .. ending
     elseif anim == "reload" or anim == "reload_empty" then
         if swep.EFT_StartedTacReload then

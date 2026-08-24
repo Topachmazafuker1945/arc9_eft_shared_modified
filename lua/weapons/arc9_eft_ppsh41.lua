@@ -72,38 +72,38 @@ SWEP.ClipSize = 0 -- actual chamber (no mag)
 SWEP.Recoil = 1 -- general multiplier of main recoil
 
 SWEP.RecoilUp   = 0.35   -- up recoil
-SWEP.RecoilUpSights   = 0.7   -- up recoil sight
+SWEP.RecoilUpSights   = 5.6   -- up recoil sight
 SWEP.RecoilSide = 1.1 -- sideways recoil
-SWEP.RecoilSideSights = 2.2 -- sideways recoil
+SWEP.RecoilSideSights = 5.9 -- sideways recoil
 
 SWEP.RecoilRandomUp   = 0.35 -- random up/down
-SWEP.RecoilRandomUpSights   = 0.5 -- random up/down sight
+SWEP.RecoilRandomUpSights   = 5.1 -- random up/down sight
 SWEP.RecoilRandomSide = 1.0   -- random left/right
-SWEP.RecoilRandomSideSights = 1.9   -- random left/right
+SWEP.RecoilRandomSideSights = 5.2   -- random left/right
 
-SWEP.RecoilAutoControl = 3.0 -- autocompenstaion, could be cool if set to high but it also affects main recoil
+SWEP.RecoilAutoControl = 10.0 -- autocompenstaion, could be cool if set to high but it also affects main recoil
 
 -- visual recoil   aka visrec
 SWEP.VisualRecoil = 0.5 -- general multiplier for it
 --SWEP.VisualRecoilHipFire = 0.1 -- general multiplier for it
 
 SWEP.EFT_VisualRecoilUp_BURST_SEMI   = 0.3   -- up/down tilt when semi/bursts
-SWEP.VisualRecoilUp                   = 1.0   --   when fullautoing
+SWEP.VisualRecoilUp                   = 0.3   --   when fullautoing
 SWEP.EFT_VisualRecoilSide_BURST_SEMI = 0.001 -- left/right tilt when semi/burst
-SWEP.VisualRecoilSide                 = 0.010   --   when fullautoing
+SWEP.VisualRecoilSide                 = 0.004   --   when fullautoing
 SWEP.VisualRecoilRoll = 20 --roll tilt, a visual thing
 
-SWEP.VisualRecoilPunch = 3 -- How far back visrec moves the gun
-SWEP.VisualRecoilPunchSights = 40 -- same but in sights only
+SWEP.VisualRecoilPunch = 1.25 -- How far back visrec moves the gun
+SWEP.VisualRecoilPunchSights = 45 -- same but in sights only
 
 
 SWEP.VisualRecoilDampingConst = 200 -- spring settings, this is speed of visrec
-SWEP.VisualRecoilSpringPunchDamping = 2.0 -- the less this is the more wobbly gun moves
+SWEP.VisualRecoilSpringPunchDamping = 5.0 -- the less this is the more wobbly gun moves
 SWEP.VisualRecoilSpringMagnitude = 1 -- some third element of spring, high values make gun shake asf on low fps
 
-SWEP.VisualRecoilPositionBumpUpHipFire = -1 -- gun will go down each shot by this value
-SWEP.VisualRecoilPositionBumpUp = -1 -- same but in sights
-SWEP.VisualRecoilPositionBumpUpRTScope = -1.0 -- same but in rt scopes, you probably should keep it same as sight value, i guess it doesn't matter anymore after recoil update
+SWEP.VisualRecoilPositionBumpUpHipFire = -0.75 -- gun will go down each shot by this value
+SWEP.VisualRecoilPositionBumpUp = -0.75 -- same but in sights
+SWEP.VisualRecoilPositionBumpUpRTScope = -0.75 -- same but in rt scopes, you probably should keep it same as sight value, i guess it doesn't matter anymore after recoil update
 
 -- SWEP.VisualRecoilCenter = Vector(4.28-1.5, 19, -5.23 +3) -- ugh, i dont now what to set it too, but probably it should be diffferent on each gun
 SWEP.EFT_ShotsToSwitchToFullAutoBehaviur = 3 -- how many shots for switch to fullauto stats from semi/burst, + 2 shots afterwards are lerping. you probably should not touch this but ok
@@ -275,7 +275,16 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
         else
             ending = rand
         end
-        
+        if rand == 0 then -- chamber check
+            if SERVER then
+                net.Start("arc9eftchambercheck")
+                net.WriteBool(true) -- accurate or not based on mag type
+                net.WriteUInt(swep:Clip1(), 9)
+            --net.WriteUInt(math.min(swep:Clip1(), swep:GetCapacity()), 9)
+                net.WriteUInt(swep:GetCapacity(), 9)
+                net.Send(swep:GetOwner())
+            end
+        end        
         return anim .. ending .. (empty and "_empty" or "")
     elseif anim == "reload" then
         if swep.EFT_StartedTacReload and !empty then

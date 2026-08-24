@@ -1,5 +1,3 @@
---copy of arc9_eft_glock17 but diff stats
-
 AddCSLuaFile()
 
 SWEP.Base = "arc9_eft_glock17"
@@ -26,8 +24,8 @@ SWEP.StandardPresets = {
     false,
 }
 
--- SWEP.DefaultElements = {"eft_l5"} -- owo ;3
-
+-- SWEP.DefaultElements = {"eft_l5"} -- owo ;3 хватит пасан
+SWEP.MuzzleParticle = "arc9_eft_pistol_4_muzzlebrake_A" -- Used for some muzzle effects.
 SWEP.HeatCapacity = 75
 SWEP.HeatDissipation = 4
 SWEP.Spread = 12.03 * ARC9.MOAToAcc
@@ -68,7 +66,7 @@ SWEP.ShootSoundSilencedIndoor = path .. "glock17_indoor_close_silenced.wav"
 SWEP.DistantShootSoundSilenced = path .. "glock17_distant_silenced.ogg"
 SWEP.DistantShootSoundSilencedIndoor = path .. "glock17_indoor_distant_silenced.wav"
 
-
+SWEP.MuzzleParticle = "arc9_eft_pistol_4_muzzlebrake_A" -- Used for some muzzle effects.
 SWEP.Attachments = {
     {
         Category = "eft_g18c_barrel",

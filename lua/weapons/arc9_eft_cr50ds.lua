@@ -126,7 +126,7 @@ SWEP.SubtleVisualRecoilHipFire = 1.1
 SWEP.SubtleVisualRecoilDirection = 5
 SWEP.SubtleVisualRecoilSpeed = 1
 
-
+SWEP.MuzzleParticle = "arc9_eft_pistol_1"
 SWEP.ShellModel = "models/weapons/arc9/darsu_eft/shells/357.mdl"
 
 SWEP.HookP_NameChange = function(self, name)

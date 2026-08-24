@@ -124,7 +124,7 @@ SWEP.SprintPos = Vector(13, -2, 2)
 SWEP.NearWallAng = Angle(80, 5, 0)
 SWEP.NearWallPos = Vector(15, -0, -2.5)
 
-SWEP.CrouchPos = Vector(0, -2, 2.2)
+SWEP.CrouchPos = Vector(0, -5, 0.2)
 SWEP.CrouchAng = Angle(0, 0, -4)
 
 SWEP.CustomizeAng = Angle(90, 0, 0)
@@ -171,7 +171,7 @@ SWEP.SpeedMultHook = ARC9EFT.SpeedHook
 SWEP.FreeAimRadius = 2
 SWEP.FreeAimRadiusSights = 0
 
-SWEP.Sway = 2.0
+SWEP.Sway = 1.25
 SWEP.SwayMultMove = 5
 SWEP.SwayAddMidAir = 1.5
 SWEP.SwayMultSights = 1.0
@@ -179,16 +179,19 @@ SWEP.SwayMultCrouch = 0.6
 SWEP.SwayMultHipFire = 1.25
 SWEP.SwayHook = ARC9EFT.SwayErgoHook
 
+SWEP.Swayspeed = 3 --GetSwaySpeed func in sh_sway
+SWEP.SwayspeedHook = ARC9EFT.SwaySpeedHook
+
 SWEP.ReloadTime = 1.2
 SWEP.ReloadTimeHook = ARC9EFT.ReloadTimeHook
 
 SWEP.HoldBreathTime = 40
-SWEP.RestoreBreathTime = 30
+SWEP.RestoreBreathTime = 10
 SWEP.BreathInSound = false 
 SWEP.BreathOutSound = false
 SWEP.BreathRunOutSound = "arc9_eft_shared/bear3_breath_sprint.ogg"
 SWEP.HoldBreathTimeHook = ARC9EFT.ErgoBreathHook
-
+SWEP.RestoreBreathTimeHook = ARC9EFT.ErgoBreathRestoreHook
 SWEP.RPM = 1
 SWEP.RPMMultHot = 0.85 -- overheat debuff
 
@@ -224,6 +227,15 @@ SWEP.TriggerDelayTime = 22 /100 /3
 SWEP.DeployTime = 1.1
 SWEP.DeployTimeHook = ARC9EFT.DeployTimeHook
 
+SWEP.TacSprintAng = Angle(-2, 60, -7)
+SWEP.TacSprintPos = Vector(2, -6, -20)
+
+-- local handupang, handuppos, handupholdtype = Angle(-2, 50, -7), Vector(0, -7, -15), "normal"
+
+-- SWEP.OneHandedSprintHook = function(self, old) if self:GetValue("HasStock") then return false end end
+-- SWEP.SprintAngHook = function(self, old) if self:GetNW2Bool("EFT_HighReadyStance", true) then return handupang end end
+-- SWEP.SprintPosHook = function(self, old) if self:GetNW2Bool("EFT_HighReadyStance", true) then return handuppos end end
+-- SWEP.HoldTypeSprintHook = function(self, old) if self:GetNW2Bool("EFT_HighReadyStance", true) then return handupholdtype end end
 ------------------------- |||           Recoil            ||| -------------------------
 
 SWEP.RecoilAutoControlHook = function(self, old) return math.Clamp(old - self:GetRecoilAmount() * 0.1, old - 1, old) end -- less autocontrol over time
@@ -241,9 +253,6 @@ SWEP.RecoilHook = function(self, old)
     if self:GetValue("HasStock") == false then return old * 0.05 end
 end
 
--- SWEP.RecoilRandomSideSightsHook = function(self, old)
---     if self:GetValue("HasStock") == false then return old * 0.05 end
--- end
 
 SWEP.RecoilDissipationRate = 5
 SWEP.RecoilAutoControlMultHipFire = 0.75
@@ -293,7 +302,7 @@ SWEP.VisualRecoilDoingFunc = function(up, side, roll, punch, recamount, self) --
 
     if recamount < 2.5 and !self.IsPistol then
         up = up * 1.1
-        punch = punch * 1.5
+        punch = punch * 1.25
     elseif recamount < 2.5 and self.IsPistol then
         up = up * 1.45
         side = side * 1.15
@@ -318,7 +327,7 @@ SWEP.VisualRecoilDoingFunc = function(up, side, roll, punch, recamount, self) --
         side = side * 1.5
     end
 
-    if eft_incorner == true and !self.IsPistol or eft_insomalian == true and !self.IsPistol then --стрельба без упора в плечо, реализм хуле
+    if (eft_incorner or eft_insomalian) and !self.IsPistol and self.GetSightAmount() < 0.5 then --стрельба без упора в плечо, реализм хуле
         up = up * 3
         punch = punch * 1.1
     elseif !self:GetValue("HasStock") and !self.IsPistol then
@@ -326,13 +335,13 @@ SWEP.VisualRecoilDoingFunc = function(up, side, roll, punch, recamount, self) --
         punch = punch * 0.75
     end
 
-    if self:GetBipod() == true then
+    if self:GetBipod() then
         up = up * 0.4
         punch = punch * 1.5
         side = side * 0.4
     end
 
-    
+    if self:GetOutOfBreath() then up = up * 1.5 end
     if self:GetUBGL() then up = 1.5 end -- ubgl!
 
 	local huy = math.Clamp(fullauto * 8, 1, 2)
@@ -601,12 +610,11 @@ function SWEP:HookP_BlockFire()
     local stances = (eft_inhighready or eft_inlowready)
 
     local stat = (self:GetSightAmount() < 0.8 and !self:GetBipod())
-    local status = (weight > 6 and stat or out == true and stat)
-    if status then
-        EFTSetReady(ply, false)
+    local blockwhile = (weight > 8 and stat or out == true and stat)
+    if blockwhile then
         -- print("weight: " .. weight)
         return true
-    elseif stances == true and stat then
+    elseif stances and stat then
         return true
     end
 end

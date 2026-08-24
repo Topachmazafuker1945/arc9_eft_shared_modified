@@ -28,7 +28,7 @@ SWEP.EFTErgo = 93
 SWEP.EFTWeight = 0.197
 SWEP.Spread = 10.31 * ARC9.MOAToAcc
 
-
+SWEP.MuzzleParticle = "arc9_eft_pistol_2" -- Used for some muzzle effects.
 SWEP.Attachments = {
     {
         Category = "eft_g19x_barrel",

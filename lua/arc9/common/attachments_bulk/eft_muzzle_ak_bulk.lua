@@ -970,7 +970,7 @@ ATT.Category = {"eft_akm_muzzle", "eft_ak103_muzzle"}
 ATT.Silencer = true
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 5
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_2"
 ATT.NoFlash = true
 ATT.BarrelLengthAdd = 5
 

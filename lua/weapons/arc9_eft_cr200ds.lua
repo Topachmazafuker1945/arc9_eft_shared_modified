@@ -30,7 +30,7 @@ SWEP.DefaultBodygroups = "0000000000000"
 SWEP.WorldModelOffset = {
     Pos = Vector(-15.5, 5.5, -3.2),
     Ang = Angle(-7, 0, 180),
-    TPIKPos = Vector(-0, 3, -7), -- rpg
+    TPIKPos = Vector(-0, 1, -6), -- rpg
     TPIKAng = Angle(-5, 0, 180),
     -- TPIKPos = Vector(-18, 3, -4), -- rewolv
     Scale = 1
@@ -46,13 +46,13 @@ SWEP.IronSights = {
 SWEP.IsPistol = true
 
 SWEP.ActivePos = Vector(-4.75, -5, -1.2)
-SWEP.ActiveAng = Angle(0, 0, -17)
+SWEP.ActiveAng = Angle(0, 0, -10)
 
-SWEP.LowReadyVector = Vector(2.0, -2, 2.5) -- pidarasiki
-SWEP.LowReadyAngle = Angle(0, -10, -1)
+SWEP.LowReadyVector = Vector(6.0, -5, 3.5) -- pidarasiki
+SWEP.LowReadyAngle = Angle(15, -15, 5)
 
-SWEP.HighReadyVector = Vector(3, -2, -10)
-SWEP.HighReadyAngle = Angle(10, 40, 10)
+SWEP.HighReadyVector = Vector(5, -5, -10)
+SWEP.HighReadyAngle = Angle(10, 35, 10)
 
 SWEP.SomalianVector = Vector(-0, -3, 5.5)
 SWEP.SomalianAngle = Angle(0, 0, -30)
@@ -61,7 +61,7 @@ SWEP.CornerVector = Vector(8.0, -2, 3.0)
 SWEP.CornerAngle = Angle(0, -0, 30)
 
 SWEP.LeftShoulderVector = Vector(-5.5, -1, -0.6) --now it's a leftcorner not shoulder >w<
-SWEP.LeftShoulderAngle = Angle(0, 0, -17)
+SWEP.LeftShoulderAngle = Angle(0, 0, -10)
 
 SWEP.CustomizePos = Vector(21, 30, 2.8)
 SWEP.CustomizeSnapshotFOV = 40
@@ -79,8 +79,8 @@ SWEP.TPIKCornerAngle = Angle(0, -0, 40)
 SWEP.TPIKLeftShoulderVector = Vector(-4, 10, 3) 
 SWEP.TPIKLeftShoulderAngle = Angle(0, -0, -50)
 
-SWEP.ShootPosOffset = Vector(0.5, 0, -1.5) -- you can make different shoot offsets for different stances in arc9_eft_base, look stances in sh_eft_shared file.
-SWEP.ShootPosOffsetAim = Vector(0, 0, -1.5) -- same but when aiming down sights
+SWEP.ShootPosOffset = Vector(0.5, 0, -1) -- you can make different shoot offsets for different stances in arc9_eft_base, look stances in sh_eft_shared file.
+SWEP.ShootPosOffsetAim = Vector(0, 0, -0.5) -- same but when aiming down sights
 SWEP.ShootPosOffsetLeftShoulder = Vector(-5.0, 0, -0) -- same but when in left shoulder
 SWEP.ShootPosOffsetCorner = Vector(11.0, 0, 0)  -- same but when peeking corner, there x coordinate must be a little bigger, cuz its mult original offset
 SWEP.ShootPosOffsetSomalian = Vector(0, 0, -6) --this one is above head, i dunno how to call it, maybe "over the head"?
@@ -126,7 +126,7 @@ SWEP.Firemodes = {
     { Mode = 1, PPrintName = ARC9:GetPhrase("eft_fmode_doubleaction"), PoseParam = 1  },
     { Mode = 1, PrintName = ARC9:GetPhrase("eft_fmode_singleaction"), PoseParam = 0, EFTSingleAction = true, ManualAction = true, RPM = 300, TriggerDelay = false, TriggerStartFireAnim = false, RecoilKickMult = 0.75 },
 }
-
+SWEP.Sway = 2
 SWEP.Slot = 1
 SWEP.ReloadInSights = false
 
@@ -234,7 +234,7 @@ SWEP.Overheat = false
 ------------------------- |||           Minor stuff            ||| -------------------------
 
 SWEP.CamQCA_Mult = 1
-SWEP.MuzzleParticle = "muzzleflash_pistol"
+SWEP.MuzzleParticle = "arc9_eft_pistol_2"
 SWEP.AfterShotParticle = "barrel_smoke"
 SWEP.ShellModel = "models/weapons/arc9/darsu_eft/shells/9x19.mdl"
 SWEP.ShellSounds = ARC9EFT.Shells9mm

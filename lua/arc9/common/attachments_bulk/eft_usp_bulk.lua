@@ -582,6 +582,7 @@ ATT.Attachments = {
         Pos = Vector(-0.375, 0, -0.115),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
+        ExtraSightDistance = 7,
     },
 }
 

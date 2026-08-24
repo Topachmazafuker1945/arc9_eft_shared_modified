@@ -20,8 +20,8 @@ SWEP.Trivia = {
 
 
 SWEP.Description = ARC9:GetPhrase("eft_weapon_deaglexix_desc")
-
-SWEP.DefaultElements = {"eft_xix"} -- owo
+SWEP.MuzzleParticle = "arc9_eft_pistol_3_magnum_clean" -- Used for some muzzle effects.
+SWEP.DefaultElements = {"eft_xix"} -- owo и пасан еще говорит че не фурри, ну все понятно 
 
 SWEP.Attachments = { -- hack
     {

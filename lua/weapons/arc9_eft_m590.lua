@@ -99,6 +99,7 @@ SWEP.SuppressEmptySuffix = false
 SWEP.NoFiremodeWhenEmpty = true 
 SWEP.Firemodes = {
     { Mode = 1, PrintName = ARC9:GetPhrase("eft_fmode_pump") },
+    { Mode = 1, CycleTimeMult = 0.5, SlamFire = true, PrepullMode = true, VisualRecoilMult = 1.6, RecoilMult = 2.0, PrintName = ARC9:GetPhrase("eft_fmode_prepull") }, --pre-pulling преднатяг
 }
 
 SWEP.SlamFire = false
@@ -148,8 +149,8 @@ SWEP.VisualRecoilSpringPunchDamping = 3 -- the less this is the more wobbly gun 
 SWEP.VisualRecoilSpringMagnitude = 1 -- some third element of spring, high values make gun shake asf on low fps
 
 SWEP.VisualRecoilPositionBumpUpHipFire = -0.75 -- gun will go down each shot by this value
-SWEP.VisualRecoilPositionBumpUp = -1.0 -- same but in sights
-SWEP.VisualRecoilPositionBumpUpRTScope = -1.0 -- same but in rt scopes, you probably should keep it same as sight value, i guess it doesn't matter anymore after recoil update
+SWEP.VisualRecoilPositionBumpUp = -0.75 -- same but in sights
+SWEP.VisualRecoilPositionBumpUpRTScope = -0.75 -- same but in rt scopes, you probably should keep it same as sight value, i guess it doesn't matter anymore after recoil update
 
 -- SWEP.VisualRecoilCenter = Vector(4.28-1.5, 19, -5.23 +3) -- ugh, i dont now what to set it too, but probably it should be diffferent on each gun
 SWEP.EFT_ShotsToSwitchToFullAutoBehaviur = 3 -- how many shots for switch to fullauto stats from semi/burst, + 2 shots afterwards are lerping. you probably should not touch this but ok
@@ -257,7 +258,16 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
             anim = "look"
             if swep:GetElements()["eft_grippose"] then anim = anim .. "_pg" end
         end
-        
+        if rand == 0 then -- chamber check
+            if SERVER then
+                net.Start("arc9eftchambercheck")
+                net.WriteBool(true) -- accurate or not based on mag type
+                net.WriteUInt(swep:Clip1(), 9)
+            --net.WriteUInt(math.min(swep:Clip1(), swep:GetCapacity()), 9)
+                net.WriteUInt(swep:GetCapacity(), 9)
+                net.Send(swep:GetOwner())
+            end
+        end        
         return anim
     end
     

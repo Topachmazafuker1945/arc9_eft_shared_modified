@@ -297,7 +297,16 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
         end
         
         if empty and !nomag then ending = ending .. "_empty" end
-
+        if rand == 0 then -- chamber check
+            if SERVER then
+                net.Start("arc9eftchambercheck")
+                net.WriteBool(true) -- accurate or not based on mag type
+                net.WriteUInt(swep:Clip1(), 9)
+            --net.WriteUInt(math.min(swep:Clip1(), swep:GetCapacity()), 9)
+                net.WriteUInt(swep:GetCapacity(), 9)
+                net.Send(swep:GetOwner())
+            end
+        end
         return anim .. ending
     end
     

@@ -149,7 +149,7 @@ if SERVER then
     util.AddNetworkString("arc9eftchambercheck")
     util.AddNetworkString("arc9eftquestionnotif")
     util.AddNetworkString("arc9eftbadtripwire")
-    util.AddNetworkString("arc9eftstances")
+    util.AddNetworkString("arc9eftstances") --gay!!!!
 else
     matproxy.Add({
         name = "ARC9_EFT_FAKEAMMO",
@@ -161,12 +161,25 @@ else
         bind = function(self, mat, ent)
             mat:SetFloat(self.Frame, 30 - self.Minusframe)
             
-            if IsValid(ent) and IsValid(ent.weapon) then ent = ent.weapon end
-
-            if IsValid(ent) and IsValid(ent:GetOwner()) and IsValid(ent:GetOwner():GetActiveWeapon()) and ent:GetClass() != "arc9_droppedmag" then
-                local weapon = ent:GetOwner():GetActiveWeapon()
-                if weapon and weapon.ARC9 then
-                    mat:SetFloat(self.Frame, math.Clamp(30-weapon:GetLoadedRounds()+1, 0,  30 - self.Minusframe))
+            if IsValid(ent) then
+                if ent:GetClass() == "class CLuaEffect" then -- is dropped
+                    if IsValid(ent.weapon) and ent.weapon.ARC9 then
+                        self.LastRound = math.Clamp(30 - ent.weapon:GetLoadedRounds() + 1, 0,  30 - self.Minusframe)
+                        ent.weapon = nil
+                    end
+                    
+                    mat:SetFloat(self.Frame, self.LastRound or 30)
+                else
+                    if !ent.weapon then -- in case its viewmodel
+                        local ownr = ent:GetOwner()
+                        if IsValid(ownr) then
+                            ent.weapon = ownr:GetActiveWeapon()
+                        end
+                    end
+                    
+                    if IsValid(ent.weapon) and ent.weapon.ARC9 then -- is gun
+                        mat:SetFloat(self.Frame, math.Clamp(30 - ent.weapon:GetLoadedRounds() + 1, 0,  30 - self.Minusframe))
+                    end
                 end
             end
         end
@@ -454,6 +467,8 @@ local conVars = {
     {name = "eft_singleuse_behaviour", default = "0", replicated = true },
     {name = "eft_mult_explosive", default = "1", replicated = true },
     {name = "eft_mult_ergo", default = "1", replicated = true },
+    {name = "eft_vmleaning", default = "1", replicated = true },
+    {name = "eft_insight_vmleaning", default = "1", replicated = true },
 }
 
 for _, var in ipairs(conVars) do
@@ -500,6 +515,14 @@ ARC9EFT.ErgoBreathHook = function(self, orig)
     return math.max(1, orig - weight * 2.5)
 end
 
+ARC9EFT.ErgoBreathRestoreHook = function(self, orig)
+    if self:GetBipod() then return orig * 10 end
+    -- local ergo = math.Clamp((self:GetValue("EFTErgo") or 0), 0, 100)
+    local weight = math.Clamp((self:GetValue("EFTWeight") or 0), 1, 20)
+    -- return math.max(1, orig + weight * 5)
+    return math.Clamp(orig + weight * 2.5, 1, 50)
+end
+
 ARC9EFT.ErgoAdsVolume = function(self, data) -- unused after they added ads sounds
     if data.name == "exitsights" or data.name == "entersights" then
         local ergo = math.Clamp((self:GetValue("EFTErgo") or 0), 0, 100)
@@ -509,6 +532,7 @@ ARC9EFT.ErgoAdsVolume = function(self, data) -- unused after they added ads soun
 end
 
 ARC9EFT.SpeedHook = function(self, orig)
+    if self.IsPistol then return end
     return orig * ((100 - math.Clamp((self:GetValue("EFTWeight") or 0) * 2, 0, 50)) / 100)
 end
 
@@ -520,6 +544,10 @@ end
 
 ARC9EFT.ReloadTimeHook = function(wep, orig)
     if wep:GetBipod() then return orig * 0.85 end
+    if wep:GetOutOfBreath() then return orig * 1.1 end
+    if wep:GetBreath() < 50 then return orig * 1.05 end
+    local high_ready = wep:GetNW2Bool("EFT_HighReadyStance", false)
+    if high_ready and !wep.IsPistol then orig = orig * 0.75 end
     local ergo = math.Clamp((wep:GetValue("EFTErgo") or 0), 0, 100)
     local weight = math.Clamp((wep:GetValue("EFTWeight") or 0), 1, 20)
     return math.max(0.05, orig * 0.5 + ((1 - ergo * 0.01) * 0.25) * ergomult:GetFloat() + weight / 10)
@@ -531,35 +559,49 @@ ARC9EFT.DeployTimeHook = function(wep, orig)
     return math.max(0.05, orig * 0.5 + ((1 - ergo * 0.01) * 0.25) * ergomult:GetFloat() + weight / 10)
 end
 
-hook.Add("StartCommand", "ScrollEFTStance", function(ply, cmd)
-    EFTStanceScroller(ply, cmd)
-end)
-
--- concommand.Add("arc9_eft_cornerblindfire", function(ply)
---     ToggleEFTStance(ply, "EFT_InCornerFire", "Corner Blind Fire")
--- end)
-
--- concommand.Add("arc9_eft_leftshoulder", function(ply)
---     ToggleEFTStance(ply, "EFT_InLeftShoulder", "Left Shoulder")
--- end)
-
--- concommand.Add("arc9_eft_somalianblindfire", function(ply)
---     ToggleEFTStance(ply, "EFT_InSomalianStance", "Somalian Stance")
--- end)
-
-function WeaponSelectorVkluchatel(state)
-    hook.Add('HUDShouldDraw', 'disablewepselector', function(el)
-        if el == 'CHudWeaponSelection' then
-            return state
-        end   
-    end)
+ARC9EFT.SwaySpeedHook = function(wep, orig) 
+    local ergo = math.Clamp((wep:GetValue("EFTErgo") or 0), 0, 100)
+    local weight = math.Clamp((wep:GetValue("EFTWeight") or 0), 1, 20)
+    return math.max(1.05, orig * 1.5 + ((1 - ergo * 0.01) * 0.1) * ergomult:GetFloat() - weight / 10)
 end
 
+-- ARC9EFT.OneHandSprintHook = function(wep, orig)
+--     local high_ready = wep:GetNW2Bool("EFT_HighReadyStance", false)
+--     local weight = wep:GetValue("EFTWeight")
+--     if high_ready and weight < 4 then
+--         orig = true
+--     end
+--     return orig
+-- end
+-- local AllEFTStances = {
+--     "EFT_HighReadyStance",
+--     "EFT_LowReadyStance",
+--     "EFT_InCornerFire",
+--     "EFT_InLeftShoulder",
+--     "EFT_InSomalianStance"    
+-- }
+
+// 1 - "EFT_HighReadyStance"
+// 2 - "EFT_LowReadyStance"
+// 3 - "EFT_InCornerFire"
+// 4 - "EFT_InLeftShoulder"
+// 5 - "EFT_InSomalianStance" пендосы такие типо причем тут сомали???? причем здесь ключи?!
+
+-- function SetEFTStance(ply, stancename, status)
+--     if !IsValid(ply) then return end
+--     local wep = ply:GetActiveWeapon()
+--     if !(IsValid(wep) and wep.ARC9 and wep.EFTCombatStances == true) then return end
+--     for _, name in ipairs(AllEFTStances) do
+--         if name == stancename then
+--             wep:SetNW2Bool(stancename, status)
+--         end
+--     end
+-- end
+
+
 -- (ply, status, stance)
-function EFTSetReady(ply, status)
-    if !IsValid(ply) then return end
-    local wep = ply:GetActiveWeapon()
-    if !(IsValid(wep) and wep.ARC9 and wep.EFTCombatStances == true) then return end
+function EFTSetReady(ply, status) --soon
+    local wep = ply:GetActiveWeapon()    
     if !status then
         wep:SetNW2Bool("EFT_HighReadyStance", false)
         wep:SetNW2Bool("EFT_LowReadyStance", false)
@@ -567,10 +609,9 @@ function EFTSetReady(ply, status)
     end
 end
 
+
 function EFTSetStance(ply, status)
-    if !IsValid(ply) then return end
     local wep = ply:GetActiveWeapon()
-    if !(IsValid(wep) and wep.ARC9 and wep.EFTCombatStances == true) then return end
     if !status then
         wep:SetNW2Bool("EFT_InCornerFire", false)
         wep:SetNW2Bool("EFT_InLeftShoulder", false)
@@ -600,7 +641,7 @@ function ToggleEFTStance(ply, stanceName) --koroche potom уберу
     }
 
     for _, name in ipairs(allStances) do
-        if name ~= stanceName then
+        if name != stanceName then
             wep:SetNW2Bool(name, false)
         end
     end
@@ -610,19 +651,18 @@ function ToggleEFTStance(ply, stanceName) --koroche potom уберу
 end
 
 
-
-function EFTStanceScroller(ply, cmd)
+hook.Add("StartCommand", "EFTStanceScroller", function(ply, cmd)
 	if !IsValid(ply) then return end
 	local wep = ply:GetActiveWeapon()
     
 	if !(IsValid(wep) and wep.ARC9 and wep.EFTCombatStances) then return end
-    WeaponSelectorVkluchatel(true) --IF TRUE THEN HUD WORKS
+    WeaponSelectorVkluchatel(true) --IF TRUE THEN HUD WORKS "func from cl_eft_stances file"
     local out = wep:GetOutOfBreath()
     local weight = wep:GetValue("EFTWeight") or 0
 
-    if ply:KeyDown(IN_WALK) and !out and weight < 6 then --MR ANALUS
+    if ply:KeyDown(IN_WALK) then --MR ANALUS
         WeaponSelectorVkluchatel(false) --МИСТР СФИНКТЕР, IF FALSE THEN HUD TURNS OFF
-    
+        if out or weight > 8 then return end
         local wheel = cmd:GetMouseWheel()
         if wheel == 0 then return end
         
@@ -647,8 +687,8 @@ function EFTStanceScroller(ply, cmd)
 
         ply:SetNWInt("EFT_OGStatus", OGstatus)
         -- print("OGstatus:", OGstatus, "High:", highReady, "Low:", lowReady)
-    else return end
-end
+    end
+end)
 
 local dmgrangecvar = GetConVar("arc9_eft_mindmgrange")
 local dmgrangesgcvar = GetConVar("arc9_eft_mindmgrange_sg")
@@ -796,6 +836,8 @@ if CLIENT then
             { sv = true, type = "bool", text = "setting.eft.prtaran.title", convar = "eft_taran_jam", desc = "setting.eft.prtaran.desc" },
             { sv = true, type = "bool", text = "setting.eft.holdtypes.title", convar = "eft_nontpik_mode", desc = "setting.eft.holdtypes.desc" },
             { sv = true, type = "bool", text = "setting.eft.rshg2.title", convar = "eft_singleuse_behaviour", desc = "setting.eft.rshg2.desc" },
+            { sv = true, type = "bool", text = "Do viewmodel Leaning", convar = "eft_vmleaning", desc = "Changing position while leaning" },
+            { sv = true, type = "bool", text = "Do viewmodel Leaning in sights", convar = "eft_insight_vmleaning", desc = "Changing position while leaning in sights" },
 
         }
         
