@@ -40,12 +40,17 @@ SWEP.EFTWeight = 0.231
 
 SWEP.VisualRecoil = 0.25 -- general multiplier for it
 
+SWEP.EFT_VisualRecoilUp_BURST_SEMI   = 2.25   -- up/down tilt when semi/bursts
+SWEP.VisualRecoilUp                   = 2.25  --   when fullautoing
+
+SWEP.EFT_VisualRecoilSide_BURST_SEMI = 0.0035 -- left/right tilt when semi/burst
+SWEP.VisualRecoilSide                 = 0.0035   --   when fullautoing
 
 SWEP.VisualRecoilDampingConst = 300  -- spring settings, this is speed of visrec
 SWEP.VisualRecoilSpringPunchDamping = 5 -- the less this is the more wobbly gun moves
 
 SWEP.VisualRecoilPositionBumpUpHipFire = 0.1 -- gun will go down each shot by this value
-SWEP.VisualRecoilPositionBumpUp = -0.15 -- same but in sights
+SWEP.VisualRecoilPositionBumpUp = -0.2 -- same but in sights
 SWEP.VisualRecoilPositionBumpUpRTScope = -0.2 -- same but in rt scopes, you probably should keep it same as sight value, i guess it doesn't matter anymore after recoil update
 
 

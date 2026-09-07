@@ -42,7 +42,25 @@ SWEP.IronSights = {
     ViewModelFOV = 54
 }
 
+SWEP.TPIKLowReadyVector = Vector(5.0, -0, -3.0)
+SWEP.TPIKLowReadyAngle = Angle(50, -10, -5)
+SWEP.TPIKHighReadyVector = Vector(-6.5, -2.5, 20)
+SWEP.TPIKHighReadyAngle = Angle(-40, 0, 0)
+-- SWEP.TPIKSomalianVector = Vector(-0.0, -0, -6.0)
+-- SWEP.TPIKSomalianAngle = Angle(0, -0, -30)
+-- SWEP.TPIKCornerVector = Vector(-6.0, -8, 6.0)
+-- SWEP.TPIKCornerAngle = Angle(0, -0, 20)
+-- SWEP.TPIKLeftShoulderVector = Vector(4, 10, -1) 
+-- SWEP.TPIKLeftShoulderAngle = Angle(0, -0, 0)
+
 SWEP.ActivePos = Vector(-2.0, -6.1, -.35)
+
+SWEP.LowReadyVector = Vector(-1.0, -2, 1.0) -- pidarasiki
+SWEP.LowReadyAngle = Angle(0, -10, -5)
+
+SWEP.HighReadyVector = Vector(2, -7, -12)
+SWEP.HighReadyAngle = Angle(0, 30, -5)
+
 SWEP.CustomizePos = Vector(23, 55, 4)
 SWEP.CustomizeSnapshotFOV = 50
 SWEP.CustomizeRotateAnchor = Vector(23, -4.28, -5.23)
@@ -72,15 +90,15 @@ SWEP.Slot = 3
 
 SWEP.Recoil = 1 -- general multiplier of main recoil
 
-SWEP.RecoilUp   = 1.0   -- up recoil
-SWEP.RecoilUpSights   = 8.25   -- up recoil sight
+SWEP.RecoilUp   = 5.5   -- up recoil
+SWEP.RecoilUpSights   = 10.25   -- up recoil sight
 SWEP.RecoilSide = 1.2 -- sideways recoil
-SWEP.RecoilSideSights = 8.0 -- sideways recoil
+SWEP.RecoilSideSights = 10.0 -- sideways recoil
 
-SWEP.RecoilRandomUp   = 1.1 -- random up/down
-SWEP.RecoilRandomUpSights   = 8.25 -- random up/down sight
+SWEP.RecoilRandomUp   = 5.1 -- random up/down
+SWEP.RecoilRandomUpSights   = 10.25 -- random up/down sight
 SWEP.RecoilRandomSide = 1.2   -- random left/right
-SWEP.RecoilRandomSideSights = 6.0   -- random left/right
+SWEP.RecoilRandomSideSights = 10.0   -- random left/right
 
 SWEP.RecoilAutoControl = 10.0 -- autocompenstaion, could be cool if set to high but it also affects main recoil
 
@@ -88,28 +106,28 @@ SWEP.RecoilAutoControl = 10.0 -- autocompenstaion, could be cool if set to high 
 SWEP.VisualRecoil = 0.5 -- general multiplier for it
 --SWEP.VisualRecoilHipFire = 0.1 -- general multiplier for it
 
-SWEP.EFT_VisualRecoilUp_BURST_SEMI   = 0.5   -- up/down tilt when semi/bursts
-SWEP.VisualRecoilUp                   = 0.5   --   when fullautoing
-SWEP.EFT_VisualRecoilSide_BURST_SEMI = 0.0015 -- left/right tilt when semi/burst
+SWEP.EFT_VisualRecoilUp_BURST_SEMI   = 1.0   -- up/down tilt when semi/bursts
+SWEP.VisualRecoilUp                   = 1.0   --   when fullautoing
+SWEP.EFT_VisualRecoilSide_BURST_SEMI = 0.001 -- left/right tilt when semi/burst
 SWEP.VisualRecoilSide                 = 0.0075   --   when fullautoing
 SWEP.VisualRecoilRoll = 25 --roll tilt, a visual thing
 
-SWEP.VisualRecoilPunch = 6 -- How far back visrec moves the gun
-SWEP.VisualRecoilPunchSights = 125 -- same but in sights only
+SWEP.VisualRecoilPunch = 10 -- How far back visrec moves the gun
+SWEP.VisualRecoilPunchSights = 100 -- same but in sights only
 
 
-SWEP.VisualRecoilDampingConst = 200 -- spring settings, this is speed of visrec
+SWEP.VisualRecoilDampingConst = 150 -- spring settings, this is speed of visrec
 SWEP.VisualRecoilSpringPunchDamping = 3 -- the less this is the more wobbly gun moves
 SWEP.VisualRecoilSpringMagnitude = 1 -- some third element of spring, high values make gun shake asf on low fps
 
 SWEP.VisualRecoilPositionBumpUpHipFire = -1.0 -- gun will go down each shot by this value
-SWEP.VisualRecoilPositionBumpUp = -1.25 -- same but in sights
+SWEP.VisualRecoilPositionBumpUp = -1.0 -- same but in sights
 SWEP.VisualRecoilPositionBumpUpRTScope = -1.0 -- same but in rt scopes, you probably should keep it same as sight value, i guess it doesn't matter anymore after recoil update
 
 -- SWEP.VisualRecoilCenter = Vector(4.28-1.5, 19, -5.23 +3) -- ugh, i dont now what to set it too, but probably it should be diffferent on each gun
 SWEP.EFT_ShotsToSwitchToFullAutoBehaviur = 3 -- how many shots for switch to fullauto stats from semi/burst, + 2 shots afterwards are lerping. you probably should not touch this but ok
 
-SWEP.RecoilKick = 0.5 -- camera roll each shot + makes camera go more up when fullautoing
+SWEP.RecoilKick = 2.5 -- camera roll each shot + makes camera go more up when fullautoing
 
 SWEP.VisualRecoilCenter = Vector(4.28, 19, -2)
 SWEP.SubtleVisualRecoilSights = 2.2

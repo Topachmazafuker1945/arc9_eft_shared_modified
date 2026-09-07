@@ -245,7 +245,7 @@ ATT.Silencer = true
 -- ATT.CustomizeSnapshotFOVAdd = 22
 ATT.BarrelLengthAdd = 5
 
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_2_small"
 ATT.MuzzleEffectQCA = 5
 ATT.NoFlash = true
 

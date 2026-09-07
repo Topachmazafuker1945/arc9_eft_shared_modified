@@ -414,8 +414,8 @@ ATT.Sights = {
     {
         Pos = Vector(0.04, 10, -.08),
         Ang = Angle(0, 0, 0),
-        Magnification = 1.15,
-        ViewModelFOV = 36,
+        Magnification = 1.0,
+        ViewModelFOV = 42,
         RTScopeFOV = 36/5,
         OnSwitchToSight = function(self, slottbl)
             if CLIENT then ARC9EFTdrawnumber("3.5x") end

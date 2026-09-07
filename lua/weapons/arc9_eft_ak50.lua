@@ -37,7 +37,7 @@ SWEP.IronSights = {
     Pos = Vector(-4.28, -6, 1.1 ),
     Ang = Angle(0, 0.06, 0),
     Midpoint = { Pos = Vector(-1, 0, 8), Ang = Angle(0, 0, -145) },
-    Magnification = 1.1,
+    Magnification = 1.0,
     ViewModelFOV = 54
 }
 
@@ -58,7 +58,7 @@ SWEP.Ammo = "357"
 SWEP.Firemodes = { {Mode = 1 } }
 
 SWEP.Slot = 3
-
+-- SWEP.HasStock = true
 ------------------------- |||           Recoil            ||| -------------------------
 
 SWEP.Recoil = 1 -- general multiplier of main recoil
@@ -79,14 +79,14 @@ SWEP.RecoilAutoControl = 2.5 -- autocompenstaion, could be cool if set to high b
 SWEP.VisualRecoil = 0.5 -- general multiplier for it
 --SWEP.VisualRecoilHipFire = 0.1 -- general multiplier for it
 
-SWEP.EFT_VisualRecoilUp_BURST_SEMI   = 3.5   -- up/down tilt when semi/bursts
-SWEP.VisualRecoilUp                   = 3.5   --   when fullautoing
-SWEP.EFT_VisualRecoilSide_BURST_SEMI = 0.004 -- left/right tilt when semi/burst
+SWEP.EFT_VisualRecoilUp_BURST_SEMI   = 1.5   -- up/down tilt when semi/bursts
+SWEP.VisualRecoilUp                   = 1.5   --   when fullautoing
+SWEP.EFT_VisualRecoilSide_BURST_SEMI = 0.003 -- left/right tilt when semi/burst
 SWEP.VisualRecoilSide                 = 0.015   --   when fullautoing
 SWEP.VisualRecoilRoll = 40 --roll tilt, a visual thing
 
 SWEP.VisualRecoilPunch = 15 -- How far back visrec moves the gun
-SWEP.VisualRecoilPunchSights = 125 -- same but in sights only
+SWEP.VisualRecoilPunchSights = 100 -- same but in sights only
 
 
 SWEP.VisualRecoilDampingConst = 20 -- spring settings, this is speed of visrec

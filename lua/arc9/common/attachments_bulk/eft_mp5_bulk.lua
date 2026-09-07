@@ -739,7 +739,7 @@ ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
 
-ATT.MuzzleParticle = "arc9_eft_muzzledevice_1"
+ATT.MuzzleParticle = "arc9_eft_pistol_1"
 
 ATT.HeatCapacityMult = 0.99
 
@@ -772,7 +772,7 @@ ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
 
-ATT.MuzzleParticle = "arc9_eft_muzzledevice_2"
+ATT.MuzzleParticle = "arc9_eft_pistol_1"
 
 ATT.HeatCapacityMult = 0.991
 

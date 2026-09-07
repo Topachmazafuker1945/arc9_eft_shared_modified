@@ -1670,6 +1670,8 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_mpx_sig_mpx_a2.mdl"
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
+ATT.NoFlash = true
+ATT.MuzzleParticle = "arc9_eft_pistol_2"
 
 ATT.PhysBulletMuzzleVelocityMult = 1.005
 

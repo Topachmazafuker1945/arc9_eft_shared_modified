@@ -52,7 +52,8 @@ ATT.RecoilMult = 0.87
 ATT.EFTErgoAdd = -13
 ATT.HeatCapacityMult = 0.9
 ATT.PhysBulletMuzzleVelocityMult = 1.022
-
+ATT.MuzzleParticle = "arc9_eft_pistol_2"
+ATT.NoFlash = true
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 -- ATT.CustomizePos = Vector(14.5, 22, 4)
@@ -494,8 +495,9 @@ ATT.RecoilMult = 0.93
 ATT.EFTErgoAdd = -1
 ATT.HeatCapacityMult = 1.01
 ATT.PhysBulletMuzzleVelocityMult = 1.005
-
+ATT.MuzzleParticle = "arc9_eft_pistol_2"
 ATT.SortOrder = 0
+ATT.NoFlash = true
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_p90_muzzle"}

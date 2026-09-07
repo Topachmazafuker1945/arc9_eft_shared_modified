@@ -203,7 +203,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.HeatCapacityMult = 0.87
 ATT.PhysBulletMuzzleVelocityMult = 1.005
 
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_2_small"
 ATT.MuzzleEffectQCA = 5
 ATT.NoFlash = true
 ATT.BarrelLengthAdd = 5

@@ -115,6 +115,8 @@ end
 SWEP.OneHandedSprint = true
 SWEP.SprintAng = Angle(3, 0, -0)
 SWEP.SprintPos = Vector(3, -20, -13)
+-- SWEP.TacSprintAng = Angle(3, 0, -0)
+-- SWEP.TacSprintPos = Vector(3, -20, -13)
 SWEP.HoldTypeSprint = "normal"
 
 ------------------------- |||           Stats            ||| -------------------------

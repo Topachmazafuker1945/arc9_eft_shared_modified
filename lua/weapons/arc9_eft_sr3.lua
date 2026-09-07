@@ -25,7 +25,7 @@ SWEP.IronSights = {
     Pos = Vector(-4.25, -7, 1.53 ),
 }
 
-SWEP.DefaultElements = {"sr3uwu"} -- owo
+SWEP.DefaultElements = {"sr3uwu"} -- owo --бро реально не фурри поверте
 
 SWEP.EFTErgo = 45
 SWEP.EFTWeight = 1.41

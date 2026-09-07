@@ -159,7 +159,7 @@ ATT.Description = "A standard-issue universal stock for sniper rifles manufactur
 
 ATT.SortOrder = -1
 ATT.MenuCategory = "ARC9 - EFT Attachments"
-
+ATT.HasStock = true
 ATT.Category = {"eft_dvl10_stock"}
 
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({

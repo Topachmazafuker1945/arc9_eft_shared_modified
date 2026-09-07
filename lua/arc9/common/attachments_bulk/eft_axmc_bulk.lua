@@ -816,7 +816,7 @@ ATT.Description = [[The AX buttstock for the AXMC sniper rifle, manufactured by 
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
-
+ATT.HasStock = true
 ATT.Category = {"eft_axmc_grip_stock"}
 
 

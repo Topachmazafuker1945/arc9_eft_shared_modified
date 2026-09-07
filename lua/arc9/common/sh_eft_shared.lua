@@ -533,6 +533,8 @@ end
 
 ARC9EFT.SpeedHook = function(self, orig)
     if self.IsPistol then return end
+    local weight = self:GetValue("EFTWeight") or 0
+    if self:GetNW2Bool("EFT_HighReadyStance", true) and weight < 4 then return end
     return orig * ((100 - math.Clamp((self:GetValue("EFTWeight") or 0) * 2, 0, 50)) / 100)
 end
 
@@ -544,8 +546,8 @@ end
 
 ARC9EFT.ReloadTimeHook = function(wep, orig)
     if wep:GetBipod() then return orig * 0.85 end
-    if wep:GetOutOfBreath() then return orig * 1.1 end
-    if wep:GetBreath() < 50 then return orig * 1.05 end
+    if wep:GetOutOfBreath() then orig = orig * 1.25 end
+    if wep:GetBreath() < 35 then return orig * 1.1 end
     local high_ready = wep:GetNW2Bool("EFT_HighReadyStance", false)
     if high_ready and !wep.IsPistol then orig = orig * 0.75 end
     local ergo = math.Clamp((wep:GetValue("EFTErgo") or 0), 0, 100)
@@ -600,7 +602,14 @@ end
 
 
 -- (ply, status, stance)
-function EFTSetReady(ply, status) --soon
+
+-- function GetNonStableShoting()
+--     if (!self:GetValue("HasStock") or self:GetNW2Bool("EFT_InCornerFire", true) or self:GetNW2Bool("EFT_InSomalianStance", true)) and self.GetSightAmount() <= 0 and !self.IsPistol then
+--         return true
+--     end
+-- end
+
+function EFTSetReady(ply, status) --soon --lybiatovo, this shits requires swep owner()
     local wep = ply:GetActiveWeapon()    
     if !status then
         wep:SetNW2Bool("EFT_HighReadyStance", false)
@@ -610,7 +619,7 @@ function EFTSetReady(ply, status) --soon
 end
 
 
-function EFTSetStance(ply, status)
+function EFTSetStance(ply, status) --lybiatovo, this shits requires swep owner()
     local wep = ply:GetActiveWeapon()
     if !status then
         wep:SetNW2Bool("EFT_InCornerFire", false)
@@ -621,9 +630,9 @@ end
 
 function ToggleEFTStance(ply, stanceName) --koroche potom уберу 
     if !IsValid(ply) then return end
-
     local wep = ply:GetActiveWeapon()
     if !(IsValid(wep) and wep.ARC9 and wep.EFTCombatStances) then return end
+    if (wep:GetOutOfBreath() or (wep:GetValue("EFTWeight") or 0) > 7) then return end
 
     local currentState = wep:GetNW2Bool(stanceName, false)
     local newState = !currentState
@@ -657,17 +666,15 @@ hook.Add("StartCommand", "EFTStanceScroller", function(ply, cmd)
     
 	if !(IsValid(wep) and wep.ARC9 and wep.EFTCombatStances) then return end
     WeaponSelectorVkluchatel(true) --IF TRUE THEN HUD WORKS "func from cl_eft_stances file"
-    local out = wep:GetOutOfBreath()
-    local weight = wep:GetValue("EFTWeight") or 0
 
     if ply:KeyDown(IN_WALK) then --MR ANALUS
         WeaponSelectorVkluchatel(false) --МИСТР СФИНКТЕР, IF FALSE THEN HUD TURNS OFF
-        if out or weight > 8 then return end
+        if wep:GetOutOfBreath() or (wep:GetValue("EFTWeight") or 0) > 7 then return end
         local wheel = cmd:GetMouseWheel()
         if wheel == 0 then return end
         
         local OGstatus = ply:GetNWInt("EFT_OGStatus", 0)
-
+        
         OGstatus = OGstatus + (wheel * 0.25)
         OGstatus = math.Clamp(OGstatus, -1, 1)
 
@@ -686,7 +693,13 @@ hook.Add("StartCommand", "EFTStanceScroller", function(ply, cmd)
         wep:SetNW2Bool("EFT_LowReadyStance", lowReady)
 
         ply:SetNWInt("EFT_OGStatus", OGstatus)
+    
         -- print("OGstatus:", OGstatus, "High:", highReady, "Low:", lowReady)
+    end
+
+    if cmd:KeyDown(IN_ATTACK) then --lol
+        wep:SetNW2Bool("EFT_HighReadyStance", false)
+        wep:SetNW2Bool("EFT_LowReadyStance", false)
     end
 end)
 
@@ -848,3 +861,7 @@ end
 
 
 list.Set("ContentCategoryIcons", "ARC9 - Escape From Tarkov", "eft_16.png")
+--[[FOCK U DEMID !))))))))))))))0
+DSFSDGSDG
+SDGSDGS
+]]--
