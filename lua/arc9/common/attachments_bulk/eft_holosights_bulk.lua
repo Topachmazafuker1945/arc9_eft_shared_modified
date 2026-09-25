@@ -568,13 +568,23 @@ ATT.RTScopeMagnification = 3
 ATT.RTScopeReticle = Material("vgui/arc9_eft_shared/reticles/new/scope_all_eotech_xps3-4_marks2.png", "mips smooth")
 ATT.RTScopeReticle:SetInt("$flags", bit.bor(ATT.RTScopeReticle:GetInt("$flags"), 128)) -- additive
 ATT.RTScopeReticle:SetVector("$color2", Vector(60, 10, 100)) -- bright color
-ATT.RTScopeReticleScale = 0.54
+ATT.RTScopeReticleScale = 0.3
 ATT.RTScopeColorable = false
-ATT.RTScopeShadowIntensity = 10
+ATT.RTScopeShadowIntensity = 120
 ATT.RTScopeBlackBox = true 
 ATT.RTScopeBlackBoxShadow = true 
 ATT.ScopeScreenRatio = 767/1080
-ATT.RTScopeNew_ShadowScale = 0.85
+ATT.RTScopeNew_ShadowScale = 1
+
+
+
+ATT.RTScopeNew_ShadowIntensity = 1.25 -- do not set to zero
+ATT.RTScopeNew_FrontShadow = true -- shadow in front of scope
+ATT.RTScopeNew_FrontShadowScale = 1.5
+ATT.RTScopeNew_BackShadow = true -- shadow close to your eye, hides visible reticle when not aimed
+ATT.RTScopeNew_BackShadowScale = 0.75
+ATT.RTScopeNew_ChromaticAberrationMult = 2
+ATT.RTScopeNew_ShaderDistorsionMult = 2
 
 ATT.DrawFunc = function(swep, model, wm) 
     if !wm then
@@ -1199,9 +1209,9 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/optic_reapir_eyecup.mdl"
 ATT.Category = {"eft_reapir_cup"}
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
-ATT.AdditionalSightDistance = 2
-
+ATT.AdditionalSightDistance = -2.5
 ATT.ModelOffset = Vector(0, 0, 0)
+ATT.VisualRecoilPunchSights = 10 -- same but in sights only
 
 
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
@@ -1726,9 +1736,9 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/scope_vulcan_eyecup.mdl"
 ATT.Category = {"eft_vulcan_cup"}
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
-ATT.AdditionalSightDistance = 1.5
-
+ATT.AdditionalSightDistance = -1.5
 ATT.ModelOffset = Vector(0, 0, 0)
+ATT.VisualRecoilPunchSights = 10 -- same but in sights only
 
 
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
@@ -2008,7 +2018,8 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/scope_zeus_armasight_eyecup.mdl"
 ATT.Category = {"eft_zeus_cup"}
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
-ATT.AdditionalSightDistance = 2
+ATT.AdditionalSightDistance = -1.75
+ATT.VisualRecoilPunchSights = 10 -- same but in sights only
 
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
     ergonomicsModifier = 5,

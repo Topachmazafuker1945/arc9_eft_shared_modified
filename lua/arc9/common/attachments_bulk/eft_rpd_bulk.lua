@@ -358,6 +358,7 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_muzzle_rpd2"}
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_4_x"
 
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
     ergonomicsModifier = -2.5,

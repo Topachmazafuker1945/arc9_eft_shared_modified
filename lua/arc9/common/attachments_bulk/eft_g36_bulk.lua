@@ -767,7 +767,7 @@ ATT.Sights = {
     {
         Pos = Vector(0, 6.3, -0.951),
         Ang = Angle(0, 0, 0),
-        Magnification = 1.15,
+        Magnification = 1.0,
         ViewModelFOV = 36,
         RTScopeFOV = 36/3,
         OnSwitchToSight = function(self, slottbl)
@@ -836,9 +836,9 @@ ATT.Category = {"eft_g36_topmount"}
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/scope_g36_lense.mdl"
 ATT.Sights = {
     {
-        Pos = Vector(0, 6.3, -0.951),
+        Pos = Vector(0, 8.0, -0.951),
         Ang = Angle(0, 0, 0),
-        Magnification = 1.15,
+        Magnification = 1.0,
         ViewModelFOV = 36,
         RTScopeFOV = 36/1.5,
         OnSwitchToSight = function(self, slottbl)
@@ -928,7 +928,7 @@ ATT.Sights = {
     {
         Pos = Vector(0, 9, -2.27),
         Ang = Angle(0, 0, 0),
-        Magnification = 1.25,
+        Magnification = 1.0,
         ViewModelFOV = 53
     }
 }
@@ -1125,7 +1125,7 @@ ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
 
 ATT.NoFlash = true
-ATT.MuzzleParticle = "arc9_eft_muzzleflashider_1"
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_1"
 
 ATT.Category = {"eft_g36_muzzle"}
 
@@ -1157,7 +1157,7 @@ ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
 
 ATT.NoFlash = true
-ATT.MuzzleParticle = "arc9_eft_muzzleflashider_1"
+ATT.MuzzleParticle = "arc9_eft_muzzleflashider_3_x"
 
 ATT.HeatCapacityMult = 0.99
 
@@ -1191,7 +1191,7 @@ ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
 
 ATT.NoFlash = true
-ATT.MuzzleParticle = "arc9_eft_muzzleflashider_1"
+ATT.MuzzleParticle = "arc9_eft_muzzleflashider_3_x"
 
 ATT.HeatCapacityMult = 0.99
 
@@ -1554,7 +1554,7 @@ ATT.Sights = {
     {
         Pos = Vector(0, 9, -1.22),
         Ang = Angle(0, 0, 0),
-        Magnification = 1.25,
+        Magnification = 1.0,
         ViewModelFOV = 53,
         IsIronSight = true
     }

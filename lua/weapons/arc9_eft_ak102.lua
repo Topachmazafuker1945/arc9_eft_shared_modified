@@ -27,8 +27,8 @@ SWEP.Spread = 1.925 * ARC9.MOAToAcc
 
 SWEP.HeatCapacity = 200
 
-SWEP.RecoilSide = 1.2 -- sideways recoil
-SWEP.RecoilRandomSide = 1.3   -- random left/right
+-- SWEP.RecoilSide = 1.2 -- sideways recoil
+-- SWEP.RecoilRandomSide = 1.3   -- random left/right
 
 
 local path = ")weapons/darsu_eft/ak/"

@@ -31,3 +31,5 @@ SWEP.OneHandedSprint = true
 SWEP.SprintAng = Angle(3, 33, -12)
 SWEP.SprintPos = Vector(3, -7.1, -13)
 SWEP.HoldTypeSprint = "normal"
+
+SWEP.MuzzleParticle = "arc9_eft_shotgun_2"

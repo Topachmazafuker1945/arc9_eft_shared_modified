@@ -34,10 +34,10 @@ SWEP.Spread = 2.269 * ARC9.MOAToAcc
 SWEP.HeatCapacity = 170
 SWEP.HeatDissipation = 2.5
 
-SWEP.RecoilUp   = 3.3   -- up recoil
-SWEP.RecoilSide = 0.9 -- sideways recoil
-SWEP.RecoilRandomUp   = 1.7 -- random up/down
-SWEP.RecoilRandomSide = 1.1   -- random left/right
+-- SWEP.RecoilUp   = 3.3   -- up recoil
+-- SWEP.RecoilSide = 0.9 -- sideways recoil
+-- SWEP.RecoilRandomUp   = 1.7 -- random up/down
+-- SWEP.RecoilRandomSide = 1.1   -- random left/right
 
 SWEP.DefaultElements = {"short_barrel"}
 

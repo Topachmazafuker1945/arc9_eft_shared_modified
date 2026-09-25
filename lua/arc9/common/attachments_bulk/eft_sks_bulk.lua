@@ -369,7 +369,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.PhysBulletMuzzleVelocityMult = 1.0175
 
 ATT.Silencer = true
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_2"
 ATT.NoFlash = true
 
 ATT.Category = {"eft_muzzle_sks"}

@@ -135,8 +135,8 @@ SWEP.VisualRecoil = 0.5 -- general multiplier for it
 
 SWEP.EFT_VisualRecoilUp_BURST_SEMI   = 2.5   -- up/down tilt when semi/bursts
 SWEP.VisualRecoilUp                   = 2.5   --   when fullautoing
-SWEP.EFT_VisualRecoilSide_BURST_SEMI = 0.005 -- left/right tilt when semi/burst
-SWEP.VisualRecoilSide                 = 0.0075   --   when fullautoing
+SWEP.EFT_VisualRecoilSide_BURST_SEMI = 0.001 -- left/right tilt when semi/burst
+SWEP.VisualRecoilSide                 = 0.005   --   when fullautoing
 SWEP.VisualRecoilRoll = 25 --roll tilt, a visual thing
 
 SWEP.VisualRecoilPunch = 6 -- How far back visrec moves the gun
@@ -191,7 +191,7 @@ SWEP.HeatDissipation = 0.5
 ------------------------- |||           Minor stuff            ||| -------------------------
 
 SWEP.CamQCA_Mult = 1
-SWEP.MuzzleParticle = "AC_muzzle_shotgun_db"
+SWEP.MuzzleParticle = "arc9_eft_shotgun_1"
 SWEP.AfterShotParticle = "barrel_smoke"
 SWEP.ShellModel = "models/weapons/arc9/darsu_eft/shells/patron_12x70_shell.mdl"
 SWEP.ShellSounds = ARC9EFT.Shells12cal

@@ -68,7 +68,7 @@ ATT.Spread = 0.76 * ARC9.MOAToAcc
 -- ATT.HasBarrel = true
 
 ATT.Silencer = true
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_1"
 ATT.NoFlash = true
 ATT.MuzzleEffectQCA = 5
 
@@ -187,7 +187,7 @@ ATT.SortOrder = -2
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.BarrelLengthAdd = 1.5
-
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_3"
 ATT.Category = {"eft_muzzle_dvl10"}
 
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
@@ -215,7 +215,7 @@ ATT.HasBarrel = true
 
 ATT.SortOrder = -2
 ATT.MenuCategory = "ARC9 - EFT Attachments"
-
+ATT.MuzzleParticle = "arc9_eft_banka_2"
 ATT.Category = {"eft_muzzle_dvl10_sup"}
 
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({

@@ -41,10 +41,17 @@ SWEP.IronSights = {
     Pos = Vector(-4.28, -5, 1.29 ),
     Ang = Angle(0, 0.06, 0),
     Midpoint = { Pos = Vector(-1, 0, 8), Ang = Angle(0, 0, -145) },
-    Magnification = 1.1,
+    Magnification = 1.0,
 }
 
-SWEP.ActivePos = Vector(-2.0, -4.1, -.35)
+SWEP.ActivePos = Vector(-2.0, -4.1, -1.5)
+
+SWEP.LowReadyVector = Vector(-1.0, -0, 0) -- pidarasiki
+SWEP.LowReadyAngle = Angle(0, -10, -5)
+
+SWEP.HighReadyVector = Vector(2, -7, -12)
+SWEP.HighReadyAngle = Angle(0, 30, -5)
+
 SWEP.CustomizePos = Vector(21.5, 45, 4)
 SWEP.CustomizeSnapshotFOV = 55
 SWEP.CustomizeRotateAnchor = Vector(21.5, -4.28, -5.23)
@@ -170,7 +177,7 @@ SWEP.HeatDissipation = 2.5
 ------------------------- |||           Minor stuff            ||| -------------------------
 
 SWEP.CamQCA_Mult = 1
-SWEP.MuzzleParticle = "muzzleflash_ak47"
+SWEP.MuzzleParticle = "arc9_eft_dtk_fireball_2"
 SWEP.ShellModel = "models/weapons/arc9/darsu_eft/shells/762x51.mdl"
 SWEP.ShellSounds = ARC9EFT.Shells556
 

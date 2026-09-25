@@ -43,7 +43,7 @@ ATT.HeatCapacityMult = 0.82
 ATT.Silencer = true 
 ATT.BarrelLengthAdd = 5
 
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_2_small"
 ATT.MuzzleEffectQCA = 5
 ATT.NoFlash = true
 

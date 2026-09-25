@@ -42,7 +42,7 @@ SWEP.IronSights = {
         Pos = Vector(-1, 0, 8),
         Ang = Angle(0, 0, -145),
     },
-    Magnification = 1.1,
+    Magnification = 1.0,
 }
 
 SWEP.ActivePos = Vector(-0.5, -2.1, -.45)

@@ -999,7 +999,8 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/scar_mz.mdl"
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
-
+ATT.NoFlash = true 
+ATT.MuzzleParticle = "arc9_eft_muzzleflashider_1"
 
 ATT.Category = {"eft_scarl_muzzle"}
 

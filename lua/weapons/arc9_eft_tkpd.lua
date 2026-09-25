@@ -30,7 +30,7 @@ SWEP.DefaultBodygroups = "000000000000000000"
 SWEP.WorldModelOffset = {
     Pos = Vector(-8.3, 5.5, -6),
     Ang = Angle(-7, 0, 180),
-    TPIKPos = Vector(-7, 5, -2), -- rpg
+    TPIKPos = Vector(-1, 4, -4), -- rpg
     TPIKAng = Angle(-11.5, 0, 180),
     Scale = 1
 }
@@ -42,8 +42,25 @@ SWEP.IronSights = {
     Magnification = 1.1,
     ViewModelFOV = 54
 }
+SWEP.TPIKLowReadyVector = Vector(5.0, -0, -3.0)
+SWEP.TPIKLowReadyAngle = Angle(50, -10, -5)
+SWEP.TPIKHighReadyVector = Vector(-6.5, -2.5, 20)
+SWEP.TPIKHighReadyAngle = Angle(-40, 0, 0)
+-- SWEP.TPIKSomalianVector = Vector(-0.0, -0, -6.0)
+-- SWEP.TPIKSomalianAngle = Angle(0, -0, -30)
+-- SWEP.TPIKCornerVector = Vector(-6.0, -8, 6.0)
+-- SWEP.TPIKCornerAngle = Angle(0, -0, 20)
+-- SWEP.TPIKLeftShoulderVector = Vector(4, 10, -1) 
+-- SWEP.TPIKLeftShoulderAngle = Angle(0, -0, 0)
 
 SWEP.ActivePos = Vector(-2.0, -6.1, -.35)
+
+SWEP.LowReadyVector = Vector(-1.0, 0, -1.0) -- pidarasiki
+SWEP.LowReadyAngle = Angle(0, -10, -5)
+
+SWEP.HighReadyVector = Vector(2, -7, -12)
+SWEP.HighReadyAngle = Angle(0, 30, -5)
+
 SWEP.CustomizePos = Vector(22, 48, 4)
 SWEP.CustomizeSnapshotFOV = 55
 SWEP.CustomizeRotateAnchor = Vector(22, -4.28, -5.23)
@@ -172,7 +189,7 @@ SWEP.HeatDissipation = 1.7
 ------------------------- |||           Minor stuff            ||| -------------------------
 
 SWEP.CamQCA_Mult = 0.8
-SWEP.MuzzleParticle = "muzzleflash_svd"
+SWEP.MuzzleParticle = "arc9_eft_shotgun_2"
 SWEP.ShellModel = "models/weapons/arc9/darsu_eft/shells/93x64.mdl"
 SWEP.ShellSounds = ARC9EFT.ShellsHeavy
 

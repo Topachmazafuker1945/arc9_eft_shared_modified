@@ -672,14 +672,14 @@ ATT.Sights = {
         Pos = Vector(0.575, 7.8, -0.8),
         Ang = Angle(0, 0, 0),
         Magnification = 1.0,
-        ViewModelFOV = 52,
+        ViewModelFOV = 32,
         Reticle = Reticle0
     },
     {
         Pos = Vector(0.575, 7.8, -0.8),
         Ang = Angle(0, 0, 0),
         Magnification = 1.0,
-        ViewModelFOV = 52,
+        ViewModelFOV = 32,
         Reticle = Reticle1
     },
 }
@@ -689,7 +689,8 @@ ATT.RTScopeSubmatIndex = 1
 ATT.RTScopeFOV = 38/4
 ATT.RTScopeMagnification = 4
 ATT.RTScopeReticle = Material("vgui/arc9_eft_shared/reticles/scope_dovetail_belomo_pso_1m2_1_4x24_marks_1.png", "mips smooth")
-ATT.RTScopeReticleScale = 0.765
+ATT.RTScopeReticleScale = 0.485
+ATT.RTScopeNew_ShadowScale = 2.5
 ATT.RTScopeColorable = false
 ATT.RTScopeShadowIntensity = 10
 ATT.RTScopeBlackBox = true 
@@ -756,14 +757,14 @@ ATT.Sights = {
         Pos = Vector(0.575, 7.8, -0.8),
         Ang = Angle(0, 0, 0),
         Magnification = 1.0,
-        ViewModelFOV = 52,
+        ViewModelFOV = 32,
         Reticle = Reticle0
     },
     {
         Pos = Vector(0.575, 7.8, -0.8),
         Ang = Angle(0, 0, 0),
         Magnification = 1.0,
-        ViewModelFOV = 52,
+        ViewModelFOV = 32,
         Reticle = Reticle1
     },
 }
@@ -773,7 +774,8 @@ ATT.RTScopeSubmatIndex = 1
 ATT.RTScopeFOV = 38/4
 ATT.RTScopeMagnification = 4
 ATT.RTScopeReticle = Material("vgui/arc9_eft_shared/reticles/scope_dovetail_belomo_pso_1m2_1_4x24_marks_1.png", "mips")
-ATT.RTScopeReticleScale = 0.765
+ATT.RTScopeReticleScale = 0.485
+ATT.RTScopeNew_ShadowScale = 2.5
 ATT.RTScopeColorable = false
 ATT.RTScopeShadowIntensity = 10
 ATT.RTScopeBlackBox = true 
@@ -917,7 +919,7 @@ ATT.Sights = {
 ATT.RTScope = true
 ATT.RTScopeSubmatIndex = 4
 ATT.RTScopeFOV = 12
-ATT.RTScopeReticle = Material("vgui/arc9_eft_shared/reticles/scope_all_swampfox_trihawk_prism_scope_3x30_mark.png", "mips")
+ATT.RTScopeReticle = Material("vgui/arc9_eft_shared/reticles/scope_all_swampfox_trihawk_prism_scope_3x30_mark.png", "mips smooth")
 ATT.RTScopeReticleScale = 1.35
 ATT.RTScopeColorable = true
 ATT.RTScopeShadowIntensity = 10
@@ -1143,8 +1145,9 @@ ATT.Model = "models/weapons/arc9_eft_shared/atts/optic/dovetail/1p78_eyecap.mdl"
 ATT.Category = {"eft_1p78_eyecap"}
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
-ATT.AdditionalSightDistance = -2
+ATT.AdditionalSightDistance = -1.75
 ATT.ModelOffset = Vector(0, 0, 0)
+ATT.VisualRecoilPunchSights = 10 -- same but in sights only
 
 
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
@@ -1233,8 +1236,9 @@ ATT.Model = "models/weapons/arc9_eft_shared/atts/optic/dovetail/1p29_eyecap.mdl"
 ATT.Category = {"eft_tulpan_eyecap"}
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
-ATT.AdditionalSightDistance = -2
+ATT.AdditionalSightDistance = -1.75
 ATT.ModelOffset = Vector(0, 0, 0)
+ATT.VisualRecoilPunchSights = 10 -- same but in sights only
 
 
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({

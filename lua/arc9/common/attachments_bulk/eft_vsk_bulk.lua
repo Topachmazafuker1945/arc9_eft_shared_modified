@@ -220,7 +220,7 @@ ATT.HasGas = true
 ATT.HeatCapacityMult = 0.84
 
 ATT.Silencer = true
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_2"
 ATT.NoFlash = true
 
 ATT.MuzzleEffectQCA = 5

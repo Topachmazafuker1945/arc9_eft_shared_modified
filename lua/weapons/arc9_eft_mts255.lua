@@ -42,7 +42,25 @@ SWEP.IronSights = {
     ViewModelFOV = 54
 }
 
+SWEP.TPIKLowReadyVector = Vector(1.0, -0, -3.0)
+SWEP.TPIKLowReadyAngle = Angle(50, -10, -5)
+SWEP.TPIKHighReadyVector = Vector(-6.5, -2.5, 20)
+SWEP.TPIKHighReadyAngle = Angle(-40, 0, 0)
+SWEP.TPIKSomalianVector = Vector(-0.0, -0, -6.0)
+SWEP.TPIKSomalianAngle = Angle(0, -0, -30)
+SWEP.TPIKCornerVector = Vector(-6.0, -8, 6.0)
+SWEP.TPIKCornerAngle = Angle(0, -0, 20)
+SWEP.TPIKLeftShoulderVector = Vector(4, 10, -1) 
+SWEP.TPIKLeftShoulderAngle = Angle(0, -0, 0)
+
 SWEP.ActivePos = Vector(-2.0, -5.2, -0.5)
+
+SWEP.LowReadyVector = Vector(-1.0, -2, 1.0) -- pidarasiki
+SWEP.LowReadyAngle = Angle(0, -10, -5)
+
+SWEP.HighReadyVector = Vector(2, -7, -12)
+SWEP.HighReadyAngle = Angle(0, 30, -5)
+
 SWEP.CustomizePos = Vector(22, 52, 3.5)
 SWEP.CustomizeSnapshotFOV = 50
 SWEP.CustomizeRotateAnchor = Vector(22, -4.28, -5.23)
@@ -154,7 +172,7 @@ SWEP.Overheat = false
 ------------------------- |||           Minor stuff            ||| -------------------------
 
 SWEP.CamQCA_Mult = 1
-SWEP.MuzzleParticle = "muzzleflash_M3"
+SWEP.MuzzleParticle = "arc9_eft_shotgun_1"
 SWEP.AfterShotParticle = "barrel_smoke"
 SWEP.ShellModel = "models/weapons/arc9/darsu_eft/shells/patron_12x70_shell.mdl"
 SWEP.ShellSounds = ARC9EFT.Shells12cal

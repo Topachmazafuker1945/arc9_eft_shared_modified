@@ -203,7 +203,7 @@ ATT.Sights = {
     {
         Pos = Vector(0, 13.0, -3.715),
         Ang = Angle(0, 0, 0),
-        Magnification = 1.15,
+        Magnification = 1.0,
         ViewModelFOV = 36,
         RTScopeFOV = 36/4,
         OnSwitchToSight = function(self, slottbl)
@@ -348,8 +348,8 @@ ATT.Sights = {
     {
         Pos = Vector(0, 11.75, -3.78),
         Ang = Angle(0, 0, 0),
-        Magnification = 1.15,
-        ViewModelFOV = 36,
+        Magnification = 1.0,
+        ViewModelFOV = 52,
         RTScopeFOV = 36/4,
         OnSwitchToSight = function(self, slottbl)
             if CLIENT then ARC9EFTdrawnumber("1.5x") end
@@ -634,7 +634,7 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/silencer_aug_aseutra_sl7i.mdl"
 ATT.HeatCapacityMult = 0.66
 
 ATT.Silencer = true
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_2"
 ATT.NoFlash = true
 
 ATT.Category = {"eft_aug_muzzle"}
@@ -668,7 +668,7 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/silencer_aug_reflex_suppressor_t
 ATT.HeatCapacityMult = 0.86
 
 ATT.Silencer = true
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_2"
 ATT.NoFlash = true
 
 ATT.ModelOffset  = Vector(-2.12, 0, 0)

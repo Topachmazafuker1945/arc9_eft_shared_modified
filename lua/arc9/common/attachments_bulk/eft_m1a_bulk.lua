@@ -1033,7 +1033,7 @@ ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
 ATT.NoFlash = true
-ATT.MuzzleParticle = "arc9_eft_muzzleflashider_2"
+ATT.MuzzleParticle = "arc9_eft_muzzleflashider_3_x"
 
 ATT.Category = {"eft_muzzle_m1a_22"}
 
@@ -1077,7 +1077,7 @@ ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
 
-ATT.MuzzleParticle = "arc9_eft_muzzledevice_2"
+ATT.MuzzleParticle = "arc9_eft_dtk_bigrifle_compensator_2"
 
 ATT.Category = {"eft_muzzle_m1a_16"}
 
@@ -1120,7 +1120,7 @@ ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
 
-ATT.MuzzleParticle = "arc9_eft_muzzledevice_2"
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_4_x"
 
 ATT.Category = {"eft_muzzle_m1a_22", "eft_muzzle_m1a_brake"}
 
@@ -1155,7 +1155,7 @@ ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
 ATT.NoFlash = true
-ATT.MuzzleParticle = "arc9_eft_muzzleflashider_1"
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_1"
 ATT.Category = {"eft_muzzle_m1a_22"}
 
 ATT.Attachments = {
@@ -1197,7 +1197,7 @@ ATT.ModelAngleOffset = Angle(0, 0, 90)
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
-
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_3"
 ATT.Category = {"eft_muzzle_m1a_22"}
 
 ATT.Attachments = {
@@ -1233,7 +1233,7 @@ ATT.HeatCapacityMult = 0.991
 
 ATT.SortOrder = -2
 ATT.MenuCategory = "ARC9 - EFT Attachments"
-
+ATT.MuzzleParticle = "arc9_eft_dtk_sport_2"
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_m14_smith_enterprise_good_iron_muzzle_brake.mdl"
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4

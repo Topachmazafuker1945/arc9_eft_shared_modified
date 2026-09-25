@@ -486,6 +486,8 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_vector_kriss_flash_hider_9.mdl"
+ATT.NoFlash = true
+ATT.MuzzleParticle = "arc9_eft_pistol_2"
 
 ATT.Category = {"eft_vector9_muzzle"}
 

@@ -29,7 +29,7 @@ SWEP.DefaultBodygroups = "0000000000000"
 SWEP.WorldModelOffset = {
     Pos = Vector(-10, 5.5, -4.5),
     Ang = Angle(-7, 0, 180),
-    TPIKPos = Vector(-5, 5, -4), -- rpg
+    TPIKPos = Vector(-2, 5, -5), -- rpg
     TPIKAng = Angle(-5, 0, 180),
     Scale = 1
 }
@@ -38,11 +38,11 @@ SWEP.IronSights = {
     Pos = Vector(-4.285, -8, 1.47 ),
     Ang = Angle(0, 0.01, 0),
     Midpoint = { Pos = Vector(-1, 0, 8), Ang = Angle(0, 0, -145) },
-    Magnification = 1.1,
+    Magnification = 1.0,
     ViewModelFOV = 54
 }
 
-SWEP.TPIKLowReadyVector = Vector(5.0, -0, -3.0)
+SWEP.TPIKLowReadyVector = Vector(2.0, -0, -3.0)
 SWEP.TPIKLowReadyAngle = Angle(50, -10, -5)
 SWEP.TPIKHighReadyVector = Vector(-6.5, -2.5, 20)
 SWEP.TPIKHighReadyAngle = Angle(-40, 0, 0)
@@ -198,7 +198,7 @@ SWEP.HeatDissipation = 6
 ------------------------- |||           Minor stuff            ||| -------------------------
 
 SWEP.CamQCA_Mult = 1
-SWEP.MuzzleParticle = "muzzleflash_4"
+SWEP.MuzzleParticle = "arc9_eft_shotgun_2"
 SWEP.ShellModel = "models/weapons/arc9/darsu_eft/shells/366tkm.mdl"
 SWEP.ShellSounds = ARC9EFT.Shells556
 

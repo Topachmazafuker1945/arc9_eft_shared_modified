@@ -41,7 +41,13 @@ SWEP.IronSights = {
     ViewModelFOV = 54
 }
 
-SWEP.ActivePos = Vector(-0.7, -3.1, -.35)
+SWEP.TPIKLowReadyVector = Vector(5.0, -0, -3.0)
+SWEP.TPIKLowReadyAngle = Angle(50, -10, -5)
+
+SWEP.LowReadyVector = Vector(-1.0, -0, -0.0) -- pidarasiki
+SWEP.LowReadyAngle = Angle(0, -10, -5)
+
+SWEP.ActivePos = Vector(-2.0, -6.1, -.35)
 SWEP.CustomizePos = Vector(24, 47, 4)
 SWEP.CustomizeSnapshotFOV = 60
 SWEP.CustomizeRotateAnchor = Vector(22, -4.28, -5.23)
@@ -79,8 +85,8 @@ SWEP.RecoilAutoControl = 2.5 -- autocompenstaion, could be cool if set to high b
 SWEP.VisualRecoil = 0.5 -- general multiplier for it
 --SWEP.VisualRecoilHipFire = 0.1 -- general multiplier for it
 
-SWEP.EFT_VisualRecoilUp_BURST_SEMI   = 1.5   -- up/down tilt when semi/bursts
-SWEP.VisualRecoilUp                   = 1.5   --   when fullautoing
+SWEP.EFT_VisualRecoilUp_BURST_SEMI   = 1.75   -- up/down tilt when semi/bursts
+SWEP.VisualRecoilUp                   = 1.75   --   when fullautoing
 SWEP.EFT_VisualRecoilSide_BURST_SEMI = 0.003 -- left/right tilt when semi/burst
 SWEP.VisualRecoilSide                 = 0.015   --   when fullautoing
 SWEP.VisualRecoilRoll = 40 --roll tilt, a visual thing
@@ -89,13 +95,13 @@ SWEP.VisualRecoilPunch = 15 -- How far back visrec moves the gun
 SWEP.VisualRecoilPunchSights = 100 -- same but in sights only
 
 
-SWEP.VisualRecoilDampingConst = 20 -- spring settings, this is speed of visrec
+SWEP.VisualRecoilDampingConst = 25 -- spring settings, this is speed of visrec
 SWEP.VisualRecoilSpringPunchDamping = 5 -- the less this is the more wobbly gun moves
 SWEP.VisualRecoilSpringMagnitude = 1 -- some third element of spring, high values make gun shake asf on low fps
 
-SWEP.VisualRecoilPositionBumpUpHipFire = -0.25 -- gun will go down each shot by this value
-SWEP.VisualRecoilPositionBumpUp = -0.25 -- same but in sights
-SWEP.VisualRecoilPositionBumpUpRTScope = -0.25-- same but in rt scopes, you probably should keep it same as sight value, i guess it doesn't matter anymore after recoil update
+SWEP.VisualRecoilPositionBumpUpHipFire = -0.75 -- gun will go down each shot by this value
+SWEP.VisualRecoilPositionBumpUp = -0.75 -- same but in sights
+SWEP.VisualRecoilPositionBumpUpRTScope = -0.75-- same but in rt scopes, you probably should keep it same as sight value, i guess it doesn't matter anymore after recoil update
 
 -- SWEP.VisualRecoilCenter = Vector(4.28-1.5, 19, -5.23 +3) -- ugh, i dont now what to set it too, but probably it should be diffferent on each gun
 SWEP.EFT_ShotsToSwitchToFullAutoBehaviur = 3 -- how many shots for switch to fullauto stats from semi/burst, + 2 shots afterwards are lerping. you probably should not touch this but ok
@@ -129,7 +135,7 @@ SWEP.HeatDissipation = 1
 ------------------------- |||           Minor stuff            ||| -------------------------
 
 SWEP.CamQCA_Mult = 1
-SWEP.MuzzleParticle = "muzzleflash_m82"
+SWEP.MuzzleParticle = "arc9_eft_shotgun_2"
 SWEP.ShellModel = "models/weapons/arc9/darsu_eft/shells/50bmg.mdl"
 SWEP.ShellSounds = ARC9EFT.ShellsHeavy
 

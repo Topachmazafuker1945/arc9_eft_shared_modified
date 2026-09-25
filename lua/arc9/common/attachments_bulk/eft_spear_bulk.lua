@@ -359,7 +359,7 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.BarrelLengthAdd = 0.5
-
+ATT.MuzzleParticle = "arc9_eft_muzzleflashider_1"
 
 ATT.Category = {"eft_spear_muzzle"}
 
@@ -399,7 +399,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.Silencer = true 
 ATT.BarrelLengthAdd = 3
 
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_2"
 ATT.NoFlash = true
 ATT.MuzzleEffectQCA = 5
 

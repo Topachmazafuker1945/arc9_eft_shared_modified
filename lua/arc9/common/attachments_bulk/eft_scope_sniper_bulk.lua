@@ -534,7 +534,7 @@ ATT.RTScope = true
 ATT.RTScopeSubmatIndex = 1
 ATT.RTScopeFOV = 12
 ATT.RTScopeReticle = Material("vgui/arc9_eft_shared/reticles/scope_base_ciklon_shakhin_37x_LOD0_mark.png", "")
-ATT.RTScopeReticleScale = 0.75
+ATT.RTScopeReticleScale = 0.5
 ATT.RTScopeColorable = false
 ATT.RTScopeShadowIntensity = 5
 -- ATT.RTScopeBlackBox = true 
@@ -631,7 +631,8 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/tactical_shakhin_eyecup.mdl"
 ATT.Category = {"eft_shakhin_cup"}
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
-ATT.AdditionalSightDistance = 1
+ATT.AdditionalSightDistance = -1.75
+ATT.VisualRecoilPunchSights = 10 -- same but in sights only
 
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
     ergonomicsModifier = 2,

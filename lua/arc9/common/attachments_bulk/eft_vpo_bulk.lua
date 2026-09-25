@@ -196,7 +196,7 @@ ATT.PhysBulletMuzzleVelocityMult = 1.0075
 ATT.Silencer = true
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 5
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_1"
 ATT.NoFlash = true
 
 ATT.Category = {"eft_366_muzzle"}
@@ -608,7 +608,7 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.HeatCapacityMult = 1.024
-
+ATT.MuzzleParticle = "arc9_eft_50_bmg"
 ATT.BarrelLengthAdd = 2
 
 ATT.Category = {"eft_ak50_mz"}

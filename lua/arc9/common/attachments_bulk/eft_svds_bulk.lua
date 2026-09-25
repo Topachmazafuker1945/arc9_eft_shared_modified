@@ -1103,7 +1103,7 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.HeatCapacityMult = 0.99
-
+ATT.MuzzleParticle = "arc9_eft_dtk_bigrifle_compensator"
 ATT.Category = {"eft_tkpd_muzzle"}
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
     ergonomicsModifier = -3,

@@ -108,7 +108,7 @@ SWEP.RecoilSideSights = 8.0 -- sideways recoil
 SWEP.RecoilRandomUp   = 1.1 -- random up/down
 SWEP.RecoilRandomUpSights   = 8.25 -- random up/down sight
 SWEP.RecoilRandomSide = 1.2   -- random left/right
-SWEP.RecoilRandomSideSights = 6.0   -- random left/right
+SWEP.RecoilRandomSideSights = 8.0   -- random left/right
 
 SWEP.RecoilAutoControl = 10.0 -- autocompenstaion, could be cool if set to high but it also affects main recoil
 
@@ -116,10 +116,10 @@ SWEP.RecoilAutoControl = 10.0 -- autocompenstaion, could be cool if set to high 
 SWEP.VisualRecoil = 0.5 -- general multiplier for it
 --SWEP.VisualRecoilHipFire = 0.1 -- general multiplier for it
 
-SWEP.EFT_VisualRecoilUp_BURST_SEMI   = 0.5   -- up/down tilt when semi/bursts
-SWEP.VisualRecoilUp                   = 0.5   --   when fullautoing
+SWEP.EFT_VisualRecoilUp_BURST_SEMI   = 0.35   -- up/down tilt when semi/bursts
+SWEP.VisualRecoilUp                   = 0.35  --   when fullautoing
 SWEP.EFT_VisualRecoilSide_BURST_SEMI = 0.001 -- left/right tilt when semi/burst
-SWEP.VisualRecoilSide                 = 0.0075   --   when fullautoing
+SWEP.VisualRecoilSide                 = 0.0025   --   when fullautoing
 SWEP.VisualRecoilRoll = 25 --roll tilt, a visual thing
 
 SWEP.VisualRecoilPunch = 6 -- How far back visrec moves the gun

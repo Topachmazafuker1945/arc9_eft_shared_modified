@@ -163,7 +163,7 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_saiga12_css_monster_caw_l
 
 
 ATT.HeatCapacityMult = 0.98
-ATT.MuzzleParticle = "arc9_eft_dtk_sport_1"
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_3"
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 2
@@ -199,7 +199,7 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_12g_red_heat_gk-02_12g.md
 
 ATT.HeatCapacityMult = 0.983
 ATT.PhysBulletMuzzleVelocityMult = 1.0025
-ATT.MuzzleParticle = "arc9_eft_dkt_sport_1"
+ATT.MuzzleParticle = "arc9_eft_dtk_bigrifle_compensator"
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 2
@@ -282,7 +282,7 @@ ATT.PhysBulletMuzzleVelocityMult = 1.0075
 
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
-ATT.MuzzleParticle = "muzzleflash_suppressed_shotgun"
+ATT.MuzzleParticle = "arc9_eft_banka_1"
 ATT.NoFlash = true
 ATT.BarrelLengthAdd = 5
 

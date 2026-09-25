@@ -177,7 +177,7 @@ SWEP.HeatDissipation = 2.5
 ------------------------- |||           Minor stuff            ||| -------------------------
 
 SWEP.CamQCA_Mult = 1
-SWEP.MuzzleParticle = "muzzleflash_m14"
+SWEP.MuzzleParticle = "arc9_eft_shotgun_2"
 SWEP.ShellSmoke = false
 SWEP.EjectDelay = 0.085
 SWEP.ShellAngleVelocity = 0.02

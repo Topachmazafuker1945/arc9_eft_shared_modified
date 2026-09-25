@@ -7,7 +7,7 @@ SWEP.Spawnable = false
 SWEP.Category = "ARC9 - Escape From Tarkov"
 SWEP.AdminOnly = false
 SWEP.UseHands = true
-
+SWEP.EFTWeapon = true --holy things
 ------------------------- |||           Trivia            ||| -------------------------
 
 SWEP.PrintName = "EFT Weapon Subbase (If seen; what the fuck even?)"
@@ -89,7 +89,7 @@ SWEP.TPIKCornerAngle = Angle(0, -0, 20)
 SWEP.TPIKLeftShoulderVector = Vector(4, 10, -1) 
 SWEP.TPIKLeftShoulderAngle = Angle(0, -0, 0)
 
-SWEP.EFTCombatStances = true
+SWEP.EFTCombatStances = true --just turns off stance and arm stamina systems, will add some more flags for sway and stances
 SWEP.IsPistol = false
 
 -- SWEP.ActivePos = Vector(-1.8, -3, -0.5)
@@ -344,11 +344,17 @@ SWEP.VisualRecoilDoingFunc = function(up, side, roll, punch, recamount, self) --
         side = side * 0.4
     end
 
-    if self:GetOutOfBreath() then up = up * 1.5 end
+    
+    if self:GetOutOfBreath() and !ispistolette then up = up * 1.5 end
     if self:GetUBGL() then up = 1.5 end -- ubgl!
 
 	local huy = math.Clamp(fullauto * 8, 1, 2)
 	-- ЖЕСТКО починил сайд отдачу за дарсу... простите если насрал..vkusno ya poel
+
+    -- for _, ply in player.Iterator() do
+    --     ply:ChatPrint(up .. side .. roll .. punch .. recamount)
+    -- end
+
     return (up * 1.6) * huy, (side * (math.random(2) == 2 and 400 or -400) / (huy * 16)) / huy, roll * 7, punch * 2
 end
 
@@ -599,15 +605,21 @@ function SWEP:HookP_BlockFire()
         return true
     end
     
-    local stat = (self:GetSightAmount() < 0.8 and !self:GetBipod())
-    local lowready = self:GetNW2Bool("EFT_LowReadyStance", false)
-    local highready = self:GetNW2Bool("EFT_HighReadyStance", false)
-    if (self:GetValue("EFTWeight") > 7 and stat or self:GetOutOfBreath() and stat) then
+    local cantfire = (self:GetSightAmount() < 0.8 and !self:GetBipod())
+    if (self:GetValue("EFTWeight") > 7 and cantfire or self:GetOutOfBreath() and cantfire) then
         -- print("weight: " .. weight)
         return true
-    elseif (lowready or highready) and stat then
-        return true
     end
+
+    if !GetConVar("arc9_eft_shoot_exit_ready"):GetBool() then
+        local low = self:GetNW2Bool("EFT_LowReadyStance", false) 
+        local high = self:GetNW2Bool("EFT_HighReadyStance", false)
+
+        if (low or high) and cantfire then
+            return true
+        end
+    end
+
 end
 
 function SWEP:Hook_RedPrintName()

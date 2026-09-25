@@ -32,20 +32,38 @@ SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_aa12.mdl"
 SWEP.WorldModelOffset = {
     Pos = Vector(-8, 5.4, -6.5),
     Ang = Angle(-7, 0, 180),
-    TPIKPos = Vector(-1.5, 6, -6), -- rpg
+    TPIKPos = Vector(-1.5, 5, -6), -- rpg
     TPIKAng = Angle(-11.5, 0, 180),
     Scale = 1
 }
 
 SWEP.IronSights = {
-    Pos = Vector(-4.27, -5.5, -0.67),
+    Pos = Vector(-4.27, -5.0, -0.67),
     Ang = Angle(0, 0.85, 0),
     Midpoint = { Pos = Vector(-1, 0, 8), Ang = Angle(0, 0, -145) },
     Magnification = 1.0,
     ViewModelFOV = 54
 }
 
-SWEP.ActivePos = Vector(-2.0, -5.2, -0.5)
+SWEP.TPIKLowReadyVector = Vector(5.0, -0, 1.0)
+SWEP.TPIKLowReadyAngle = Angle(50, -10, -5)
+SWEP.TPIKHighReadyVector = Vector(-6.5, -2.5, 20)
+SWEP.TPIKHighReadyAngle = Angle(-40, 0, 0)
+-- SWEP.TPIKSomalianVector = Vector(-0.0, -0, -6.0)
+-- SWEP.TPIKSomalianAngle = Angle(0, -0, -30)
+-- SWEP.TPIKCornerVector = Vector(-6.0, -8, 6.0)
+-- SWEP.TPIKCornerAngle = Angle(0, -0, 20)
+-- SWEP.TPIKLeftShoulderVector = Vector(4, 10, -1) 
+-- SWEP.TPIKLeftShoulderAngle = Angle(0, -0, 0)
+
+SWEP.ActivePos = Vector(-2.0, -6.1, -.35)
+
+SWEP.LowReadyVector = Vector(-1.0, -0, -1.0) -- pidarasiki
+SWEP.LowReadyAngle = Angle(0, -10, -5)
+
+SWEP.HighReadyVector = Vector(2, -6, -12)
+SWEP.HighReadyAngle = Angle(0, 30, -5)
+
 SWEP.CustomizePos = Vector(15.5, 50, 6)
 SWEP.CustomizeSnapshotFOV = 50
 SWEP.CustomizeRotateAnchor = Vector(15.5, -4.28, -5.23)
@@ -96,12 +114,12 @@ SWEP.Recoil = 1 -- general multiplier of main recoil
 SWEP.RecoilUp   = 1.0   -- up recoil
 SWEP.RecoilUpSights   = 3.5   -- up recoil sight
 SWEP.RecoilSide = 1.2 -- sideways recoil
-SWEP.RecoilSideSights = 4 -- sideways recoil
+SWEP.RecoilSideSights = 8 -- sideways recoil
 
 SWEP.RecoilRandomUp   = 1.1 -- random up/down
 SWEP.RecoilRandomUpSights   = 3.5 -- random up/down sight
 SWEP.RecoilRandomSide = 1.2   -- random left/right
-SWEP.RecoilRandomSideSights = 4.5   -- random left/right
+SWEP.RecoilRandomSideSights = 6.5   -- random left/right
 
 SWEP.RecoilAutoControl = 10.0 -- autocompenstaion, could be cool if set to high but it also affects main recoil
 
@@ -109,10 +127,10 @@ SWEP.RecoilAutoControl = 10.0 -- autocompenstaion, could be cool if set to high 
 SWEP.VisualRecoil = 0.5 -- general multiplier for it
 --SWEP.VisualRecoilHipFire = 0.1 -- general multiplier for it
 
-SWEP.EFT_VisualRecoilUp_BURST_SEMI   = 1.0   -- up/down tilt when semi/bursts
-SWEP.VisualRecoilUp                   = 1.0   --   when fullautoing
+SWEP.EFT_VisualRecoilUp_BURST_SEMI   = 0.75   -- up/down tilt when semi/bursts
+SWEP.VisualRecoilUp                   = 0.75   --   when fullautoing
 SWEP.EFT_VisualRecoilSide_BURST_SEMI = 0.0025 -- left/right tilt when semi/burst
-SWEP.VisualRecoilSide                 = 0.015   --   when fullautoing
+SWEP.VisualRecoilSide                 = 0.0025   --   when fullautoing
 SWEP.VisualRecoilRoll = 25 --roll tilt, a visual thing
 
 SWEP.VisualRecoilPunch = 5 -- How far back visrec moves the gun
@@ -130,7 +148,7 @@ SWEP.VisualRecoilPositionBumpUpRTScope = -1.0 -- same but in rt scopes, you prob
 -- SWEP.VisualRecoilCenter = Vector(4.28-1.5, 19, -5.23 +3) -- ugh, i dont now what to set it too, but probably it should be diffferent on each gun
 SWEP.EFT_ShotsToSwitchToFullAutoBehaviur = 3 -- how many shots for switch to fullauto stats from semi/burst, + 2 shots afterwards are lerping. you probably should not touch this but ok
 
-SWEP.RecoilKick = 1.5 -- camera roll each shot + makes camera go more up when fullautoing
+SWEP.RecoilKick = 0.5 -- camera roll each shot + makes camera go more up when fullautoing
 
 SWEP.VisualRecoilCenter = Vector(4.28, 19, -2)
 SWEP.SubtleVisualRecoilSights = 2.2
@@ -167,7 +185,7 @@ SWEP.MalfunctionWait = 0
 
 ------------------------- |||           Minor stuff            ||| -------------------------
 
-SWEP.MuzzleParticle = "muzzleflash_M3"
+SWEP.MuzzleParticle = "arc9_eft_shotgun_1"
 SWEP.AfterShotParticle = "barrel_smoke"
 SWEP.ShellModel = "models/weapons/arc9/darsu_eft/shells/patron_12x70_shell.mdl"
 SWEP.ShellCorrectAng = Angle(0, 180, 180)

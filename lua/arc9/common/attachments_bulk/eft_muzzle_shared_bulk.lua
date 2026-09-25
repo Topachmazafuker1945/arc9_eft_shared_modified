@@ -18,7 +18,7 @@ ATT.BarrelLengthAdd = 0.5
 
 ATT.HeatCapacityMult = 0.987
 ATT.PhysBulletMuzzleVelocityMult = 1.005
-
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_2"
 ATT.Category = {"eft_ar10_muzzle"}
 
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
@@ -48,7 +48,7 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_ar15_aac_blackout_51t_fla
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
-
+ATT.MuzzleParticle = "arc9_eft_muzzleflashider_1"
 
 ATT.HeatCapacityMult = 0.99
 
@@ -133,7 +133,7 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_ar10_kac_qdc_flash_supres
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
-
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_1"
 
 ATT.HeatCapacityMult = 0.99
 ATT.PhysBulletMuzzleVelocityMult = 1.01
@@ -174,7 +174,7 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/silencer_qdc_kac_prs_qdc_762x51.mdl"
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_1"
 ATT.NoFlash = true
 ATT.BarrelLengthAdd = 5
 ATT.Silencer = true
@@ -212,7 +212,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/silencer_all_sig_srd_762_762x51.mdl"
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 5
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_1"
 ATT.NoFlash = true
 ATT.BarrelLengthAdd = 5
 ATT.Silencer = true
@@ -312,7 +312,7 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/silencer_base_gemtech_one_multi.mdl"
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_2"
 ATT.NoFlash = true
 ATT.BarrelLengthAdd = 5
 ATT.Silencer = true
@@ -348,7 +348,7 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/silencer_wave_dd_wave_qd_supressor_multi.mdl"
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_2"
 ATT.NoFlash = true
 ATT.BarrelLengthAdd = 5
 ATT.Silencer = true
@@ -383,7 +383,7 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/silencer_tbac_thunder_beast_ultra_5_762x51.mdl"
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_1"
 ATT.NoFlash = true
 ATT.BarrelLengthAdd = 5
 ATT.Silencer = true
@@ -419,7 +419,7 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/silencer_ar10_aac_762_sdn_6_762x51.mdl"
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_2"
 ATT.NoFlash = true
 ATT.BarrelLengthAdd = 5
 ATT.Silencer = true
@@ -537,7 +537,7 @@ ATT.PhysBulletMuzzleVelocityMult = 1.005
 
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_2_small"
 ATT.NoFlash = true
 ATT.BarrelLengthAdd = 5
 
@@ -573,7 +573,7 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_all_silencerco_ac858_asr_
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
-
+ATT.MuzzleParticle = "arc9_eft_dtk_bigrifle_3"
 ATT.Category = {"eft_muzzle_338"}
 
 

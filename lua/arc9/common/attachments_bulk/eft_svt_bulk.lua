@@ -56,7 +56,7 @@ ATT.Description = [[A standard-issue muzzle brake for the SVT rifle.]]
 
 ATT.HasGas = true 
 
-
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_2"
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 

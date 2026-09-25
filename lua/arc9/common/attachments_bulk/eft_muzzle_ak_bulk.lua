@@ -196,7 +196,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.Model = "models/weapons/arc9_eft_shared/atts/muzzle/muzzle_ar15_pws_cqb_556x45.mdl"
 
 ATT.Category = {"eft_ak74_muzzle", "eft_rpk16_muzzle"}
-ATT.MuzzleParticle = "arc9_eft_dtk_1"
+ATT.MuzzleParticle = "arc9_eft_muzzleflashider_3_x"
 ATT.HeatCapacityMult = 0.989
 ATT.PhysBulletMuzzleVelocityMult = 1.005
 
@@ -288,7 +288,8 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_ak_izhmash_akml_762x39.mdl"
 
 ATT.PhysBulletMuzzleVelocityMult = 1.015
-
+ATT.NoFlash = true 
+ATT.MuzzleParticle = "arc9_eft_muzzleflashider_3_x"
 ATT.Category = {"eft_akm_muzzle"}
 
 
@@ -318,7 +319,7 @@ ATT.HeatCapacityMult = 0.99
 ATT.PhysBulletMuzzleVelocityMult = 1.005
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_ak_srvv_mbrfhmb_762_762x39.mdl"
-
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_1"
 ATT.Category = {"eft_akm_muzzle", "eft_ak103_muzzle", "eft_ak_ttak"}
 
 
@@ -346,7 +347,6 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_ak_izhmash_akm_std_762x39.mdl"
-
 
 ATT.Category = {"eft_akm_muzzle"}
 
@@ -376,7 +376,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_ak_venom_antidote_muzzle_brake_multi.mdl"
 
 ATT.HeatCapacityMult = 0.987
-
+ATT.MuzzleParticle = "arc9_eft_dtk_sport_3"
 ATT.Category = {"eft_akm_muzzle"}
 
 
@@ -507,7 +507,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_ak_spike_tactical_ak_dynacomp_762x39.mdl"
 
 ATT.Category = {"eft_akm_muzzle", "eft_ak103_muzzle"}
-
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_1"
 ATT.HeatCapacityMult = 0.99
 ATT.PhysBulletMuzzleVelocityMult = 1.004
 
@@ -616,7 +616,7 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_ak_jmac_rrd_4c_762x39.mdl"
-
+ATT.MuzzleParticle = "arc9_eft_dtk_sport_3"
 ATT.Category = {"eft_akm_muzzle"}
 
 ATT.HeatCapacityMult = 0.984
@@ -650,7 +650,7 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_ak74_jmac_rrd_4c_multi.md
 
 ATT.HeatCapacityMult = 0.987
 ATT.PhysBulletMuzzleVelocityMult = 1.0045
-
+ATT.MuzzleParticle = "arc9_eft_dtk_sport_3"
 ATT.Category = {"eft_ak74_muzzle", "eft_ak101_muzzle", "eft_ak103_muzzle", "eft_ak_ttak"}
 
 
@@ -809,7 +809,7 @@ ATT.Category = {"eft_ak74_muzzle", "eft_rpk16_muzzle"}
 ATT.Silencer = true
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 5
-ATT.MuzzleParticle = "mw_fas2_muzzleflash_shared_big"
+ATT.MuzzleParticle = "arc9_eft_banka_2"
 ATT.NoFlash = true
 ATT.BarrelLengthAdd = 5
 
@@ -847,7 +847,7 @@ ATT.Category = {"eft_akm_muzzle"}
 ATT.Silencer = true
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 5
-ATT.MuzzleParticle = "AC_muzzle_357"
+ATT.MuzzleParticle = "arc9_eft_banka_2"
 ATT.NoFlash = true
 ATT.BarrelLengthAdd = 5
 
@@ -886,7 +886,7 @@ ATT.Category = {"eft_ak103_muzzle", "eft_ak_ttak"}
 ATT.Silencer = true
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 5
-ATT.MuzzleParticle = "AC_muzzle_357"
+ATT.MuzzleParticle = "arc9_eft_banka_1"
 ATT.NoFlash = true
 ATT.BarrelLengthAdd = 5
 
@@ -1010,7 +1010,7 @@ ATT.Category = {"eft_ak74_muzzle"}
 ATT.Silencer = true
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 5
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_2"
 ATT.NoFlash = true
 ATT.BarrelLengthAdd = 5
 
@@ -1050,7 +1050,7 @@ ATT.Category = {"eft_ak74_muzzle", "eft_rpk16_muzzle"}
 ATT.Silencer = true
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 5
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_1"
 ATT.NoFlash = true
 ATT.BarrelLengthAdd = 6
 
@@ -1089,7 +1089,7 @@ ATT.Category = {"eft_ak_wafflemaker"}
 ATT.Silencer = true
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 5
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_2"
 ATT.NoFlash = true
 ATT.BarrelLengthAdd = 5
 
@@ -1144,7 +1144,7 @@ table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
 ARC9.LoadAttachment(ATT, "eft_silencer_ak_r43_762")
 
 
--- ///////////////////////////////////////      eft_muzzle_ak_kibaarms_308 -- ??
+-- ///////////////////////////////////////      eft_muzzle_ak_kibaarms_308 -- ?? chegooo?
 
 
 
@@ -1167,7 +1167,7 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_ak74_arsenal_4_piece_flas
 
 ATT.Category = {"eft_ak74_muzzle", "eft_ak103_muzzle"}
 
-ATT.MuzzleParticle = "arc9_eft_flashider_1"
+ATT.MuzzleParticle = "arc9_eft_muzzleflashider_2"
 ATT.NoFlash = true
 
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({

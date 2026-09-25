@@ -357,7 +357,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.HeatCapacityMult = 1.14
 
 ATT.Silencer = true
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_1"
 ATT.NoFlash = true
 
 ATT.Category = {"eft_muzzle_sv98_sil"}
@@ -418,7 +418,7 @@ ATT.Description = [[The Mk.2.0 compensator produced by SRVV for SV-98 sniper rif
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
-
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_2"
 ATT.Category = {"eft_muzzle_sv98"}
 
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
@@ -528,8 +528,8 @@ ATT.Sights = {
     {
         Pos = Vector(0, 11.6, 0.03),
         Ang = Angle(0, 0, 0),
-        Magnification = 1.15,
-        ViewModelFOV = 36,
+        Magnification = 1.0,
+        ViewModelFOV = 52,
         RTScopeFOV = 36/1,
     },
 }
@@ -652,8 +652,8 @@ ATT.Sights = {
     {
         Pos = Vector(0, 11.6, 0.03),
         Ang = Angle(0, 0, 0),
-        Magnification = 1.15,
-        ViewModelFOV = 36,
+        Magnification = 1.0,
+        ViewModelFOV = 52,
         RTScopeFOV = 36/1,
     },
 }
@@ -766,9 +766,9 @@ ATT.Model = "models/weapons/arc9_eft_shared/atts/optic/kmz_eyecup.mdl"
 ATT.Category = {"eft_kmz_eyecap"}
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
-ATT.AdditionalSightDistance = 2
-
+ATT.AdditionalSightDistance = -1.5
 ATT.ModelOffset = Vector(0, 0, 0)
+ATT.VisualRecoilPunchSights = 10 -- same but in sights only
 
 
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({

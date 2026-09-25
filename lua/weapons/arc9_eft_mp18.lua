@@ -29,7 +29,7 @@ SWEP.WorldModel = "models/weapons/w_shot_xm1014.mdl"
 SWEP.WorldModelOffset = {
     Pos = Vector(-10, 5.5, -4),
     Ang = Angle(-7, 0, 180),
-    TPIKPos = Vector(-6, 6, -5), -- rpg
+    TPIKPos = Vector(-2, 4, -5), -- rpg
     TPIKAng = Angle(-11.5, 0, 180),
     Scale = 1
 }
@@ -45,9 +45,9 @@ SWEP.IronSights = {
     Magnification = 1.0,
 }
 
-SWEP.TPIKLowReadyVector = Vector(5.0, -0, -3.0)
+SWEP.TPIKLowReadyVector = Vector(0.0, -0, -3.0)
 SWEP.TPIKLowReadyAngle = Angle(50, -10, -5)
-SWEP.TPIKHighReadyVector = Vector(-6.5, -2.5, 20)
+SWEP.TPIKHighReadyVector = Vector(-1.5, -2.5, 20)
 SWEP.TPIKHighReadyAngle = Angle(-40, 0, 0)
 -- SWEP.TPIKSomalianVector = Vector(-0.0, -0, -6.0)
 -- SWEP.TPIKSomalianAngle = Angle(0, -0, -30)
@@ -190,7 +190,7 @@ SWEP.Overheat = false
 ------------------------- |||           Minor stuff            ||| -------------------------
 
 SWEP.CamQCA_Mult = 1
-SWEP.MuzzleParticle = "muzzleflash_svd"
+SWEP.MuzzleParticle = "arc9_eft_shotgun_2"
 SWEP.ShellModel = "models/weapons/arc9/darsu_eft/shells/762x54r.mdl"
 SWEP.ShellSounds = ARC9EFT.ShellsHeavy
 

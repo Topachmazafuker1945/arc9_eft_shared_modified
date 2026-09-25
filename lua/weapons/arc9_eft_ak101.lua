@@ -75,13 +75,13 @@ SWEP.Recoil = 1 -- general multiplier of main recoil
 
 SWEP.RecoilUp   = 1.0   -- up recoil
 SWEP.RecoilUpSights   = 3.25   -- up recoil sight
-SWEP.RecoilSide = 1.2 -- sideways recoil
-SWEP.RecoilSideSights = 4.0 -- sideways recoil
+SWEP.RecoilSide = 2.5 -- sideways recoil
+SWEP.RecoilSideSights = 9.9 -- sideways recoil
 
-SWEP.RecoilRandomUp   = 1.1 -- random up/down
+SWEP.RecoilRandomUp   = 1.0 -- random up/down
 SWEP.RecoilRandomUpSights   = 3.25 -- random up/down sight
-SWEP.RecoilRandomSide = 1.2   -- random left/right
-SWEP.RecoilRandomSideSights = 4.0   -- random left/right
+SWEP.RecoilRandomSide = 2.5   -- random left/right
+SWEP.RecoilRandomSideSights = 9.7   -- random left/right
 
 SWEP.RecoilAutoControl = 10.0 -- autocompenstaion, could be cool if set to high but it also affects main recoil
 
@@ -89,10 +89,10 @@ SWEP.RecoilAutoControl = 10.0 -- autocompenstaion, could be cool if set to high 
 SWEP.VisualRecoil = 0.5 -- general multiplier for it
 --SWEP.VisualRecoilHipFire = 0.1 -- general multiplier for it
 
-SWEP.EFT_VisualRecoilUp_BURST_SEMI   = 0.5   -- up/down tilt when semi/bursts
-SWEP.VisualRecoilUp                   = 0.5   --   when fullautoing
+SWEP.EFT_VisualRecoilUp_BURST_SEMI   = 0.3   -- up/down tilt when semi/bursts
+SWEP.VisualRecoilUp                   = 0.3   --   when fullautoing
 SWEP.EFT_VisualRecoilSide_BURST_SEMI = 0.001 -- left/right tilt when semi/burst
-SWEP.VisualRecoilSide                 = 0.0075   --   when fullautoing
+SWEP.VisualRecoilSide                 = 0.0025   --   when fullautoing
 SWEP.VisualRecoilRoll = 25 --roll tilt, a visual thing
 
 SWEP.VisualRecoilPunch = 2.5 -- How far back visrec moves the gun
@@ -176,7 +176,7 @@ SWEP.HeatDissipation = 2.5
 ------------------------- |||           Minor stuff            ||| -------------------------
 
 SWEP.CamQCA_Mult = 0.36
-SWEP.MuzzleParticle = "muzzleflash_ak74"
+SWEP.MuzzleParticle = "arc9_eft_dtk_fireball_1"
 SWEP.ShellModel = "models/weapons/arc9_eft_shared/shells/eft_shell_556_m855.mdl"
 SWEP.ShellSounds = ARC9EFT.Shells556
 

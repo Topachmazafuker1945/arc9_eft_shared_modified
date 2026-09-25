@@ -55,7 +55,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.Spread = 0.96 * ARC9.MOAToAcc
 ATT.HeatCapacityMult = 1.22
 ATT.HeatDissipationMult = 1.12
-
+ATT.MuzzleParticle = "arc9_eft_muzzleflashider_3_x"
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/pkp_barrel_lhik.mdl"
 ATT.LHIK = true
 
@@ -86,7 +86,7 @@ ATT.HeatCapacityMult = 1.013
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
-
+ATT.MuzzleParticle = "arc9_eft_dtk_sport_3"
 ATT.Category = {"eft_pkm_muzzle"}
 
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
@@ -112,7 +112,7 @@ ATT.Description = [[A standard-issue flash hider for Kalashnikov Machine gun. Ma
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
-
+ATT.MuzzleParticle = "arc9_eft_muzzleflashider_3_x"
 ATT.Category = {"eft_pkm_muzzle"}
 
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
@@ -137,7 +137,7 @@ ATT.HeatCapacityMult = 1.01
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
-
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_1"
 ATT.Category = {"eft_pkm_muzzle"}
 
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({

@@ -473,7 +473,7 @@ ATT.HasBarrel = true
 -- ATT.PhysBulletMuzzleVelocityMult = 0.94
 
 ATT.Silencer = true
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_2"
 ATT.NoFlash = true
 
 ATT.SortOrder = 0
@@ -525,7 +525,7 @@ ATT.ActivateElements = {"eft_val_supp_val"}
 -- ATT.PhysBulletMuzzleVelocityMult = 0.94
 
 ATT.Silencer = true
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_2"
 ATT.NoFlash = true
 
 ATT.SortOrder = 0
@@ -723,7 +723,7 @@ ATT.Description = [[A standard-issue sound suppressor for the SR-3M assault rifl
 ATT.HeatCapacityMult = 0.75
 
 ATT.Silencer = true
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_2"
 ATT.NoFlash = true
 ATT.MuzzleEffectQCA = 5
 
@@ -1681,7 +1681,7 @@ ATT.Category = {"eft_valmod4_sup"}
 ATT.PhysBulletMuzzleVelocityMult = 1.011
 
 ATT.Silencer = true
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_1"
 ATT.NoFlash = true
 
 ATT.Attachments = {

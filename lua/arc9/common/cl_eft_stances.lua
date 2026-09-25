@@ -28,7 +28,9 @@ function WeaponSelectorVkluchatel(state)
         hook.Add('HUDShouldDraw', 'disablewepselector', function(el)
             if el == 'CHudWeaponSelection' then
                 return state
-            end   
+            end
         end)
     end
 end
+
+

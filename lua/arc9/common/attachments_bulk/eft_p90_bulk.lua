@@ -760,7 +760,7 @@ ATT.EFTErgoAdd = -17
 ATT.Silencer = true 
 -- ATT.CustomizePos = Vector(14.5, 30, 4)
 
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_2_small"
 ATT.MuzzleEffectQCA = 5
 ATT.NoFlash = true
 ATT.BarrelLengthAdd = 5

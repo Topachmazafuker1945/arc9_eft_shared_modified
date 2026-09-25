@@ -43,7 +43,7 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_all_awc_psr_muzzle_brake.
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
-
+ATT.MuzzleParticle = "arc9_eft_dtk_bigrifle_3"
 ATT.Category = {"eft_muzzle_338"}
 ATT.Attachments = {
     {
@@ -78,7 +78,7 @@ ATT.CompactName = "TMB 338LM"
 ATT.Icon = Material("entities/eft_axmc_attachments/tmb338.png", "mips smooth")
 ATT.Description = [[A muzzle brake manufactured by Accuracy International for .338 LM (8.6x70). Reduces recoil and counters the muzzle rise.]]
 
-
+ATT.MuzzleParticle = "arc9_eft_dtk_bigrifle_3"
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_all_ai_tactical_muzzle_brake_86x70.mdl"
@@ -118,7 +118,7 @@ ATT.Icon = Material("entities/eft_axmc_attachments/tsm338lm.png", "mips smooth")
 ATT.Description = [[A sound moderator manufactured by Accuracy International, designed to fit .338 Lapua Magnum weapons.]]
 
 ATT.Silencer = true
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_1"
 ATT.NoFlash = true
 ATT.BarrelLengthAdd = 5
 
@@ -159,7 +159,7 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_aseutra_borelock_muzzle_b
 ATT.ModelAngleOffset = Angle(0, -90, 0)
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
-
+ATT.MuzzleParticle = "arc9_eft_dtk_bigrifle_3"
 
 ATT.Category = {"eft_muzzle_338"}
 ATT.Attachments = {
@@ -219,7 +219,7 @@ ATT.Icon = Material("entities/eft_axmc_attachments/ase_utra_sl7ibl_borelock_338_
 ATT.Description = [[The SL7i-BL sound suppressor, installed on compatible BoreLock muzzle brakes. Manufactured by Ase Utra.]]
 
 ATT.Silencer = true
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_1"
 ATT.NoFlash = true
 ATT.BarrelLengthAdd = 4
 
@@ -257,10 +257,9 @@ ATT.Description = [[A TRG .338 LM sniper rifle muzzle brake, manufactured by Sak
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_trg_sako_m10_muzzle_brake.mdl"
 ATT.ModelAngleOffset = Angle(0, -90, 0)
 
--- 
+ATT.MuzzleParticle = "arc9_eft_dtk_bigrifle_3"
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
-
 ATT.Category = {"eft_muzzle_sako"}
 
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
@@ -311,7 +310,7 @@ ATT.Description = [[A .338 LM muzzle brake for the TRG sniper rifle. Manufacture
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_trg_coretac_corebrake_muzzle_brake_86x70.mdl"
 ATT.ModelAngleOffset = Angle(0, -90, 0)
 
-
+ATT.MuzzleParticle = "arc9_eft_dtk_bigrifle_3"
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
@@ -338,7 +337,7 @@ ATT.Icon = Material("entities/eft_axmc_attachments/sako_trg_pgm_precision_338_lm
 ATT.Description = [[A sound suppressor manufactured by PGM Precision, designed to fit .338 Lapua Magnum weapons]]
 
 ATT.Silencer = true
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_1"
 ATT.NoFlash = true
 ATT.BarrelLengthAdd = 6
 
@@ -375,7 +374,7 @@ ATT.Icon = Material("entities/eft_axmc_attachments/cgs_hekate_dt_338_lm_sound_su
 ATT.Description = [[The Hekate DT .338 LM suppressor boasts great noise and flash reduction for large caliber rifles. Manufactured by CGS Group.]]
 
 ATT.Silencer = true
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_1"
 ATT.NoFlash = true
 ATT.BarrelLengthAdd = 5
 

@@ -183,7 +183,7 @@ SWEP.HeatDissipation = 1.5
 ------------------------- |||           Minor stuff            ||| -------------------------
 
 SWEP.CamQCA_Mult = 1
-SWEP.MuzzleParticle = "muzzleflash_1"
+SWEP.MuzzleParticle = "arc9_eft_shotgun_2"
 SWEP.ShellModel = "models/weapons/arc9/darsu_eft/shells/762x54r_bt.mdl"
 SWEP.ShellSounds = ARC9EFT.Shells556
 

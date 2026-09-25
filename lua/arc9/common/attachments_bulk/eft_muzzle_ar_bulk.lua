@@ -159,9 +159,8 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_ar15_taa_zk_23_muzzle_bra
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
-ATT.MuzzleParticle = "arc9_eft_muzzledevice_2"
 ATT.HeatCapacityMult = 0.989
-
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_2"
 ATT.Category = {"eft_ar10_muzzle"}
 
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
@@ -807,7 +806,7 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/silencer_base_sig_srd_762_qd_762x51.mdl"
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_1"
 ATT.NoFlash = true
 ATT.BarrelLengthAdd = 5
 ATT.Silencer = true
@@ -851,7 +850,7 @@ ATT.Model = "models/weapons/arc9_eft_shared/atts/muzzle/muzzle_ar15_pws_cqb_556x
 
 ATT.HeatCapacityMult = 0.989
 ATT.PhysBulletMuzzleVelocityMult = 1.005
-ATT.MuzzleParticle = "arc9_eft_muzzledevice_2"
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_4_x"
 ATT.Category = {"eft_ar15_muzzle", "eft_ak101_muzzle"}
 
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
@@ -1003,7 +1002,7 @@ ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
 
-
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_2"
 ATT.Category = {"eft_ar15_muzzle"}
 
 ATT.Attachments = {
@@ -1109,7 +1108,7 @@ ATT.Category = {"eft_spr_sup"}
 ATT.Silencer = true
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 5
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_2"
 ATT.NoFlash = true
 
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({

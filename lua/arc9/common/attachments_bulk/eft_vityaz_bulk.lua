@@ -209,7 +209,7 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_saiga_9_izhmash_saiga_9_s
 ATT.PhysBulletMuzzleVelocityMult = 1.005
 
 ATT.Category = {"eft_pp1901_muzzle"}
-
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_1_small"
 
 table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
     ergonomicsModifier = -0.5,
@@ -237,7 +237,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.PhysBulletMuzzleVelocityMult = 1.005
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_pp-19-01_izhmash_vityaz_std_9x19.mdl"
-
+ATT.MuzzleParticle = "arc9_eft_dtk_1"
 ATT.Category = {"eft_pp1901_muzzle"}
 
 
@@ -358,7 +358,7 @@ ATT.Category = {"eft_pp1901_muzzle"}
 ATT.Silencer = true
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 5
-ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleParticle = "arc9_eft_banka_2_small"
 ATT.NoFlash = true
 
 ATT.HeatCapacityMult = 1.14

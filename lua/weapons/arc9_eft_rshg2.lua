@@ -48,6 +48,7 @@ SWEP.IronSights = {
     -- end,
 }
 
+SWEP.EFTCombatStances = false
 SWEP.NoTPIKVMPos = true
 SWEP.ActivePos = Vector(-0.7, -3.1, 0.35)
 

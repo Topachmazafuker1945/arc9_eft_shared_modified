@@ -1071,7 +1071,8 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_sa58_ds_arms_3_prong_trid
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 0.5
-
+ATT.NoFlash = true
+ATT.MuzzleParticle = "arc9_eft_muzzleflashider_1"
 
 ATT.Category = {"eft_fal_muzzle"}
 
@@ -1101,7 +1102,7 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_fal_ds_arms_austrian_styl
 ATT.MuzzleDevice = true
 ATT.MuzzleDevice_Priority = 4
 ATT.BarrelLengthAdd = 1
-
+ATT.MuzzleParticle = "arc9_eft_muzzledevice_4_x"
 
 ATT.Category = {"eft_fal_muzzle"}
 
