@@ -225,8 +225,14 @@ SWEP.TracerColor = Color(255, 225, 200)
 
 SWEP.FiremodeAnimLock = true
 SWEP.Slot = 2
+
 SWEP.TriggerDelayRepeat = false
-SWEP.TriggerDelay = true
+SWEP.TriggerDelay = false
+SWEP.TriggerDelayHook = function(self, old)
+    if GetConVar("arc9_eft_trigger_delay"):GetBool() then
+        return true
+    end
+end
 SWEP.TriggerDelayTime = 22 /100 /3
 SWEP.DeployTime = 1.1
 SWEP.DeployTimeHook = ARC9EFT.DeployTimeHook
