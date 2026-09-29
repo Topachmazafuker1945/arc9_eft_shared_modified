@@ -472,6 +472,7 @@ local conVars = {
     {name = "eft_shoot_exit_ready", default = "1", replicated = true },
     {name = "eft_vm_sway_rtscope", default = "0", replicated = true },
     {name = "eft_trigger_delay", default = "1", replicated = true },
+    {name = "eft_enable_breathing", default = "1", replicated = true },
 }
 
 for _, var in ipairs(conVars) do
@@ -833,13 +834,12 @@ if CLIENT then
             { sv = true, type = "bool", text = "Exit Ready stance", convar = "eft_shoot_exit_ready", desc = "Exit ready stance while shooting gun" },
             { sv = true, type = "bool", text = "ViewModel swaying if RT Scopes", convar = "eft_vm_sway_rtscope", desc = "Allow ARC9 sway in RT Scopes" },
             { sv = true, type = "bool", text = "Trigger Delay", convar = "eft_trigger_delay", desc = "Allow to turn on/off trigger delay (!)Need to re-join(!)" },
-
+            { sv = true, type = "bool", text = "Arm Stamina", convar = "eft_enable_breathing", desc = "Allow to turn on/off arm stamina system" },
         }
         
         table.insert(ARC9.SettingsTable, 331, eftsettings)
     
     end)
 end
-
 
 list.Set("ContentCategoryIcons", "ARC9 - Escape From Tarkov", "eft_16.png")
