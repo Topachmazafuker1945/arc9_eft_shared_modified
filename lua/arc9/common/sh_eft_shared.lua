@@ -472,7 +472,12 @@ local conVars = {
     {name = "eft_shoot_exit_ready", default = "1", replicated = true },
     {name = "eft_vm_sway_rtscope", default = "0", replicated = true },
     {name = "eft_trigger_delay", default = "1", replicated = true },
+    {name = "eft_trigger_delay_multiplier", default = "1", replicated = true },
     {name = "eft_enable_breathing", default = "1", replicated = true },
+    {name = "eft_stamina_ammount", default = "1", replicated = true },
+    {name = "eft_overweight_blockfire", default = "1", replicated = true },
+    {name = "eft_block_blindfire", default = "0", replicated = true },
+    {name = "eft_outofbreath_block", default = "1", replicated = true },
 }
 
 for _, var in ipairs(conVars) do
@@ -500,7 +505,7 @@ end
 -- but this is a bit incorrect because real eft takes weapon & atts weight as part of formula but there's no weight in arc9
 
 local ergomult = GetConVar("arc9_eft_mult_ergo")
-
+local breathtime = GetConVar("arc9_eft_stamina_ammount")
 ARC9EFT.ErgoHook = function(self, orig)
     local ergo = math.Clamp((self:GetValue("EFTErgo") or 0), 0, 100)
     return math.max(0.05, (0.6 - ((ergo * 0.01) * 0.45)) * ergomult:GetFloat())
@@ -523,7 +528,7 @@ ARC9EFT.ErgoBreathHook = function(self, orig)
     if self:GetBipod() then return orig * 10 end
     -- local ergo = math.Clamp((self:GetValue("EFTErgo") or 0), 0, 100)
     local weight = math.Clamp((self:GetValue("EFTWeight") or 0), 1, 20)
-    return math.max(1, orig - weight * 2.5)
+    return (math.max(1, orig - weight * 2.5) * breathtime:GetFloat())
 end
 
 ARC9EFT.ErgoBreathRestoreHook = function(self, orig)
@@ -579,17 +584,6 @@ function EFTSetReady(ply, status) --soon --lybiatovo, this shits requires swep o
         wep:SetNW2Bool("EFT_LowReadyStance", false)
         ply:GetNWInt("EFT_OGStatus", 0)
     end
-    
-    -- local ready = {
-    --     [1] = "EFT_HighReadyStance",
-    --     [2] = "EFT_LowReadyStance"
-    -- }
-
-    -- for i, k in ipairs(ready) do
-    --     if i == status then
-    --        wep:SetNW2Bool(ready[i], true)
-    --     end
-    -- end
 end
 
 function EFTSetStance(ply, status) --also this one too
@@ -601,11 +595,40 @@ function EFTSetStance(ply, status) --also this one too
     end
 end
 
+function GetEFTOverWeight(ply)
+    local wep = ply:GetActiveWeapon()
+    if !IsValid(wep) then return end
+    if GetConVar("arc9_eft_overweight_blockfire"):GetBool() then
+        local weight = wep:GetValue("EFTWeight") or 0
+        return weight
+    else
+        return 0
+    end
+end
+
+function GetEFTOutOfBreath(ply) --похуй пусть плай будет я заебусь все искать
+    local wep = ply:GetActiveWeapon()
+    if !IsValid(wep) then return end
+    if GetConVar("arc9_eft_outofbreath_block"):GetBool() then
+        if wep:GetOutOfBreath() then return true end
+    else
+        return false 
+    end
+end
+
+-- cvars.AddChangeCallback("arc9_eft_overweight_blockfire", function(convar_name, value_old, value_new)
+--     print(convar_name, value_old, value_new)
+--     if value_new == 1 then
+        
+--     end
+-- end)
+
 function ToggleEFTStance(ply, stanceName) --koroche potom уберу 
     if !IsValid(ply) then return end
     local wep = ply:GetActiveWeapon()
     if !(IsValid(wep) and wep.ARC9 and wep.EFTCombatStances) then return end
-    if (wep:GetOutOfBreath() or (wep:GetValue("EFTWeight") or 0) > 7) then return end
+    if GetEFTOutOfBreath(ply) or GetEFTOverWeight(ply) > 7 then return end
+    if GetConVar("arc9_eft_block_blindfire"):GetBool() then return end
 
     local currentState = wep:GetNW2Bool(stanceName, false)
     local newState = !currentState
@@ -643,7 +666,7 @@ hook.Add("StartCommand", "EFTStanceScroller", function(ply, cmd)
     WeaponSelectorVkluchatel(true) --IF TRUE THEN HUD WORKS "func from cl_eft_stances file"
     if ply:KeyDown(IN_WALK) then --MR ANALUS
         WeaponSelectorVkluchatel(false) --МИСТР СФИНКТЕР, IF FALSE THEN HUD TURNS OFF
-        if wep:GetOutOfBreath() or (wep:GetValue("EFTWeight") or 0) > 7 then return end
+        if GetEFTOutOfBreath(ply) or GetEFTOverWeight(ply) > 7 then return end
         local wheel = cmd:GetMouseWheel()
         if wheel == 0 then return end
         
@@ -833,10 +856,14 @@ if CLIENT then
             { sv = true, type = "bool", text = "Do viewmodel Leaning in sights", convar = "eft_insight_vmleaning", desc = "Rolling viewmodel while leaning in sights" },
             { sv = true, type = "bool", text = "Exit Ready stance", convar = "eft_shoot_exit_ready", desc = "Exit ready stance while shooting gun" },
             { sv = true, type = "bool", text = "ViewModel swaying if RT Scopes", convar = "eft_vm_sway_rtscope", desc = "Allow ARC9 sway in RT Scopes" },
-            { sv = true, type = "bool", text = "Trigger Delay", convar = "eft_trigger_delay", desc = "Allow to turn on/off trigger delay (!)Need to re-join(!)" },
+            { sv = true, type = "bool", text = "Trigger Delay", convar = "eft_trigger_delay", desc = "Allow to turn on/off trigger delay" },
+            { sv = true, type = "slider", text = "Trigger Delay multiplier", convar = "eft_trigger_delay_multiplier", min = 0.1, max = 10, decimals = 1, desc = "Multiplier of trigger delay speed " },
             { sv = true, type = "bool", text = "Arm Stamina", convar = "eft_enable_breathing", desc = "Allow to turn on/off arm stamina system" },
+            { sv = true, type = "slider", text = "Arm Stamina amount", convar = "eft_stamina_ammount", min = 0.1, max = 10, decimals = 1, desc = "How much arm stamina do you have" },
+            { sv = true, type = "bool", text = "Overweight blockfire", convar = "eft_overweight_blockfire", desc = "If too heavy, blocks hipfire" },
+            { sv = true, type = "bool", text = "Block Blindfire", convar = "eft_block_blindfire", desc = "It blocks blindfire" },
+            { sv = true, type = "bool", text = "Out of Breath blocks", convar = "eft_outofbreath_block", desc = "If on, while you out of breath, you can't hip fire, blindfire" },
         }
-        
         table.insert(ARC9.SettingsTable, 331, eftsettings)
     
     end)

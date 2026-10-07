@@ -45,7 +45,27 @@ SWEP.IronSights = {
     ViewModelFOV = 54
 }
 
-SWEP.ActivePos = Vector(-0.7, -4, -0.37)
+SWEP.TPIKLowReadyVector = Vector (5, -0, -3.0)
+SWEP.TPIKLowReadyAngle = Angle(50, -10, -5)
+
+
+SWEP.TPIKHighReadyVector = Vector(-7, -2, 10)
+SWEP.TPIKHighReadyAngle = Angle(-15, 0, 0)
+SWEP.TPIKSomalianVector = Vector(-0.0, -0, -6.0)
+SWEP.TPIKSomalianAngle = Angle(0, -0, -30)
+SWEP.TPIKCornerVector = Vector(-6.0, -8, 6.0)
+SWEP.TPIKCornerAngle = Angle(0, -0, 20)
+SWEP.TPIKLeftShoulderVector = Vector(4, 10, -1) 
+SWEP.TPIKLeftShoulderAngle = Angle(0, -0, 0)
+
+SWEP.ActivePos = Vector(-2.0, -6.1, -.35)
+
+SWEP.LowReadyVector = Vector(-1.0, -2, 1.0) -- pidarasiki
+SWEP.LowReadyAngle = Angle(0, -10, -5)
+
+SWEP.HighReadyVector = Vector(-0, -5, -5)
+SWEP.HighReadyAngle = Angle(0, 10, -10)
+
 SWEP.CustomizePos = Vector(22.5, 51, 5.5)
 SWEP.CustomizeSnapshotFOV = 52
 SWEP.CustomizeRotateAnchor = Vector(22.5, -5, -5.23)
@@ -93,14 +113,14 @@ SWEP.RecoilAutoControl = 10.0 -- autocompenstaion, could be cool if set to high 
 SWEP.VisualRecoil = 0.5 -- general multiplier for it
 --SWEP.VisualRecoilHipFire = 0.1 -- general multiplier for it
 
-SWEP.EFT_VisualRecoilUp_BURST_SEMI   = 0.5   -- up/down tilt when semi/bursts
-SWEP.VisualRecoilUp                   = 0.5   --   when fullautoing
+SWEP.EFT_VisualRecoilUp_BURST_SEMI   = 0.35  -- up/down tilt when semi/bursts
+SWEP.VisualRecoilUp                   = 0.35   --   when fullautoing
 SWEP.EFT_VisualRecoilSide_BURST_SEMI = 0.001 -- left/right tilt when semi/burst
 SWEP.VisualRecoilSide                 = 0.005   --   when fullautoing
 SWEP.VisualRecoilRoll = 25 --roll tilt, a visual thing
 
-SWEP.VisualRecoilPunch = 2.5 -- How far back visrec moves the gun
-SWEP.VisualRecoilPunchSights = 70 -- same but in sights only
+SWEP.VisualRecoilPunch = 5 -- How far back visrec moves the gun
+SWEP.VisualRecoilPunchSights = 100 -- same but in sights only
 
 
 SWEP.VisualRecoilDampingConst = 150 -- spring settings, this is speed of visrec

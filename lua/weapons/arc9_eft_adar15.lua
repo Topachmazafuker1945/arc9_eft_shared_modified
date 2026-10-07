@@ -40,8 +40,8 @@ SWEP.FiremodesHook = function(swep, val) if !swep:GetElements()["eft_extras_forc
 SWEP.Spread = 1.49 * ARC9.MOAToAcc
 
 --recoil
-SWEP.RecoilUp   = 3.5  -- up recoil
-SWEP.RecoilSide = 0.5 -- sideways recoil
+-- SWEP.RecoilUp   = 3.5  -- up recoil
+-- SWEP.RecoilSide = 0.5 -- sideways recoil
 
 local path = ")weapons/darsu_eft/m4a1/"
 

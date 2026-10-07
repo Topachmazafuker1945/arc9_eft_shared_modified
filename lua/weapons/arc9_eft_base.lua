@@ -115,6 +115,7 @@ SWEP.LeftShoulderAngle = Angle(0, -0, 0)
 
 SWEP.ShootPosOffset = Vector(2.0, 0, -2.5) --this is original offset, watch this one for set up the others
 SWEP.ShootPosOffsetAim = Vector(-3, 0, -2) --this just overide original ones
+SWEP.ShootPosOffsetNearWall = Vector(1, 0, -2)
 SWEP.ShootPosOffsetLeftShoulder = Vector(-7, 0, -4)
 SWEP.ShootPosOffsetCorner = Vector(3, 0, 1)
 SWEP.ShootPosOffsetSomalian = Vector(-1, 0, -4)
@@ -125,8 +126,11 @@ SWEP.ShootPosOffsetSomalian = Vector(-1, 0, -4)
 SWEP.SprintAng = Angle(75, -10, -20)
 SWEP.SprintPos = Vector(13, -2, 2)
 
-SWEP.NearWallAng = Angle(80, 5, 0)
-SWEP.NearWallPos = Vector(15, -0, -2.5)
+SWEP.NearWall2Ang = Angle(80, 5, 0)
+SWEP.NearWall2Pos = Vector(15, -0, -2.5)
+
+SWEP.NearWallAng = Angle(-2, 0, -20)
+SWEP.NearWallPos = Vector(-2.5, -10.75, -3.0)
 
 SWEP.CrouchPos = Vector(0, -5, 0.2)
 SWEP.CrouchAng = Angle(0, 0, -4)
@@ -201,6 +205,7 @@ SWEP.RPMMultHot = 0.85 -- overheat debuff
 
 SWEP.EFTErgo = 0
 SWEP.BarrelLength = 36
+SWEP.BarrelLengthThreshold = 22
 SWEP.Ammo = "ar2"
 SWEP.EFTWeight = 1
 
@@ -233,7 +238,13 @@ SWEP.TriggerDelayHook = function(self, old)
         return true
     end
 end
-SWEP.TriggerDelayTime = 22 /100 /3
+SWEP.TriggerDelayTime = 22 /100 /6
+SWEP.TriggerDelayTimeHook = function(self, orig)
+    if GetConVar("arc9_eft_trigger_delay"):GetBool() then
+        local new = GetConVar("arc9_eft_trigger_delay_multiplier"):GetFloat()
+        return orig * new
+    end
+end
 SWEP.DeployTime = 1.1
 SWEP.DeployTimeHook = ARC9EFT.DeployTimeHook
 
@@ -610,11 +621,18 @@ function SWEP:HookP_BlockFire()
 
         return true
     end
-    
+
+
     local cantfire = (self:GetSightAmount() < 0.8 and !self:GetBipod())
-    if (self:GetValue("EFTWeight") > 7 and cantfire or self:GetOutOfBreath() and cantfire) then
-        -- print("weight: " .. weight)
+    if GetEFTOutOfBreath(self:GetOwner()) and cantfire then
         return true
+    end
+
+    if GetConVar("arc9_eft_overweight_blockfire"):GetBool() then
+        if (self:GetValue("EFTWeight") > 7 and cantfire or self:GetOutOfBreath() and cantfire) then
+            -- print("weight: " .. weight)
+            return true
+        end
     end
 
     if !GetConVar("arc9_eft_shoot_exit_ready"):GetBool() then

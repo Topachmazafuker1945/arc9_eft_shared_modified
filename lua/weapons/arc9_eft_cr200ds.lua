@@ -120,7 +120,7 @@ SWEP.Spread = 9.63 * ARC9.MOAToAcc
 SWEP.RPM = 450
 SWEP.EFTErgo = 95
 SWEP.EFTWeight = 0.5
-SWEP.BarrelLength = 12
+SWEP.BarrelLength = 36
 SWEP.Ammo = "pistol"
 SWEP.Firemodes = {
     { Mode = 1, PPrintName = ARC9:GetPhrase("eft_fmode_doubleaction"), PoseParam = 1  },
