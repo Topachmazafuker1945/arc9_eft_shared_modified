@@ -113,10 +113,10 @@ SWEP.VisualRecoilSide                 = 0.0075   --   when fullautoing
 SWEP.VisualRecoilRoll = 25 --roll tilt, a visual thing
 
 SWEP.VisualRecoilPunch = 10 -- How far back visrec moves the gun
-SWEP.VisualRecoilPunchSights = 100 -- same but in sights only
+SWEP.VisualRecoilPunchSights = 125 -- same but in sights only
 
 
-SWEP.VisualRecoilDampingConst = 150 -- spring settings, this is speed of visrec
+SWEP.VisualRecoilDampingConst = 200 -- spring settings, this is speed of visrec
 SWEP.VisualRecoilSpringPunchDamping = 3 -- the less this is the more wobbly gun moves
 SWEP.VisualRecoilSpringMagnitude = 1 -- some third element of spring, high values make gun shake asf on low fps
 

@@ -278,7 +278,7 @@ SWEP.RecoilDissipationRate = 5
 SWEP.RecoilAutoControlMultHipFire = 0.75
 SWEP.RecoilAutoControl_DontTryToReturnBack = true
 SWEP.RecoilResetTime = 0.03
-SWEP.RecoilFullResetTime = 0.2
+SWEP.RecoilFullResetTime = 10.2
 
 SWEP.PhysicalVisualRecoilForce = true 
 
@@ -290,7 +290,6 @@ SWEP.VisualRecoilMultCrouch = 0.75
 SWEP.VisualRecoilPositionBumpUpHook = function(self, old)
     if self:GetValue("HasStock") == false and !self.IsPistol then return old * 0.75 end
 end
-
 
 SWEP.VisualRecoilSideHook = function(self, old)
     if self:GetValue("HasStock") == false and !self.IsPistol then return old * 20 end
@@ -313,7 +312,7 @@ SWEP.VisualRecoilDoingFunc = function(up, side, roll, punch, recamount, self) --
     local eft_insomalian = self:GetNW2Bool("EFT_InSomalianStance", false) or {}
     if !self.EFT_VisualRecoilUp_BURST_SEMI then return up, side, roll, punch end
     local ispistolette = self.IsPistol
-    local hasstock = self:GetValue("HasStock")
+    -- local hasstock = self:GetValue("HasStock")
     local fullauto = math.Clamp(recamount - self.EFT_ShotsToSwitchToFullAutoBehaviur, 0, 3) * 0.33333333
     up = Lerp(fullauto, self.EFT_VisualRecoilUp_BURST_SEMI, up)
 	up = math.Clamp(up, 0, 12)
@@ -350,7 +349,7 @@ SWEP.VisualRecoilDoingFunc = function(up, side, roll, punch, recamount, self) --
     if (eft_incorner == true or eft_insomalian == true) and self.GetSightAmount() <= 0 and !ispistolette then --стрельба без упора в плечо, реализм хуле, пиздец статусы эти нахуй
         up = up * 2.5
         punch = punch * 1.1
-    elseif hasstock == false and !ispistolette then
+    elseif self:GetValue("HasStock") == false and !ispistolette then
         up = up * 2.5
         punch = punch * 0.75
     end

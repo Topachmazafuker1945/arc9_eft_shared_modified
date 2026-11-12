@@ -73,6 +73,7 @@ SWEP.Firemodes = {
     { Mode = 1, RPM = 450, PoseParam = 2 }
 }
 
+SWEP.HasStock = false
 SWEP.Slot = 3
 
 ------------------------- |||           Recoil            ||| -------------------------
